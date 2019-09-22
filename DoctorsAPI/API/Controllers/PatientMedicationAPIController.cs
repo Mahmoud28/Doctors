@@ -59,7 +59,20 @@ namespace Doctors.API.Controllers
             }
             else
             {
-
+                var patientMedication = _medication.Where(x => x.Id == model.Id).FirstOrDefault();
+                if(patientMedication == null)
+                {
+                    result.Msg.Add("Not found");
+                    result.success = false;
+                    result.Access = false;
+                    return Ok(result);
+                }
+                patientMedication.MorningCount = model.Morning;
+                patientMedication.Name = model.Medication.ToString();
+                patientMedication.PharmacyName = model.PharmacyName;
+                patientMedication.Sideeffect = model.Sideeffect;
+                patientMedication.UserId = Convert.ToInt32(User.Claims.SingleOrDefault(x => x.Type == "UserId") != null ? User.Claims.SingleOrDefault(x => x.Type == "UserId").Value : null);
+                patientMedication.Days = string.Join(",", model.SelectedIds);
             }
            
             return Ok(result);
@@ -86,7 +99,19 @@ namespace Doctors.API.Controllers
                 return Ok(result);
             }
            var medication =_medication.Where(x => x.Id == Id).FirstOrDefault();
-            return null;
+            PatientMedicationModel model = new PatientMedicationModel()
+            {
+                Id = medication.Id,
+                Afternoon = medication.AfternoonCount,
+                DoctorName = medication.Doctors,
+                Morning = medication.MorningCount,
+                SelectedIds = medication.Days.Split(',').Select(Int32.Parse).ToList(),
+                PharmacyName = medication.PharmacyName,
+                Sideeffect = medication.Sideeffect,
+                Medication = int.Parse(medication.Name)
+            };
+            result.data = model;
+            return Ok(result);
         }
     }
     
