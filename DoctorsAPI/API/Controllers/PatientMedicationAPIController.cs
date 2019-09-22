@@ -73,6 +73,8 @@ namespace Doctors.API.Controllers
                 patientMedication.Sideeffect = model.Sideeffect;
                 patientMedication.UserId = Convert.ToInt32(User.Claims.SingleOrDefault(x => x.Type == "UserId") != null ? User.Claims.SingleOrDefault(x => x.Type == "UserId").Value : null);
                 patientMedication.Days = string.Join(",", model.SelectedIds);
+                _medication.Update(patientMedication);
+                _context.SaveChanges();
             }
            
             return Ok(result);
