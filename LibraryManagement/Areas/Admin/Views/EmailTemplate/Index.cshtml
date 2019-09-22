@@ -1,0 +1,20 @@
+﻿@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.ListOfEmailTemplate");
+}
+
+<sg-page >
+    <sg-tabs>
+        <sg-table ctrl="EmailTemplate" datasrc="EmailTemplate/List" has-operation="{add: false, edit : true ,delete :true, customview: {show : false , tablename : 'EmailTemplate' }}" delete_msg="{header : '@_localizer.GetString("Admin.Delete.EmailTemplate")',bodyMsg: '@_localizer.GetString("Admin.Delete.Confirm.EmailTemplate")'}" create-action="@Url.Action("PrepareEmailTemplate", "EmailTemplate",new { id = 0 })" token="0">
+            <sg-col name="TemplateNameAr" title="@_localizer.GetString("Admin.EmailTemplate.TemplateNameAr")" type="text"></sg-col>
+            <sg-col name="TemplateNameEn" title="@_localizer.GetString("Admin.EmailTemplate.TemplateNameEn")" type="text"></sg-col>
+            <sg-col name="BodyAr" title="@_localizer.GetString("Admin.EmailTemplate.BodyAr")" type="text"></sg-col>
+            <sg-col name="BodyEn" title="@_localizer.GetString("Admin.EmailTemplate.BodyEn")" type="text"></sg-col>
+            <sg-col name="HeaderAr" title="@_localizer.GetString("Admin.EmailTemplate.HeaderAr")" type="text"></sg-col>
+            <sg-col name="HeaderEn" title="@_localizer.GetString("Admin.EmailTemplate.HeaderEn")" type="text"></sg-col>
+            <sg-col name="ServiceType" title="@_localizer.GetString("Admin.EmailTemplate.ServiceType")" type="number"></sg-col>
+        </sg-table>
+    </sg-tabs>
+</sg-page>
+

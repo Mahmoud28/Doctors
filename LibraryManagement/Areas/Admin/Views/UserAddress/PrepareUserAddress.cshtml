@@ -1,0 +1,20 @@
+﻿@model int
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.UserAddress.AddEdit");
+}
+<sg-page >
+    <form sg-form name="myform" data-ctrl="UserAddress" data-id="@Model" token="0" form-controller="null">
+        <sg-form-toolbar savec="true"></sg-form-toolbar>
+        <sg-input type="text" name="Area" label="@_localizer.GetString("Admin.UserAddress.Area")" ng-model="model.Area"></sg-input>
+        <sg-input type="text" name="Block" label="@_localizer.GetString("Admin.UserAddress.Block")" ng-model="model.Block"></sg-input>
+        <sg-input type="text" name="Street" label="@_localizer.GetString("Admin.UserAddress.Street")" ng-model="model.Street"></sg-input>
+        <sg-input type="number" name="BuildingNumber" label="@_localizer.GetString("Admin.UserAddress.BuildingNumber")" ng-model="model.BuildingNumber"></sg-input>
+        <sg-input type="text" name="Floor" label="@_localizer.GetString("Admin.UserAddress.Floor")" ng-model="model.Floor"></sg-input>
+        <sg-input type="text" name="Appartment" label="@_localizer.GetString("Admin.UserAddress.Appartment")" ng-model="model.Appartment"></sg-input>
+        <sg-input type="text" name="MobileNumber" label="@_localizer.GetString("Admin.UserAddress.MobileNumber")" ng-model="model.MobileNumber"></sg-input>
+
+    </form>
+</sg-page>
+

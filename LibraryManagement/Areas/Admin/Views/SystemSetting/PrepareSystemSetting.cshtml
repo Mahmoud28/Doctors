@@ -1,0 +1,305 @@
+﻿@model int
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.SystemSetting.AddEdit");
+}
+<style>
+    .ta-editor {
+        min-height: 150px;
+        height: auto;
+        overflow: auto;
+        font-family: inherit;
+        font-size: 100%;
+    }
+
+    li {
+        font-size: 18px;
+        font-size: 100%;
+    }
+
+    .ta-toolbar > .btn-group > .btn {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background-color: white;
+        color: black;
+    }
+</style>
+@*<sg-page title="@_localizer.GetString("Admin.SystemSetting.AddEdit")">*@
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-header card-header-tabs card-header-warning">
+                <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                        <ul class="nav nav-tabs" data-tabs="tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-toggle="tab">
+                                    <i class="material-icons">build</i> @_localizer.GetString("Admin.SystemSetting.GlobalSetting")
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <form sg-form name="myform" data-ctrl="SystemSetting" data-id="@Model" token="0" form-controller="null">
+                <div id="SystemSettings">
+
+
+                    <sg-form-toolbar savec="true"></sg-form-toolbar>
+                    <sg-input type="text" name="Id" label="@_localizer.GetString("Admin.SystemSetting.Id")" ng-model="model.Id" ng-show="fales"></sg-input>
+                    <sg-input type="text" name="Token" label="@_localizer.GetString("Admin.SystemSetting.Token")" ng-model="model.Token" ng-show="fales"></sg-input>
+                    <sg-tabs>
+                        <sg-tab title="@_localizer.GetString("Admin.SystemSetting.GlobalSetting")">
+                            @*<sg-input type="singlefile" name="SystemLogo" label="@_localizer.GetString("Admin.SystemSetting.SystemLogo")" ng-model="model.SystemLogo" ng-required="true"></sg-input>
+                <div class="container">
+                    <div class="row" style="margin-top: 15px;" ng-if="model.SystemLogo != null">
+                        <div class="col-xs-6">
+                            <img class="img-responsive center-block" src="{{model.SystemLogo}} " />
+                        </div>
+                    </div>
+                </div>*@
+                            @*<sg-input type="file" datactrl="SystemSetting" name="SystemLogo" label="@_localizer.GetString("Admin.SystemSetting.SystemLogo")" multiple="true" ng-model="model.SystemLogo" kk="SystemLogo"></sg-input>
+                            <div class="container">
+                                <div class="col-md-12" style="margin-top: 15px;">
+                                    <div class="row">
+                                        <div class="col-md-12" id="SystemLogo">
+                                            <div ng-if="model.SystemLogo != null">
+                                                <img class="img-responsive" style="max-width: 100%;" src="{{model.SystemLogo}}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>*@
+                            <sg-input type="text" name="SystemContactNumber" label="@_localizer.GetString("Admin.SystemSetting.SystemContactNumber")" ng-model="model.SystemContactNumber" ng-required="true"></sg-input>
+                            <sg-input type="text" name="FildLogInNumber" label="@_localizer.GetString("Admin.SystemSetting.SystemFildLogInNumber")" ng-model="model.FildLogInNumber" ng-required="true"></sg-input>
+                        </sg-tab>
+                    </sg-tabs>
+                    <sg-tabs>
+                        <sg-tab title="@_localizer.GetString("Admin.SystemSetting.AboutHome")">
+                            <sg-input type="text" name="AboutHomeTitle" label="@_localizer.GetString("Admin.SystemSetting.AboutHomeTitle")" ng-model="model.AboutHomeTitle" ng-required="true"></sg-input>
+                            <sg-input type="text" name="AboutHomeTitleAR" label="@_localizer.GetString("Admin.SystemSetting.AboutHomeTitleAR")" ng-model="model.AboutHomeTitleAR" ng-required="true"></sg-input>
+                            @*<sg-input type="text" name="AboutHomeSubTitle" label="@_localizer.GetString("Admin.SystemSetting.AboutHomeSubTitle")" ng-model="model.AboutHomeSubTitle" ng-required="true"></sg-input>
+                <sg-input type="text" name="AboutHomeSubTitleAR" label="@_localizer.GetString("Admin.SystemSetting.AboutHomeSubTitleAR")" ng-model="model.AboutHomeSubTitleAR" ng-required="true"></sg-input>*@
+
+                            <div class="row test">
+                                <div class="col-2"><label>@_localizer.GetString("Admin.SystemSetting.AboutHomeDescriptionAr")</label></div>
+                                <div class="col-10 text-center">
+                                    <div text-angular="text-angular" name="AboutHomeDescriptionAR" label="@_localizer.GetString("Admin.SystemSetting.AboutHomeDescriptionAR")" ng-model="model.AboutHomeDescriptionAR" ng-required="true"></div>
+                                </div>
+                                <div class="col-2"><label>@_localizer.GetString("Admin.SystemSetting.AboutHomeDescription")</label></div>
+                                <div class="col-10 text-center">
+                                    <div text-angular="text-angular" name="AboutHomeDescription" label="@_localizer.GetString("Admin.SystemSetting.AboutHomeDescription")" ng-model="model.AboutHomeDescription" ng-required="true"></div>
+                                </div>
+                            </div>
+
+
+                            @*<sg-input type="singlefile" name="AboutHomeImage" label="@_localizer.GetString("Admin.SystemSetting.AboutHomeImage")" ng-model="model.AboutHomeImage" ng-required="true"></sg-input>
+                <div class="container">
+                    <div class="row" style="margin-top: 15px;" ng-if="model.AboutHomeImage != null">
+                        <div class="col-xs-6">
+                            <img class="img-responsive center-block" src="{{model.AboutHomeImage}} " />
+                        </div>
+                    </div>
+                </div>*@
+
+                            <sg-input type="file" datactrl="SystemSetting" name="AboutHomeImage" label="@_localizer.GetString("Admin.SystemSetting.AboutHomeImage")" multiple="true" ng-model="model.AboutHomeImage" kk="AboutHomeImage"></sg-input>
+                            <div class="container">
+                                <div class="col-md-12" style="margin-top: 15px;">
+                                    <div class="row">
+                                        <div class="col-md-12" id="AboutHomeImage">
+                                            <div ng-if="model.AboutHomeImage != null">
+                                                <img class="img-responsive" style="max-width: 100%;" src="{{model.AboutHomeImage}}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row test">
+                                <div class="col-2"><label>@_localizer.GetString("Admin.SystemSetting.AboutHomeFooterDescriptionAr")</label></div>
+                                <div class="col-10 text-center">
+                                    <div text-angular="text-angular" name="AboutHomeFooterDescriptionAr" label="@_localizer.GetString("Admin.SystemSetting.AboutHomeFooterDescriptionAr")" ng-model="model.AboutHomeFooterDescriptionAr" ng-required="true"></div>
+                                </div>
+                                <div class="col-2"><label>@_localizer.GetString("Admin.SystemSetting.AboutHomeFooterDescription")</label></div>
+                                <div class="col-10 text-center">
+                                    <div text-angular="text-angular" name="AboutHomeFooterDescription" label="@_localizer.GetString("Admin.SystemSetting.AboutHomeFooterDescription")" ng-model="model.AboutHomeFooterDescription" ng-required="true"></div>
+                                </div>
+                            </div>
+                        </sg-tab>
+                    </sg-tabs>
+                    <style>
+                        .divDash {
+                            outline-color: black;
+                            outline-style: dashed;
+                            padding: 11px;
+                            margin: 9px 0px 18px 0px;
+                        }
+
+                        .blueDash {
+                            outline-color: #dd4b39;
+                        }
+
+                        .greenDash {
+                            outline-color: #4caf50;
+                        }
+
+                        .panel-title {
+                            text-align: center;
+                            margin-top: 2%;
+                        }
+
+                        .btn-toolbar {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center !important;
+                        }
+
+                        .form-control, label, input::placeholder {
+                            line-height: 1.1;
+                            height: 100% !important;
+                        }
+
+                        hr {
+                            border: none;
+                            height: 2px;
+                            /* Set the hr color */
+                            color: #13688c; /* old IE */
+                            background-color: #13688c; /* Modern Browsers */
+                        }
+                    </style>
+
+                    <sg-tabs>
+                        <sg-tab title="@_localizer.GetString("Admin.SystemSetting.EmailSetting")">
+                            <sg-input type="text" name="Email" label="@_localizer.GetString("Admin.SystemSetting.Email")" ng-model="model.Email" ng-required="true"></sg-input>
+                            <sg-input type="text" name="SMTP" label="@_localizer.GetString("Admin.SystemSetting.SMTP")" ng-model="model.SMTP" ng-required="true"></sg-input>
+                            <sg-input type="text" name="EmailUserName" label="@_localizer.GetString("Admin.SystemSetting.EmailUserName")" ng-model="model.EmailUserName" ng-required="true"></sg-input>
+                            <sg-input type="text" name="EmailPassword" label="@_localizer.GetString("Admin.SystemSetting.EmailPassword")" ng-model="model.EmailPassword" ng-required="true"></sg-input>
+                            <sg-input type="text" name="Port" label="@_localizer.GetString("Admin.SystemSetting.Port")" ng-model="model.Port" ng-required="true"></sg-input>
+                        </sg-tab>
+                    </sg-tabs>
+                    @*Promotion*@
+
+                    <sg-tabs>
+                        <sg-tab title="@_localizer.GetString("Admin.SystemSetting.Promotion")">
+                            <sg-input type="text" name="PromotionTitle" label="@_localizer.GetString("Admin.SystemSetting.PromotionTitle")" ng-model="model.PromotionTitle" ng-required="true"></sg-input>
+                            <sg-input type="text" name="PromotionTitleAR" label="@_localizer.GetString("Admin.SystemSetting.PromotionTitleAR")" ng-model="model.PromotionTitleAR" ng-required="true"></sg-input>
+
+                            <div class="row test">
+                                <div class="col-2"><label>@_localizer.GetString("Admin.SystemSetting.PromotionDescriptionAR")</label></div>
+                                <div class="col-10 text-center">
+                                    <div text-angular="text-angular" name="PromotionDescriptionAR" label="@_localizer.GetString("Admin.SystemSetting.PromotionDescriptionAR")" ng-model="model.PromotionDescriptionAR" ng-required="true"></div>
+                                </div>
+                                <div class="col-2"><label>@_localizer.GetString("Admin.SystemSetting.PromotionDescription")</label></div>
+                                <div class="col-10 text-center">
+                                    <div text-angular="text-angular" name="PromotionDescription" label="@_localizer.GetString("Admin.SystemSetting.PromotionDescription")" ng-model="model.PromotionDescription" ng-required="true"></div>
+                                </div>
+                            </div>
+
+
+                            @*<sg-input type="singlefile" name="PromotionImage" label="@_localizer.GetString("Admin.SystemSetting.PromotionImage")" ng-model="model.PromotionImage" ng-required="true"></sg-input>
+                <div class="container">
+                    <div class="row" style="margin-top: 15px;" ng-if="model.PromotionImage != null">
+                        <div class="col-xs-6">
+                            <img class="img-responsive center-block" src="{{model.PromotionImage}} " />
+                        </div>
+                    </div>
+                </div>*@
+                            <sg-input type="file" datactrl="SystemSetting" name="PromotionImage" label="@_localizer.GetString("Admin.SystemSetting.PromotionImage")" multiple="true" ng-model="model.PromotionImage" kk="PromotionImage"></sg-input>
+                            <div class="container">
+                                <div class="col-md-12" style="margin-top: 15px;">
+                                    <div class="row">
+                                        <div class="col-md-12" id="PromotionImage">
+                                            <div ng-if="model.PromotionImage != null">
+                                                <img class="img-responsive" style="max-width: 100%;" src="{{model.PromotionImage}}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </sg-tab>
+                    </sg-tabs>
+                    @*End Promotion*@
+                    <sg-tabs>
+                        <sg-tab title="@_localizer.GetString("Admin.SystemSetting.FooterSetting")">
+                            <sg-input type="text" name="FooterContactNumber" label="@_localizer.GetString("Admin.SystemSetting.FooterContactNumber")" ng-model="model.FooterContactNumber" ng-required="true"></sg-input>
+                            <sg-input type="text" name="FooterContactEmail" label="@_localizer.GetString("Admin.SystemSetting.FooterContactEmail")" ng-model="model.FooterContactEmail" ng-required="true"></sg-input>
+                            <sg-input type="text" name="FooterAdressEnglish" label="@_localizer.GetString("Admin.SystemSetting.FooterAdressEnglish")" ng-model="model.FooterAdressEnglish" ng-required="true"></sg-input>
+                            <sg-input type="text" name="FooterAdressArabic" label="@_localizer.GetString("Admin.SystemSetting.FooterAdressArabic")" ng-model="model.FooterAdressArabic" ng-required="true"></sg-input>
+                            <sg-input type="text" name="FooterFacebook" label="@_localizer.GetString("Admin.SystemSetting.FooterFacebook")" ng-model="model.FooterFacebook" ng-required="true"></sg-input>
+                            <sg-input type="text" name="FooterTwitter" label="@_localizer.GetString("Admin.SystemSetting.FooterTwitter")" ng-model="model.FooterTwitter" ng-required="true"></sg-input>
+                            <sg-input type="text" name="FooterLinedIn" label="@_localizer.GetString("Admin.SystemSetting.FooterLinedIn")" ng-model="model.FooterLinedIn" ng-required="true"></sg-input>
+                            <sg-input type="text" name="FooterCopyRightsEnglish" label="@_localizer.GetString("Admin.SystemSetting.FooterCopyRightsEnglish")" ng-model="model.FooterCopyRightsEnglish" ng-required="true"></sg-input>
+                            <sg-input type="text" name="FooterCopyRightsArabic" label="@_localizer.GetString("Admin.SystemSetting.FooterCopyRightsArabic")" ng-model="model.FooterCopyRightsArabic" ng-required="true"></sg-input>
+                        </sg-tab>
+                    </sg-tabs>
+
+                    <sg-tabs>
+                        <sg-tab title="@_localizer.GetString("Admin.SystemSetting.Terms & Conditions")">
+
+                            <div class="row test">
+                                <div class="col-2"><label>@_localizer.GetString("Admin.SystemSetting.ConditionsDescriptionAr")</label></div>
+                                <div class="col-10 text-center">
+                                    <div text-angular="text-angular" name="ConditionsDescriptionAr" label="@_localizer.GetString("Admin.SystemSetting.ConditionsDescriptionAr")" ng-model="model.ConditionsDescriptionAr" ng-required="true"></div>
+                                </div>
+                                <div class="col-2"><label>@_localizer.GetString("Admin.SystemSetting.ConditionsDescriptionEn")</label></div>
+                                <div class="col-10 text-center">
+                                    <div text-angular="text-angular" name="ConditionsDescriptionEn" label="@_localizer.GetString("Admin.SystemSetting.ConditionsDescriptionEn")" ng-model="model.ConditionsDescriptionEn" ng-required="true"></div>
+                                </div>
+                            </div>
+                        </sg-tab>
+                    </sg-tabs>
+
+
+                    <sg-tabs>
+                        <sg-tab title="@_localizer.GetString("Admin.SystemSetting.Privacy & Policy")">
+
+                            <div class="row test">
+                                <div class="col-2"><label>@_localizer.GetString("Admin.SystemSetting.PrivacyPolicyDescriptionAr")</label></div>
+                                <div class="col-10 text-center">
+                                    <div text-angular="text-angular" name="PrivacyPolicyDescriptionAr" label="@_localizer.GetString("Admin.SystemSetting.PrivacyPolicyDescriptionAr")" ng-model="model.PrivacyPolicyDescriptionAr" ng-required="true"></div>
+                                </div>
+                                <div class="col-2"><label>@_localizer.GetString("Admin.SystemSetting.PrivacyPolicyDescriptionEn")</label></div>
+                                <div class="col-10 text-center">
+                                    <div text-angular="text-angular" name="PrivacyPolicyDescriptionEn" label="@_localizer.GetString("Admin.SystemSetting.PrivacyPolicyDescriptionEn")" ng-model="model.PrivacyPolicyDescriptionEn" ng-required="true"></div>
+                                </div>
+                            </div>
+                        </sg-tab>
+                    </sg-tabs>
+
+
+
+                    <sg-tabs>
+
+                        <sg-tab title="@_localizer.GetString("Admin.SystemSetting.BookingSettings")">
+                            <sg-input type="checkbox" name="BookingChargeStatus" label="@_localizer.GetString("Admin.SystemSetting.BookingChargeStatus")" ng-model="BookingChargeStatusChecked"></sg-input>
+
+                            <sg-input type="number" ng-show="BookingChargeStatusChecked" class="ng-hide" name="BookingCharge" label="@_localizer.GetString("Admin.SystemSetting.BookingCharge")" ng-model="model.BookingCharge"></sg-input>
+
+                            <sg-input type="checkbox" name="MaxSeatStatus" label="@_localizer.GetString("Admin.SystemSetting.MaxSeatStatus")" ng-model="MaxSeatStatusChecked"></sg-input>
+
+                            <sg-input type="number" ng-show="MaxSeatStatusChecked" class="ng-hide" name="MaxSeat" label="@_localizer.GetString("Admin.SystemSetting.MaxSeat")" ng-model="model.MaxSeat"></sg-input>
+
+                            <sg-input type="checkbox" name="EmptySeatStatus" label="@_localizer.GetString("Admin.SystemSetting.EmptySeatStatus")" ng-model="EmptySeatStatusChecked"></sg-input>
+
+                            <sg-input type="number" ng-show="EmptySeatStatusChecked" class="ng-hide" name="EmptySeat" label="@_localizer.GetString("Admin.SystemSetting.Empty")" ng-model="model.EmptySeat"></sg-input>
+
+                        </sg-tab>
+                    </sg-tabs>
+                    <sg-input type="text" name="SystemLocation" label="@_localizer.GetString("Admin.SystemSetting.SystemLocation")" ng-model="model.SystemLocation" ng-required="true"></sg-input>
+
+                    <sg-input type="text" name="Latitude" label="@_localizer.GetString("Admin.SystemSetting.Latitude")" ng-model="model.Latitude" ng-required="true" disable="true"></sg-input>
+                    <sg-input type="text" name="Longitude" label="@_localizer.GetString("Admin.SystemSetting.Longitude")" ng-model="model.Longitude" ng-required="true" disable="true"></sg-input>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <div style="max-width:100%;height:500px;" class="col-5">
+        @Html.Partial("_EventMap")
+    </div>
+</div>
+

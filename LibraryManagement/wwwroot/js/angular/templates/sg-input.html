@@ -1,0 +1,13 @@
+﻿<div class="row">
+    <label class="control-label col-lg-3">{{label}} {{required == "true" ? '*' : ''}}</label>
+    <div class="col-lg-9 form-control-wrapper" style="position: relative;">
+        <sg style="{{style}}" class="{{class}}" id="{{id}}" sg-type="{{type}}" name="{{name}}" change="{{change}}" keyup="{{keyup}}" disable="{{disable}}" dvalue="{{disable}}" value="{{value}}" checked="{{checked}}" placeholder="{{placeholder}}" step="{{step}}"></sg>
+        <i class="valid-sign ng-invalid text-danger fa fa-remove"></i>
+        <i class="valid-sign ng-valid text-success fa fa-check"></i>
+        <div>
+            <p class="ng-invalid"><i class="fa fa-warning"></i> {{getMessage()}}</p>
+            <p class="ng-invalid ng-form-error" ng-repeat="error in $parent.FormErrors[name]"><i class="fa fa-warning"></i> {{error.ErrorMessage}}</p>
+        </div>
+    </div>
+</div>
+<ng-transclude></ng-transclude>

@@ -1,0 +1,7059 @@
+[
+  {
+    "LocalizedValue": {
+      "ar-AE": "المزيد",
+      "en-US": "View More"
+    },
+    "Key": "Common.ViewMore",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الكل",
+      "en-US": "View All"
+    },
+    "Key": "Common.ViewAll",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الصفحة الرئيسية",
+      "en-US": "Home"
+    },
+    "Key": "Pages.Home",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": " تاريخ البداية",
+      "en-US": "Start Date"
+    },
+    "Key": "Web.Catering.StartDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "من نحن",
+      "en-US": "About Us"
+    },
+    "Key": "Pages.About",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوظائف",
+      "en-US": "Careers"
+    },
+    "Key": "Pages.Career",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اتصل بنا",
+      "en-US": "Contact Us"
+    },
+    "Key": "Pages.Contact",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تسجيل الدخول",
+      "en-US": "Sign In"
+    },
+    "Key": "Common.SignIn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التفاصيل",
+      "en-US": "View Details"
+    },
+    "Key": "Common.ViewDetails",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "البريد الالكتروني",
+      "en-US": "Email"
+    },
+    "Key": "Form.Email",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الهاتف",
+      "en-US": "Phone Number"
+    },
+    "Key": "Form.Phone",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرسالة",
+      "en-US": "Message"
+    },
+    "Key": "Form.Message",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "روابط سريعة",
+      "en-US": "Quick Links"
+    },
+    "Key": "Common.QuickLinks",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تابعنا",
+      "en-US": "Follow Us"
+    },
+    "Key": "Common.FollowUs",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "EN",
+      "en-US": "EN"
+    },
+    "Key": "Language.EN",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "فيما يلي قائمة بالوظائف الشاغرة المتاحة",
+      "en-US": "Here are the list of available vacancies"
+    },
+    "Key": "Pages.CareerList",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اتصل بنا",
+      "en-US": "Contact Us"
+    },
+    "Key": "Pages.CareerContact",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان",
+      "en-US": "Some Cool Title Will Be Here"
+    },
+    "Key": "Pages.CareerContactTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الأخبار",
+      "en-US": "News"
+    },
+    "Key": "Common.News",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الأحداث",
+      "en-US": "Events"
+    },
+    "Key": "Common.Events",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ البداية",
+      "en-US": "Start"
+    },
+    "Key": "Common.Start",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ النهاية",
+      "en-US": "End"
+    },
+    "Key": "Common.End",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تفاصيل الوظيفة",
+      "en-US": "Vacancy Details"
+    },
+    "Key": "Pages.VacancyDetails",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "قدم الآن",
+      "en-US": "Apply Now"
+    },
+    "Key": "Common.ApplyNow",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ التقديم",
+      "en-US": "Applying Date"
+    },
+    "Key": "Vacancy.ApplyingDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تسجيل الدخول",
+      "en-US": "Sign In"
+    },
+    "Key": "Web.SignIn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "البريد الالكتروني",
+      "en-US": "Email"
+    },
+    "Key": "Web.YourEmail",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "كلمة المرور",
+      "en-US": "Password"
+    },
+    "Key": "Web.YourPassword",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "هل نسيت كلمة المرور",
+      "en-US": "Forget Password"
+    },
+    "Key": "Web.ForgotPassword",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ليس لديك حساب",
+      "en-US": "Dont Have An Account"
+    },
+    "Key": "Web.DontHaveanAccount",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الغاء",
+      "en-US": "Cancel"
+    },
+    "Key": "Common.Cancel",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تعديل",
+      "en-US": "Update"
+    },
+    "Key": "Common.Update",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تعديل",
+      "en-US": "Edit"
+    },
+    "Key": "Common.Edit",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الحالة الاجتماعية",
+      "en-US": "Social Status"
+    },
+    "Key": "Web.SocialStatus",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الجنسية",
+      "en-US": "Nationality"
+    },
+    "Key": "Web.Nationality",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "غير متزوج",
+      "en-US": "Single"
+    },
+    "Key": "Web.Single",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "متزوج",
+      "en-US": "Married"
+    },
+    "Key": "Web.Married",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المدينة",
+      "en-US": "City"
+    },
+    "Key": "Web.City",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "القطعة",
+      "en-US": "Block"
+    },
+    "Key": "Web.Block",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الشارع",
+      "en-US": "Street"
+    },
+    "Key": "Web.Street",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المنطقة",
+      "en-US": "Avenue"
+    },
+    "Key": "Web.Avenue",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم المبنى",
+      "en-US": "Building Number"
+    },
+    "Key": "Web.BuildingNumber",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا",
+      "en-US": "No"
+    },
+    "Key": "Common.No",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان",
+      "en-US": "Current Address"
+    },
+    "Key": "Web.CurrentAddress",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رمز البريد",
+      "en-US": "PostBox Number"
+    },
+    "Key": "Web.PostBoxNo",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "في اي قسم يعمل",
+      "en-US": "Which part he is working for"
+    },
+    "Key": "Web.ForWhichpartyheisworkingfor?",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أقارب يمكن الاتصال بهم",
+      "en-US": "Relatives Persons We Can Call"
+    },
+    "Key": "Web.RelativesPersonswecancallthem?",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الهاتف",
+      "en-US": "Mobile Number"
+    },
+    "Key": "Web.MobileNumber",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم الأول",
+      "en-US": "First Name"
+    },
+    "Key": "Web.FirstName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم الثاني",
+      "en-US": "Second Name"
+    },
+    "Key": "Web.SecondName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم الأخير",
+      "en-US": "Family Name"
+    },
+    "Key": "Web.Surname",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الخبرات",
+      "en-US": "Experience"
+    },
+    "Key": "Web.Experience",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "السابقة",
+      "en-US": "Previous Work"
+    },
+    "Key": "Web.Previous Work",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المعلومات الشخصية",
+      "en-US": "Personal Info"
+    },
+    "Key": "Web.PersonalInfo",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مستندات الهوية",
+      "en-US": "Identification Document"
+    },
+    "Key": "Web.IdentificationDocumentAttaching",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تحميل",
+      "en-US": "Upload"
+    },
+    "Key": "Common.Upload",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إغلاق",
+      "en-US": "Close"
+    },
+    "Key": "Pages.Applied.Close",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حسابي",
+      "en-US": "My Account"
+    },
+    "Key": "Web.MyAccount",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الجامعة",
+      "en-US": "University"
+    },
+    "Key": "Web.University",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "السنة",
+      "en-US": "Year"
+    },
+    "Key": "Web.Year",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "من",
+      "en-US": "From"
+    },
+    "Key": "Web.From",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تعديل",
+      "en-US": "Edit"
+    },
+    "Key": "Web.Common.Edit",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التالي",
+      "en-US": "Next"
+    },
+    "Key": "Web.Common.Next",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "نعم",
+      "en-US": "Yes"
+    },
+    "Key": "Web.Yes",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا",
+      "en-US": "No"
+    },
+    "Key": "Web.No",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اضافة",
+      "en-US": "Add"
+    },
+    "Key": "Web.Common.Add",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوظائف",
+      "en-US": "Vacancies"
+    },
+    "Key": "Web.Vacancies",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوظائف المقدم عليها مسبقا",
+      "en-US": "Previously Applied Vacancies"
+    },
+    "Key": "Web.PreviouslyAppliedVacancies",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوظائف قيد المعالجة",
+      "en-US": "In Process Vacancies"
+    },
+    "Key": "Web.InProcessVacancies",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم الثاني",
+      "en-US": "Your Second Name"
+    },
+    "Key": "Web.YourSecondName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم الاخير",
+      "en-US": "Your Last Name"
+    },
+    "Key": "Web.YourLastName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الهاتف",
+      "en-US": "Your Mobile"
+    },
+    "Key": "Web.YourMobile",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تأكيد كلمة المرور",
+      "en-US": "Confirm Password"
+    },
+    "Key": "Web.ConfirmPassword",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "هل لديك حساب",
+      "en-US": "Already havean Account"
+    },
+    "Key": "Web.AlreadyhaveanAccount",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تسجيل حساب",
+      "en-US": "Sign Up"
+    },
+    "Key": "Web.SignUp",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الى",
+      "en-US": "To"
+    },
+    "Key": "Web.To",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "انشاء حساب",
+      "en-US": "Create Your Account"
+    },
+    "Key": "Web.CreateYourAccount",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوظائف",
+      "en-US": "Vacancy"
+    },
+    "Key": "Admin.Vacancy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم الاول",
+      "en-US": "Your First Name"
+    },
+    "Key": "Web.YourFirstName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وصف قصير",
+      "en-US": "Short Description"
+    },
+    "Key": "Admin.Vacancy.ShortDescription",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وصف كامل",
+      "en-US": "FullDescription"
+    },
+    "Key": "Admin.Vacancy.FullDescription",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "بداية التقديم",
+      "en-US": "Start Date"
+    },
+    "Key": "Admin.Vacancy.SDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "نهاية التقديم",
+      "en-US": "End Date"
+    },
+    "Key": "Admin.Vacancy.EDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اقل علامة للنجاح",
+      "en-US": "Minimum Grade To Pass"
+    },
+    "Key": "Admin.Vacancy.MinimumGrade",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "نشر",
+      "en-US": "Publish"
+    },
+    "Key": "Admin.Vacancy.IsPublish",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المقيمين",
+      "en-US": "Vacancy Evaluator"
+    },
+    "Key": "Admin.Vacancy.VacancyEvaluator",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الدور الوظيفي",
+      "en-US": "Job Role"
+    },
+    "Key": "Web.JobRole",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إلغاء",
+      "en-US": "Cancel"
+    },
+    "Key": "Web.Common.Cancel",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التالي",
+      "en-US": "Proceed to Next"
+    },
+    "Key": "Proceed to Next",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ارفاق ملف",
+      "en-US": "Attach Prove"
+    },
+    "Key": "Web.AttachProve",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التالي",
+      "en-US": "Proceed to Next"
+    },
+    "Key": "Web.Proceed to Next",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرقم المدني",
+      "en-US": "Civil Id"
+    },
+    "Key": "Web.CivilId",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "قادة الفريق",
+      "en-US": "Team Leaders"
+    },
+    "Key": "Web.Team Leaders",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تحميل ملف",
+      "en-US": "Upload"
+    },
+    "Key": "Web.Upload",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المستندات المطلوبة",
+      "en-US": "Needed Documents"
+    },
+    "Key": "Web.NeededDocuments",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "سبب ترك العمل سابق",
+      "en-US": "Left Job Reson"
+    },
+    "Key": "Web.LeftJobReson",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أضف لغة أخرى",
+      "en-US": "Add Other Language"
+    },
+    "Key": "Web.AddOtherLanguage",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تحميل المرفق الخاص بك",
+      "en-US": "Upload Your Attachment"
+    },
+    "Key": "Web.UploadYourAttachment",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Web.Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وظائفي",
+      "en-US": "User Vacancies"
+    },
+    "Key": "Web.UserVacancies",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم تسجيل مسبقا رقم الطلب",
+      "en-US": "Already Applied"
+    },
+    "Key": "Admin.Already Applied",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم التسجيل بنجاح رقم الطلب",
+      "en-US": "Applied Successfully"
+    },
+    "Key": "Admin.AppliedSuccessfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الموقع العام",
+      "en-US": "Public Site"
+    },
+    "Key": "Admin.PublicSite",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "البريد الإلكتروني",
+      "en-US": "Email"
+    },
+    "Key": "Admin.User.Email",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الهاتف",
+      "en-US": "Mobile"
+    },
+    "Key": "Admin.User.Mobile",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "النظام",
+      "en-US": "System"
+    },
+    "Key": "Seagull.System",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل مستخدم",
+      "en-US": "Add or Edit User"
+    },
+    "Key": "Admin.User.AddEdit",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم الثاني",
+      "en-US": "Second Name"
+    },
+    "Key": "Admin.User.SecondName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "كلمة السر",
+      "en-US": "Password"
+    },
+    "Key": "Admin.User.Password",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المدينة",
+      "en-US": "City"
+    },
+    "Key": "Admin.User.City",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان الرئيسي",
+      "en-US": "Full Address"
+    },
+    "Key": "Admin.User.FullAdress",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ الميلاد",
+      "en-US": "BirthDate"
+    },
+    "Key": "Admin.User.BirthDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرقم",
+      "en-US": "Id"
+    },
+    "Key": "Admin.User.Id",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Admin.User.Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حذف مستخدم",
+      "en-US": "Delete User"
+    },
+    "Key": "Admin.Delete.User",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تأكيد حذف المستخدم",
+      "en-US": "Confirm Delete User"
+    },
+    "Key": "Admin.Delete.Confirm.User",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Admin.Localization.Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الترجمات والمصطلحات بالعربية",
+      "en-US": "الترجمات والمصطلحات بالعربية"
+    },
+    "Key": "Admin.Localization.Arabic",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حفظ",
+      "en-US": "Save"
+    },
+    "Key": "ADMIN.LOCALIZATIONS.SAVE",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إعدادات النظام",
+      "en-US": "System Settings"
+    },
+    "Key": "Admin.SystemSetting",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل إعدادات النظام",
+      "en-US": "Add Or Edit System Settings"
+    },
+    "Key": "Admin.SystemSetting.AddEdit",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إعدادات عامة",
+      "en-US": "Global Setting"
+    },
+    "Key": "Admin.SystemSetting.GlobalSetting",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "شعار النظام",
+      "en-US": "System Logo"
+    },
+    "Key": "Admin.SystemSetting.SystemLogo",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الاتصال للنظام",
+      "en-US": "System Contact Number"
+    },
+    "Key": "Admin.SystemSetting.SystemContactNumber",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "البريد الإلكتروني",
+      "en-US": "Email"
+    },
+    "Key": "Admin.SystemSetting.Email",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إعدادات البريد الإلكتروني",
+      "en-US": "Email Settings"
+    },
+    "Key": "Admin.SystemSetting.EmailSetting",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "SMTP",
+      "en-US": "SMTP"
+    },
+    "Key": "Admin.SystemSetting.SMTP",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم المستخدم",
+      "en-US": "User Name"
+    },
+    "Key": "Admin.SystemSetting.EmailUserName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "كلمة المرور",
+      "en-US": "Password"
+    },
+    "Key": "Admin.SystemSetting.EmailPassword",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "Port",
+      "en-US": "Port"
+    },
+    "Key": "Admin.SystemSetting.Port",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إعدادات التذييل",
+      "en-US": "Footer Settings"
+    },
+    "Key": "Admin.SystemSetting.FooterSetting",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وصف قصير باللغة العربية",
+      "en-US": "Short Description AR"
+    },
+    "Key": "Admin.Vacancy.ShortDescriptionAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوصف باللغة العربية",
+      "en-US": "Description in Arabic"
+    },
+    "Key": "Admin.SystemSetting.FooterDescriptionArabic",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الاتصال",
+      "en-US": "Contact Number"
+    },
+    "Key": "Admin.SystemSetting.FooterContactNumber",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "البريد الإلكتروني",
+      "en-US": "Email"
+    },
+    "Key": "Admin.SystemSetting.FooterContactEmail",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان باللغة العربية",
+      "en-US": "Address in Arabic"
+    },
+    "Key": "Admin.SystemSetting.FooterAdressArabic",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حساب الفيسبوك",
+      "en-US": "Facebook Account"
+    },
+    "Key": "Admin.SystemSetting.FooterFacebook",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حساب تويتر",
+      "en-US": "Twitter Account"
+    },
+    "Key": "Admin.SystemSetting.FooterTwitter",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حساب جوجل بلس",
+      "en-US": "GooglePlus Account"
+    },
+    "Key": "Admin.SystemSetting.FooterGooglePlus",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الشروط والأحكام باللغة العربية",
+      "en-US": "Terms and Conditions in Arabic"
+    },
+    "Key": "Admin.SystemSetting.FooterTermsandConditionArabic",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الشروط والأحكام باللغة الإنجليزية",
+      "en-US": "Terms and Conditions in English"
+    },
+    "Key": "Admin.SystemSetting.FooterTermsandConditionEnglish",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حقوق النشر باللغة الإنجليزية",
+      "en-US": "CopyRights in English"
+    },
+    "Key": "Admin.SystemSetting.FooterCopyRightsEnglish",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حقوق النشر باللغة العربية",
+      "en-US": "CopyRights in Arabic"
+    },
+    "Key": "Admin.SystemSetting.FooterCopyRightsArabic",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إعدادات حول الصفحة الرئيسية",
+      "en-US": "About Home Settings"
+    },
+    "Key": "Admin.SystemSetting.AboutHome",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان باللغة الإنجليزية",
+      "en-US": "Title in English"
+    },
+    "Key": "Admin.SystemSetting.AboutHomeTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان باللغة العربية",
+      "en-US": "Title in Arabic"
+    },
+    "Key": "Admin.SystemSetting.AboutHomeTitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان الفرعي باللغة الإنجليزية",
+      "en-US": "Sub Title  in English"
+    },
+    "Key": "Admin.SystemSetting.AboutHomeSubTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان الفرعي باللغة العربية",
+      "en-US": "Sub Title in Arabic"
+    },
+    "Key": "Admin.SystemSetting.AboutHomeSubTitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوصف باللغة الإنجليزية",
+      "en-US": "Description in English"
+    },
+    "Key": "Admin.SystemSetting.AboutHomeDescription",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوصف باللغة العربية",
+      "en-US": "Description in Arabic"
+    },
+    "Key": "Admin.SystemSetting.AboutHomeDescriptionAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "صورة",
+      "en-US": "Image"
+    },
+    "Key": "Admin.SystemSetting.AboutHomeImage",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "من نحن",
+      "en-US": "About Us"
+    },
+    "Key": "Admin.SystemSetting.AboutUs",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان باللغة الإنجليزية",
+      "en-US": "Title in English"
+    },
+    "Key": "Admin.SystemSetting.AboutTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان باللغة العربية",
+      "en-US": "Title in Arabic"
+    },
+    "Key": "Admin.SystemSetting.AboutTitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "صورة",
+      "en-US": "Image"
+    },
+    "Key": "Admin.SystemSetting.AboutImage",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوصف باللغة الإنجليزية",
+      "en-US": "Description in English"
+    },
+    "Key": "Admin.SystemSetting.AboutDescription",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوصف باللغة العربية",
+      "en-US": "Description in Arabic"
+    },
+    "Key": "Admin.SystemSetting.AboutDescriptionAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وصف عن العمل باللغة العربية",
+      "en-US": "About Working Description in Arabic"
+    },
+    "Key": "Admin.SystemSetting.AboutWorkingDescriptionAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان عن العمل باللغة الإنجليزية",
+      "en-US": "About Working Title in English"
+    },
+    "Key": "Admin.SystemSetting.AboutWorkingTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان عن العمل باللغة العربية",
+      "en-US": "About Working Title in Arabic"
+    },
+    "Key": "Admin.SystemSetting.AboutWorkingTitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان الفرعي لعن العمل  باللغة الإنجليزية",
+      "en-US": "About Working Sub Title in English"
+    },
+    "Key": "Admin.SystemSetting.AboutWorkingSubTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان الفرعي لعن العمل  باللغة الإنجليزية",
+      "en-US": "About Working Sub Title in English"
+    },
+    "Key": "Admin.SystemSetting.AboutWorkingSubTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان الفرعي لعن العمل باللغة العربية",
+      "en-US": "About Working Sub Title in Arabic"
+    },
+    "Key": "Admin.SystemSetting.AboutWorkingSubTitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وصف عن العمل باللغة الإنجليزية",
+      "en-US": "About Working Description in English"
+    },
+    "Key": "Admin.SystemSetting.AboutWorkingDescription",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "صورة",
+      "en-US": "Image"
+    },
+    "Key": "Admin.SystemSetting.AboutWorkingImage",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إعدادات المهمة والرؤية",
+      "en-US": "Mission and Vision Settings"
+    },
+    "Key": "Admin.SystemSetting.MissionVision",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "صورة",
+      "en-US": "Image"
+    },
+    "Key": "Admin.SystemSetting.MissionImage",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان المهمة باللغة الإنجليزية",
+      "en-US": "Mission Title in English"
+    },
+    "Key": "Admin.SystemSetting.MissionTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان المهمة باللغة العربية",
+      "en-US": "Mission Title in Arabic"
+    },
+    "Key": "Admin.SystemSetting.MissionTitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وصف المهمة باللغة الإنجليزية",
+      "en-US": "Mission Description in English"
+    },
+    "Key": "Admin.SystemSetting.MissionDescription",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وصف المهمة باللغة العربية",
+      "en-US": "Mission Description in Arabic"
+    },
+    "Key": "Admin.SystemSetting.MissionDescriptionAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "صورة الرؤية",
+      "en-US": "Vision Image"
+    },
+    "Key": "Admin.SystemSetting.VisionImage",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان الرؤية باللغة الإنجليزية",
+      "en-US": "Vision Title in English"
+    },
+    "Key": "Admin.SystemSetting.VisionTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان الرؤية باللغة العربية",
+      "en-US": "Vision Title in Arabic"
+    },
+    "Key": "Admin.SystemSetting.VisionTitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وصف الرؤية باللغة الإنجليزية",
+      "en-US": "Vision Description in English"
+    },
+    "Key": "Admin.SystemSetting.VisionDescription",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وصف الرؤية باللغة العربية",
+      "en-US": "Vision Description in Arabic"
+    },
+    "Key": "Admin.SystemSetting.VisionDescriptionAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إلغاء",
+      "en-US": "DISMISS"
+    },
+    "Key": "ADMIN.LOCALIZATIONS.DISMISS",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان الفرعي للخدمات الرئيسية باللغة الإنجليزية",
+      "en-US": "Services Home Sub Title in English"
+    },
+    "Key": "Admin.SystemSetting.ServicesHomeSubTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان الفرعي للخدمات الرئيسية باللغة العربية",
+      "en-US": "Services Home Sub Title in Arabic"
+    },
+    "Key": "Admin.SystemSetting.ServicesHomeSubTitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إعدادات الخدمات",
+      "en-US": "Services Settings"
+    },
+    "Key": "Admin.SystemSetting.Services",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إعدادات الخدمات الرئيسية",
+      "en-US": "Services Home Settings"
+    },
+    "Key": "Admin.SystemSetting.ServicesHome",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "صورة الخدمات",
+      "en-US": "Services Image"
+    },
+    "Key": "Admin.SystemSetting.ServicesImage",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وصف الخدمات باللغة الإنجليزية",
+      "en-US": "Services Description in English"
+    },
+    "Key": "Admin.SystemSetting.ServicesDescription",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وصف الخدمات باللغة العربية",
+      "en-US": "Services Description in Arabic"
+    },
+    "Key": "Admin.SystemSetting.ServicesDescriptionAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إعدادات الأخبار الرئيسية",
+      "en-US": "News Home Settings"
+    },
+    "Key": "Admin.SystemSetting.NewsHome",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان الأخبار الرئيسية باللغة الإنجليزية",
+      "en-US": "News Home Title in English"
+    },
+    "Key": "Admin.SystemSetting.NewsHomeTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان الأخبار الرئيسية باللغة العربية",
+      "en-US": "News Home Title in Arabic"
+    },
+    "Key": "Admin.SystemSetting.NewsHomeTitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان الفرعي للأخبار الرئيسية باللغة الإنجليزية",
+      "en-US": "News Home Sub Title in English"
+    },
+    "Key": "Admin.SystemSetting.NewsHomeSubTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان الفرعي للأخبار الرئيسية باللغة العربية",
+      "en-US": "News Home Sub Title in Arabic"
+    },
+    "Key": "Admin.SystemSetting.NewsHomeSubTitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إعدادات الاتصال الرئيسية",
+      "en-US": "Contact Home Setting"
+    },
+    "Key": "Admin.SystemSetting.ContactHome",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان الخدمات الرئيسية باللغة الإنجليزية",
+      "en-US": "Services Home Title in English"
+    },
+    "Key": "Admin.SystemSetting.ServicesHomeTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان الخدمات الرئيسية باللغة العربية",
+      "en-US": "Services Home Title in Arabic"
+    },
+    "Key": "Admin.SystemSetting.ServicesHomeTitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان الاتصال باللغة الإنجليزية",
+      "en-US": "Contact Home Title in English"
+    },
+    "Key": "Admin.SystemSetting.ContactHomeTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان الاتصال باللغة العربية",
+      "en-US": "Contact Home Title in Arabic"
+    },
+    "Key": "Admin.SystemSetting.ContactHomeTitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان الفرعي للاتصال باللغة الإنجليزية",
+      "en-US": "Contact Home Sub Title in English"
+    },
+    "Key": "Admin.SystemSetting.ContactHomeSubTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان الفرعي للاتصال باللغة العربية",
+      "en-US": "Contact Home Sub Title in Arabic"
+    },
+    "Key": "Admin.SystemSetting.ContactHomeSubTitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "سياسات الخصوصية باللغة الاإنجليزية",
+      "en-US": "Privacy Policy in English"
+    },
+    "Key": "Admin.SystemSetting.FooterPrivacyPolicyEnglish",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "سياسات الخصوصية باللغة العربية",
+      "en-US": "Privacy Policy in Arabic"
+    },
+    "Key": "Admin.SystemSetting.FooterPrivacyPolicyArabic",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إعدادات النظام",
+      "en-US": "System Settings"
+    },
+    "Key": "Admin.System Settings",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الصفحة الرئيسية",
+      "en-US": "Home Page"
+    },
+    "Key": "Admin.HomePage",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الخدمات",
+      "en-US": "Services"
+    },
+    "Key": "Admin.Services",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان باللغة الإنجليزية",
+      "en-US": "Title in English"
+    },
+    "Key": "Admin.Services.TitleEN",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان باللغة العربية",
+      "en-US": "Title in Arabic"
+    },
+    "Key": "Admin.Services.TitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الترتيب",
+      "en-US": "Sort Order"
+    },
+    "Key": "Admin.Services.SortOrder",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حذف خدمات",
+      "en-US": "Delete Services"
+    },
+    "Key": "Admin.Delete.Services",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تأكيد حذف الخدمات",
+      "en-US": "Confirm Delete Services"
+    },
+    "Key": "Admin.Delete.Confirm.Services",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حساب LinkedIn",
+      "en-US": "LinkedIn Account"
+    },
+    "Key": "Admin.SystemSetting.FooterSeagulldIn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الأخبار",
+      "en-US": "News"
+    },
+    "Key": "Admin.News",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان باللغة الإنجليزية",
+      "en-US": "Title in English"
+    },
+    "Key": "Admin.News.TitleEN",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان باللغة العربية",
+      "en-US": "Title in Arabic"
+    },
+    "Key": "Admin.News.TitleAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حذف أخبار",
+      "en-US": "Delete News"
+    },
+    "Key": "Admin.Delete.News",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تأكيد حذف الخبر",
+      "en-US": "Confirm Delete News"
+    },
+    "Key": "Admin.Delete.Confirm.News",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان الوظيفة باللغة العربية",
+      "en-US": "Job Title in Arabic"
+    },
+    "Key": "Admin.Vacancy.JobTitleAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العدد",
+      "en-US": "Count"
+    },
+    "Key": "Admin.Vacancy.Count",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حذف وظيفة",
+      "en-US": "Delete Vacancy"
+    },
+    "Key": "Admin.Delete.Vacancy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تأكيد حذف الوظيفة",
+      "en-US": "Confirm Delete Vacancy"
+    },
+    "Key": "Admin.Delete.Confirm.Vacancy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل الوظيفة",
+      "en-US": "Add or Edit Vacancy"
+    },
+    "Key": "ADMIN.VACANCY.ADDEDIT",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الدور الوظيفي",
+      "en-US": "Job Role"
+    },
+    "Key": "Admin.JobRole",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "متطلبات الوظيفة",
+      "en-US": "Vacancy Requirements"
+    },
+    "Key": "Admin.Vacancy.Requirements",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المتطلبات باللغة الإنجليزية",
+      "en-US": "Requirements in English"
+    },
+    "Key": "Admin.Requirements.EN",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المتطلبات باللغة العربية",
+      "en-US": "Requirements in Arabic"
+    },
+    "Key": "Admin.Requirements.AR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "متطلبات خاصة باللغة العربية",
+      "en-US": "Special Requirements in Arabic"
+    },
+    "Key": "Admin.User.SpecialRequirementsAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "متطلبات عامة باللغة العربية",
+      "en-US": "General Requirements in Arabic"
+    },
+    "Key": "Admin.User.GeneralRequirementsAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المستندات المطلوبة باللغة الإنجليزية",
+      "en-US": "Needed Documents in English"
+    },
+    "Key": "Admin.User.NeededDocumentsEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "متطلبات خاصة باللغة الإنجليزية",
+      "en-US": "Special Requirements in English"
+    },
+    "Key": "Admin.User.SpecialRequirementsEN",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "متطلبات عامة باللغة الإنجليزية",
+      "en-US": "General Requirements in English"
+    },
+    "Key": "Admin.User.GeneralRequirementsEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المستندات المطلوبة باللغة العربية",
+      "en-US": "Needed Documents in Arabic"
+    },
+    "Key": "Admin.User.NeededDocumentsAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المتطلبات الخاصة",
+      "en-US": "Special Requirements"
+    },
+    "Key": "Admin.Vacancy.SpecialRequirements",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التخصص",
+      "en-US": "Major"
+    },
+    "Key": "Admin.Major",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Admin.Major.Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حذف التخصص",
+      "en-US": "Delete Major"
+    },
+    "Key": "Admin.Delete.Major",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تأكيد حذف التخصص",
+      "en-US": "Confirm Delete Major"
+    },
+    "Key": "Admin.Delete.Confirm.Major",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل",
+      "en-US": "Add or Edit"
+    },
+    "Key": "ADMIN.MAJOR.ADDEDIT",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Admin.EducationalDegree.Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حذف الدرجة التعليمية",
+      "en-US": "Delete Educational Degree"
+    },
+    "Key": "Admin.Delete.EducationalDegree",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تأكيد حذف الدرجة التعليمية",
+      "en-US": "Confirm Delete Educational Degree"
+    },
+    "Key": "Admin.Delete.Confirm.EducationalDegree",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل",
+      "en-US": "Add or Edit"
+    },
+    "Key": "ADMIN.EDUCATIONALDEGREE.ADDEDIT",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الدولة",
+      "en-US": "Country"
+    },
+    "Key": "ADMIN.COUNTRY",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Admin.Country.Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حذف الدولة",
+      "en-US": "Delete Country"
+    },
+    "Key": "Admin.Delete.Country",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تأكيد حذف الدولة",
+      "en-US": "Confirm Delete Country"
+    },
+    "Key": "Admin.Delete.Confirm.Country",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل",
+      "en-US": "Add or Edit"
+    },
+    "Key": "ADMIN.COUNTRY.ADDEDIT",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة الإنجليزية",
+      "en-US": "Name in English"
+    },
+    "Key": "Admin.JobRole.NameEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة العربية",
+      "en-US": "Name in Arabic"
+    },
+    "Key": "Admin.JobRole.NameAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حذف الدور الوظيفي",
+      "en-US": "Delete Job Role"
+    },
+    "Key": "Admin.Delete.JobRole",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تأكيد حذف الدور الوظيفي",
+      "en-US": "Confirm Delete Job Role"
+    },
+    "Key": "Admin.Delete.Confirm.JobRole",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل",
+      "en-US": "Add or Edit"
+    },
+    "Key": "ADMIN.JOBROLE.ADDEDIT",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لغة المستخدم",
+      "en-US": "User Language"
+    },
+    "Key": "ADMIN.USERLANGUAGE",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Admin.Userlanguage.Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل",
+      "en-US": "Add or Edit"
+    },
+    "Key": "Admin.Userlanguage.AddEdit",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حذف لغة المستخدم",
+      "en-US": "Delete User Language"
+    },
+    "Key": "Admin.Delete.Userlanguage",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تأكيد حذف لغة المستخدم",
+      "en-US": "Confirm Delete User Language"
+    },
+    "Key": "Admin.Delete.Confirm.Userlanguage",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرفض",
+      "en-US": "Rejection"
+    },
+    "Key": "ADMIN.REJECTION",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Admin.Rejection.Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل",
+      "en-US": "Add or Edit"
+    },
+    "Key": "ADMIN.REJECTION.ADDEDIT",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حذف الرفض",
+      "en-US": "Delete Rejection"
+    },
+    "Key": "Admin.Delete.Rejection",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تأكيد حذف الرفض",
+      "en-US": "Confirm Delete Rejection"
+    },
+    "Key": "Admin.Delete.Confirm.Rejection",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوصف باللغة الإنجليزية",
+      "en-US": "Description in English"
+    },
+    "Key": "Admin.Banners.DescriptionEN",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوصف باللغة العربية",
+      "en-US": "Description in Arabic"
+    },
+    "Key": "Admin.Banners.DescriptionAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الصورة",
+      "en-US": "Image"
+    },
+    "Key": "Admin.Banners.Image",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الترتيب",
+      "en-US": "Sort Order"
+    },
+    "Key": "Admin.Banners.SortOrder",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل",
+      "en-US": "Add or Edit"
+    },
+    "Key": "ADMIN.BANNERS.ADDEDIT",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة العربية",
+      "en-US": "Name in Arabic"
+    },
+    "Key": "Admin.VacancyPostStatus.NameAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل",
+      "en-US": "Add or Edit"
+    },
+    "Key": "ADMIN.VACANCY.ADDEDITVACANCYPOSTSTATUS",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "البريد الإلكتروني",
+      "en-US": "Email"
+    },
+    "Key": "Seagull.Login.Email",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "كلمة المرور",
+      "en-US": "Password"
+    },
+    "Key": "Seagull.Login.Password",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم المستخدم",
+      "en-US": "User Name"
+    },
+    "Key": "Seagull.Login.UserName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "دخول",
+      "en-US": "Enter"
+    },
+    "Key": "LINE.LOGIN.ENTER",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عمليات البحث",
+      "en-US": "Lookups"
+    },
+    "Key": "Admin.Lookups",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اللافتات",
+      "en-US": "Banners"
+    },
+    "Key": "Admin.Banners",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اللافتات",
+      "en-US": "Banners"
+    },
+    "Key": "ADMIN.BANNERS",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرقم",
+      "en-US": "Id"
+    },
+    "Key": "Admin.VacancyPostStatus.Id",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حالة الوظيفة",
+      "en-US": "Vacancy Post Status"
+    },
+    "Key": "ADMIN.VACANCYPOSTSTATUS",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة الإنجليزية",
+      "en-US": "Name in English"
+    },
+    "Key": "Admin.VacancyPostStatus.NameEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حذف حالة الوظيفة",
+      "en-US": "Vacancy Post Status"
+    },
+    "Key": "Admin.Delete.VacancyPostStatus",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تأكيد حذف حالة الوظيفة",
+      "en-US": "Confirm Delete Vacancy Post Status"
+    },
+    "Key": "Admin.Delete.Confirm.VacancyPostStatus",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "غير مسموح بالدخول",
+      "en-US": "Access Denied"
+    },
+    "Key": "Admin.AccessDenied",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تقييم الوظائف",
+      "en-US": "Rating Vacancy"
+    },
+    "Key": "Admin.RatingVacancy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تقييم الوظائف",
+      "en-US": "Rating Vacancy"
+    },
+    "Key": "Admin.RatingVacancy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تقييم الوظائف",
+      "en-US": "Rating Vacancy"
+    },
+    "Key": "Admin.RatingVacancy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان الوظيفة باللغة الإنجليزية",
+      "en-US": "Job Title in English"
+    },
+    "Key": "Admin.RatingVacancy.JobTitleEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان الوظيفة باللغة العربية",
+      "en-US": "Job Title in Arabic"
+    },
+    "Key": "Admin.RatingVacancy.JobTitleAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم المستخدم",
+      "en-US": "User Name"
+    },
+    "Key": "Admin.RatingVacancy.UserName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العلامة",
+      "en-US": "Mark"
+    },
+    "Key": "Admin.RatingVacancy.Mark",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Admin.RatingVacancy.KPIName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تعديل",
+      "en-US": "Update"
+    },
+    "Key": "ADMIN.UPDATEKPI",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "جار التحميل",
+      "en-US": "Loading"
+    },
+    "Key": "Admin.Loading",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المستخدمون",
+      "en-US": "Users"
+    },
+    "Key": "Admin.Users",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أهداف الجهاز",
+      "en-US": "Services"
+    },
+    "Key": "Pages.Services",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إدارة الصلاحيات",
+      "en-US": "Permissions Configuration"
+    },
+    "Key": "ADMIN.CONFBIGURATION.ACL",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة معيار",
+      "en-US": "Add KPI"
+    },
+    "Key": "Admin.Vacancy.vacancyKPI.Add",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اتصل بنا",
+      "en-US": "Contact Us"
+    },
+    "Key": "Admin.ContactUs",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Admin.ContactUs.Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "البريد الإلكتروني",
+      "en-US": "Email"
+    },
+    "Key": "Admin.ContactUs.Email",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الهاتف",
+      "en-US": "Phone Number"
+    },
+    "Key": "Admin.ContactUs.PhoneNumber",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرسالة",
+      "en-US": "Message"
+    },
+    "Key": "Admin.ContactUs.Message",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرسالة",
+      "en-US": "Message"
+    },
+    "Key": "Admin.ContactUs.Msg",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرسائل",
+      "en-US": "Messages"
+    },
+    "Key": "ADMIN.CONTACTUS.ADDEDIT",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوظائف",
+      "en-US": "Careers"
+    },
+    "Key": "Web.Career",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "سياسة الخصوصية",
+      "en-US": "Policy"
+    },
+    "Key": "Common.Policy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لوحة التحكم",
+      "en-US": "Administration"
+    },
+    "Key": "Web.AdminLogIn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الصلاحيات",
+      "en-US": "Permissions"
+    },
+    "Key": "Admin.Permissions",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اللغات المتاحة",
+      "en-US": "Available Languages"
+    },
+    "Key": "Web.AvailableLanguage",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم الدخول بنجاح",
+      "en-US": "Login successfully"
+    },
+    "Key": "Admin.Login Success",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "فشل تسجيل الدخول ، يرجى إدخال بيانات الاعتماد الصحيحة",
+      "en-US": "Login Failed, Please enter correct credentials"
+    },
+    "Key": "Admin.LoginFailed.Pleaseentercorrectcredentials",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوظائف السابقة",
+      "en-US": "Previous Job Profile"
+    },
+    "Key": "Web.Common.PreviousJobProfile",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المسمى الوظيفي",
+      "en-US": "Position"
+    },
+    "Key": "Web.Position",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الجادة",
+      "en-US": "Flat"
+    },
+    "Key": "Web.Flat",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "جهة التدريب",
+      "en-US": "Training Courses"
+    },
+    "Key": "Web.TrainingCourses",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حذف",
+      "en-US": "Delete"
+    },
+    "Key": "Web.Common.Delete",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الملف",
+      "en-US": "File"
+    },
+    "Key": "Web.File Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الملف",
+      "en-US": "Document"
+    },
+    "Key": "Web.Document",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "من اي جهه تم الحصول عليها",
+      "en-US": ".From Which Employer the candidate got it"
+    },
+    "Key": "Web.From Which Employer the candidate got it",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مرفقات اخرى",
+      "en-US": "Other Attachment"
+    },
+    "Key": "Web.Other Attachment",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لوحة التحكم",
+      "en-US": "Dashboard"
+    },
+    "Key": "Admin.Dashboard",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الأخبار و الفعاليات",
+      "en-US": "News & Events"
+    },
+    "Key": "Pages.News",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إرسال",
+      "en-US": "Send"
+    },
+    "Key": "Form.SendMessage",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عربي",
+      "en-US": "AR"
+    },
+    "Key": "Language.AR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المهام والمسؤوليات",
+      "en-US": "Roles & Responsibilities"
+    },
+    "Key": "Vacancy.RolesResponsibilities",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "فترة التقديم",
+      "en-US": "Duration of Applying Date"
+    },
+    "Key": "Common.DurationofApplyingDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم المنزل",
+      "en-US": "House Number"
+    },
+    "Key": "Web.HouseNumber",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المتطلبات الخاصة",
+      "en-US": "Special Requirements"
+    },
+    "Key": "Web.SpecialRequirements",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المؤهلات العلمية",
+      "en-US": "Educational Info"
+    },
+    "Key": "Web.EducationalInfo",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "صورة شهادة الميلاد",
+      "en-US": "Birth Certificate"
+    },
+    "Key": "Web.Birth Certificate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "صورة شهادة الجنسية",
+      "en-US": "Nationality Certificate"
+    },
+    "Key": "Web.NationalityCertificate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرمز البريدي",
+      "en-US": "PostBox Number"
+    },
+    "Key": "Web.PostboxNumber",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ملاحظة: يخضع الموظف لفترة تجربة لمدة عام واحد ويحق للجهاز بأن ينهي خدماته خلال هذا العام أو حتى بعد شهر من ذلك العام إذا تبين أنه غير مناسب لهذا الشاغر.",
+      "en-US": "Note : The employee will be under the preparation period for one year and the state bureau of financial controllers has the right to terminate him during this year or even after one month from that year if it was shown that he is not suitable for this vacancy"
+    },
+    "Key": "Web.Note : The employee will be under the preparation period for one year and the state bureau of financial controllers has the right to terminate him during this year or even after one month from that year if it was shown that he is not suitable for this vacancy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "هل لديك أقرباء يعملون بالجهاز",
+      "en-US": "Do you have relatives works here"
+    },
+    "Key": "Web.Doyouhaveanyrelativesworksforbureau?",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "صورة الشخصية",
+      "en-US": "Your Personal Picture"
+    },
+    "Key": "Web.YourPersonalPicture",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "صور عن الدورات التدريبية",
+      "en-US": "Training courses certificates"
+    },
+    "Key": "Web.Training courses certificates",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الخبرات الوظيفية السابقة",
+      "en-US": "Work Experience"
+    },
+    "Key": "Web.PreviousWorkInfo",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التحصيل العلمي",
+      "en-US": "Educational Degree"
+    },
+    "Key": "Web.EducationalDegree",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المؤهل العلمي",
+      "en-US": "Educational Degree"
+    },
+    "Key": "ADMIN.EDUCATIONALDEGREE",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التخصص العلمي",
+      "en-US": "Major"
+    },
+    "Key": "Web.Major",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "شهادة حسن سير وسلوك حديثة لا تتجاوز مدتها الثلاث شهور من الإدارة العامة للأدلة الجنائية في وزارة الداخلية",
+      "en-US": "Certificate of good conduct and conduct not exceeding three months from the General Directorate of Criminal Evidence from the Ministry of the Interiors"
+    },
+    "Key": "Web.Certificate of good conduct and conduct not exceeding three months from the General Directorate of Criminal Evidence from the Ministry of the Interiors",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "البلد",
+      "en-US": "Country Name"
+    },
+    "Key": "Web.CountryName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "السنة",
+      "en-US": "Year Of Education"
+    },
+    "Key": "Web.YearOfEducation",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التقدير",
+      "en-US": "Grade"
+    },
+    "Key": "Web.Grad",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم الشهادة",
+      "en-US": "Certificate Name"
+    },
+    "Key": "Web.CertificateName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "سيرة ذاتية للمتقدم تتضمن الخبرات العملية السابقة والجهات التي عمل بها وأهم المشاريع والاعمال واللجان التي شارك بها ، ورؤيته في مجال الوظيفة المتقدم لها",
+      "en-US": "Curriculum vitae of the applicant includes the previous practical experience and the entities where he worked, the most important projects, the works and committees he participated in, and his vision in the field of the job of the applicant"
+    },
+    "Key": "Web.Curriculum vitae of the applicant includes the previous practical experience and the entities where he worked, the most important projects, the works and committees he participated in, and his vision in the field of the job of the applicant",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "هل لديك أي موظفين انت مسؤول عنهم بشكل مباشر؟",
+      "en-US": "?Do you have any emplyee's who is reporting to you directly"
+    },
+    "Key": "Web.Do you have any emplyee's who is reporting you directly?",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "صورة المؤهل العلمي + كشف الدرجات ( معادلة من التعليم العالي لغير خريجي جامعة الكويت )",
+      "en-US": "Educational Certificate and degrees"
+    },
+    "Key": "Web.Educational Certificate + degrees",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "شهادة لمن يهمه الامر صادرة من المؤسسة العامة للتأمينات الاجتماعية (مدد الاشتراك)",
+      "en-US": "To whom who may concern certificate from the social insurance"
+    },
+    "Key": "Web.To whom who may concern certificate from the social insurance",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "شهادة رسمية معتمدة بتقييم أداء المتقدم عن آخر سنتين من آخر جهة يعمل بها أو عمل بها المتقدم",
+      "en-US": "A certified official certificate evaluating the performance of the applicant for the last two years from the last employer's work"
+    },
+    "Key": "Web.A certified official certificate evaluating the performance of the applicant for the last two years from the last employer's work",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التقديم على الوظيفة",
+      "en-US": "Apply For Job"
+    },
+    "Key": "Pages.Applied.Header",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التعليم",
+      "en-US": "Education"
+    },
+    "Key": "Web.Educations",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "البلد",
+      "en-US": "Country"
+    },
+    "Key": "Web.Country",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أوافق على الشروط والأحكام وسياسة الخصوصية",
+      "en-US": "Accept Theterms & Conditions & Theprivacypolicy"
+    },
+    "Key": "Web.Accepttheterms&conditions&theprivacypolicy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم جهة التدريب",
+      "en-US": "TrainingInstitute"
+    },
+    "Key": "Web.TrainingInstitute",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "كتاب موافقة من جهة العمل على الالتحاق بالبرنامج التدريبي والندب والنقل في حالة أجتياز البرنامج التدريبي بالنسبة المطلوبة.",
+      "en-US": "An official approval letter from the employer to enroll in the training, scarcity and transportation program in case of passing the training program as required"
+    },
+    "Key": "Web.An official approval letter from the employer to enroll in the training, scarcity and transportation program in case of passing the training program as required",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم الدورة التدريبية",
+      "en-US": "Course Name"
+    },
+    "Key": "Web.CourseName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "القراءة",
+      "en-US": "Web.Reading"
+    },
+    "Key": "Reading",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مدة العمل",
+      "en-US": "Working Period of Your Last Company"
+    },
+    "Key": "Web.WorkingPeriodofYourLastCompany",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أذكر سبب ترك العمل أو سبب الرغبة في ترك العمل",
+      "en-US": "Why you left the job or what was the reason behind leaving old job ?"
+    },
+    "Key": "Web.Why you left the job or what was the reason behind leaving old job ?",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أذكر وصفاً مختصراً لواجبات آخر وظيفة شغلتها",
+      "en-US": "Please mention briefly your job rules of your last career."
+    },
+    "Key": "Web.Please mention briefly your job rules of your last career.",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أذكر عدد الموظفين الذين يقدمون تقارير لك",
+      "en-US": "Please mention the number of emplyees that were reporting directly to you"
+    },
+    "Key": "Web.Please mention the number of emplyees that were reporting directly to you.",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "هل لديك رغبة في العمل بإدارة معينة من إدارات الجهاز ؟",
+      "en-US": "Do you have any Desire work for a specific administration or department"
+    },
+    "Key": "Web.Do you have any Desire work for a specific administration or department ?",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أذكرها حسب الرغبة",
+      "en-US": "Mention them by most desired to the less"
+    },
+    "Key": "Web.Mention them by most desired to the less",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ما سبب اختيارك لهذه الادارات ؟",
+      "en-US": "? Why do you choose those administrations"
+    },
+    "Key": "Web.Why do you choose those administrations?",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "هل تمانع عند اختيارك للعمل في إدارة أخرى ؟",
+      "en-US": "?Do you have any problems with working for any other administration"
+    },
+    "Key": "Web.do you any problems with working for any other administration?",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ما هي توقعاتك بالنسبة الى :",
+      "en-US": ": What are your expectation for"
+    },
+    "Key": "Web.What are your expectation for:",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "امتيازات أخرى",
+      "en-US": "Other Benefits"
+    },
+    "Key": "Web.Other Benifits",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أقر بأن جميع البيانات التي وردت بهذا الطلب صحيحة ومطابقة للواقع وأني أتحمل المسئولية حال ثبوت عدم صحتها ، وما يترتب على ذلك من إجراءات قانونية تتخذ بحقي وفقاً للأنظمة والقوانين المعمول بها .",
+      "en-US": "I confirm that all the mentioned information in this application are correct and accurate, and I do take the responsibility in case of incorrection of any of them, and what would be the disciplinarian procedures according to the laws, terms & conditions"
+    },
+    "Key": "Web.I confirm that all the mentioned information in this application are correct and accurate, and I do take the responsibility in case of incorrection of any of them, and what would be the disciplinarian procedures according to the laws, terms & conditions",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "السابق",
+      "en-US": "Back to Previous"
+    },
+    "Key": "Web.Back to Previous",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العلمية",
+      "en-US": "Information"
+    },
+    "Key": "Web.informations",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوظيفية",
+      "en-US": "Experience"
+    },
+    "Key": "Web.jobs",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التعليم",
+      "en-US": "Education"
+    },
+    "Key": "Web.Educations",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الدرجة",
+      "en-US": "Job Degree"
+    },
+    "Key": "Web.grades",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المعلومات",
+      "en-US": "Personal"
+    },
+    "Key": "Web.Personal",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الشخصية",
+      "en-US": "Information"
+    },
+    "Key": "Web.Information",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المؤهلات",
+      "en-US": "Education"
+    },
+    "Key": "Web.Education",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوثائق",
+      "en-US": "Identification"
+    },
+    "Key": "Web.Identification",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المطلوبة",
+      "en-US": "Document Attaching"
+    },
+    "Key": "Web.DocumentAttaching",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "قراءة",
+      "en-US": "Reading"
+    },
+    "Key": "Web.Reading",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "كتابة",
+      "en-US": "Writing"
+    },
+    "Key": "Web.Writing",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "محادثة",
+      "en-US": "Speaking"
+    },
+    "Key": "Web.Speaking",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ضعيف",
+      "en-US": "Weak"
+    },
+    "Key": "Web.Weak",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "متوسط",
+      "en-US": "Moderate"
+    },
+    "Key": "Web.Moderate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ممتاز",
+      "en-US": "Excellent"
+    },
+    "Key": "Web.Excellent",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "شروط شغل الوظيفة",
+      "en-US": "General Requirements"
+    },
+    "Key": "Web.GeneralRequirements",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "استمرار",
+      "en-US": "Continue"
+    },
+    "Key": "Web.Common.Continue",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "جهة العمل",
+      "en-US": "Job Title"
+    },
+    "Key": "Web.JobTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوظائف المقدم عليها مسبقا",
+      "en-US": "Previously Applied Vacancies"
+    },
+    "Key": "الوظائف المقدم عليها مسبقا",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "شهادة تدرج وظيفي من آخر جهة يعمل بها أو عمل بها المتقدم، على أن تكون حديثة لا تتجاوز مدتها الثلاث شهور.",
+      "en-US": "Career certificate from the last employer in which the applicant worked, provided that it is not more than three months old"
+    },
+    "Key": "Web.Career certificate from the last employer in which the applicant worked, provided that it is not more than three months old",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "موظفين",
+      "en-US": "Employees"
+    },
+    "Key": "Web.TeamLeaders",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رؤساء أقسام",
+      "en-US": "Team Leader"
+    },
+    "Key": "Web.Bereaus",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مراقبين",
+      "en-US": "Controllers"
+    },
+    "Key": "Web.Managers",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الراتب",
+      "en-US": "Salary"
+    },
+    "Key": "Web.Salary",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الى تاريخ:",
+      "en-US": "Date To"
+    },
+    "Key": "Web.DateTo",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تقدمتَ مسبقا،الرقم المتسلسل هو",
+      "en-US": "You have already applied,The Serial number is"
+    },
+    "Key": "Web.You have already applied,The Serial number is",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرقم المدني",
+      "en-US": "Civil ID"
+    },
+    "Key": "Web.Civil ID",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ الميلاد",
+      "en-US": "BirthDate"
+    },
+    "Key": "Web.BirthDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الجنس",
+      "en-US": "Gender"
+    },
+    "Key": "Web.Gender",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ذكر",
+      "en-US": "Male"
+    },
+    "Key": "Web.Male",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أنثى",
+      "en-US": "Female"
+    },
+    "Key": "Web.Female",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Form.YourName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حفظ",
+      "en-US": "Save"
+    },
+    "Key": "Common.Save",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حفظ",
+      "en-US": "Save"
+    },
+    "Key": "Web.Common.Save",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الدور",
+      "en-US": "Floor Number"
+    },
+    "Key": "Web.FloorNumber",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يمكنك التقديم للوظيفة الآن",
+      "en-US": "You can apply now"
+    },
+    "Key": "Web.YouCanApplyToVacancy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم الثالث",
+      "en-US": "Grandfather Name"
+    },
+    "Key": "Web.GrandfatherName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وصف كامل باللغة العربية",
+      "en-US": "Full Description AR"
+    },
+    "Key": "Admin.Vacancy.FullDescriptionAR",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حصل خطأ ارجو المحاولة لاحقا",
+      "en-US": "Error Happend"
+    },
+    "Key": "web.Error Happend",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الهاتف غير صحيح يجب ان يتكون من 10 ارقام",
+      "en-US": "Incorrect phone number must be 10 digits"
+    },
+    "Key": "web.Incorrect phone number must be 10 digits",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "جميع الحقول اجباري",
+      "en-US": "all fields  mandatory"
+    },
+    "Key": "web.all fields  mandatory",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حذف",
+      "en-US": "Deleted"
+    },
+    "Key": "web.Deleted!",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم حذف الملف بنجاح",
+      "en-US": "Your file has been deleted"
+    },
+    "Key": "web.Your file has been deleted.",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لن تتمكن من التراجع عن هذا!",
+      "en-US": "You won't be able to revert this!"
+    },
+    "Key": "web.You won't be able to revert this!",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم الحفظ بنجاح",
+      "en-US": "Saved Successfully"
+    },
+    "Key": "web.Saved Successfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم بنجاح",
+      "en-US": "Done"
+    },
+    "Key": "web.Done",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يجب تعبئة جميع الحقول",
+      "en-US": "All fields must be filled"
+    },
+    "Key": "Web.ModelIsNull",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يجب ان يكون اسم جهة التدريب اقل من 100 حرف",
+      "en-US": "Training Institute must be less than 100 character"
+    },
+    "Key": "Web.Training Institutemust be less than 100 character",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يجب ان يكون اسم الدورة التدريبة اقل من 100 حرف",
+      "en-US": "Course Name  must be less than 100"
+    },
+    "Key": "Web.Course Name  must be less than 100",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تحقق من المدى المختار في الحقل (الى التاريخ)",
+      "en-US": "Check The Range Of Selected  To Date"
+    },
+    "Key": "Web.Check The Range Of Selected  To Date",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يجب ان يكون اسم الشهادة اقل من 100 حرف",
+      "en-US": "Certificat Name must be less than 100 character"
+    },
+    "Key": "Web.Certificat Name must be less than 100 character",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يجب ان يكون التقدير اكبر من 0",
+      "en-US": "Grad Cant  be less than 0"
+    },
+    "Key": "Web.Grad Cant  be less than 0",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يجب ان يكون اسم الجامعة اقل من 100 حرف",
+      "en-US": "University  must be less than 100 character"
+    },
+    "Key": "Web.University  must be less than 100 character",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يجب ان تكون المدينة اقل من 100 حرف",
+      "en-US": "Web.Country  must be less than 100 character"
+    },
+    "Key": "Web.Country  must be less than 100 character",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يجب ان تكونة سنة التخرج اكبر من 0",
+      "en-US": "Education Year Cant be less than 0"
+    },
+    "Key": "Web.Education Year Cant be less than 0",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "بنجاح",
+      "en-US": "Successfully"
+    },
+    "Key": "web.Successfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم ارسال",
+      "en-US": "Message Sent"
+    },
+    "Key": "web.Message Sent",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يجب تعبئة جميع الحقول",
+      "en-US": "All fields must be filled"
+    },
+    "Key": "Web.Model Is Null",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ارجو الموافقة على الشروط و الاحكام",
+      "en-US": "Confirmatiom Check"
+    },
+    "Key": "Web.Confirmatiom Check",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا يمكن ان يكون الحقل الموظفين اقل من 0",
+      "en-US": "Team Leaders Value Can't be less than 0"
+    },
+    "Key": "Web.Team Leaders Value Can't be less than 0",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا يمكن ان يكون الحقل رؤساء أقسام اقل  0",
+      "en-US": "Bereaus Value Can't be less than 0"
+    },
+    "Key": "Web.Bereaus Value Can't be less than 0",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يجب رفع جميع الوثائق المطلوبة",
+      "en-US": "All required documents must be submitted"
+    },
+    "Key": "Web.Uploads Can't be Null",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يجب ان يكون اسم جهة العمل السابقة اقل من 300 حرف",
+      "en-US": "Company Name must be less than 300 character"
+    },
+    "Key": "Web.Company Name must be less than 300 character",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يجب ان يكون المسمى الوظيفي اقل من 300 حرف",
+      "en-US": "Position must be less than 300 character"
+    },
+    "Key": "Web.Position must be less than 300 character",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا يمكن ان يكون الراتب اقل من 0",
+      "en-US": "Salary Value Can't be less than 0"
+    },
+    "Key": "Web.Salary Value Can't be less than 0",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تحقق من المدى المختار في الحقل (الى التاريخ)",
+      "en-US": "Check The Range Of Selected To Date"
+    },
+    "Key": "Web.CheckTheRangeOfSelectedDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "متطلبات التقدم للوظيفة",
+      "en-US": "Vacancy Attributes"
+    },
+    "Key": "Admin.Vacancy.Attributes",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الدرجة الوظيفيه",
+      "en-US": "Job Grades"
+    },
+    "Key": "Web.JobGrades",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يرجى ادخال الدرجة الوظيفية",
+      "en-US": "Enter Job Degree"
+    },
+    "Key": "Web.EnterJobDegree",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا يمكن الاستمرار الى الخطوة التالية",
+      "en-US": "You Can't Continuo"
+    },
+    "Key": "Web.YouCan'tContinuo",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم تعديل بنجاح",
+      "en-US": "Edit Successfully"
+    },
+    "Key": "Web.Edit.Successfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم الاضافة بنجاح",
+      "en-US": "Successfully Add"
+    },
+    "Key": "Web.Successfully Add",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم تعديل بنجاح",
+      "en-US": "Successfully Update"
+    },
+    "Key": "Web.Successfully Update",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ارجو تأكد من جميع الحقول",
+      "en-US": "Check your input"
+    },
+    "Key": "web.Check your input",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "هل أنت متأكد ؟",
+      "en-US": "Are you sure?"
+    },
+    "Key": "web.Are you sure?",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا يمكن ان يكون الحقل المراقبين اقل  0",
+      "en-US": "Managers Value Can't be less than 0"
+    },
+    "Key": "Web.Managers Value Can't be less than 0",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "نعم ! حذف",
+      "en-US": "Yes, delete it!"
+    },
+    "Key": "web.Yesdelete",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حدثت الأخطاء التالية:",
+      "en-US": "There following errors occured:"
+    },
+    "Key": "web.There following errors occured:",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ألغاء",
+      "en-US": "Cancel"
+    },
+    "Key": "web.Cancel",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "جهة العمل",
+      "en-US": "Company Name"
+    },
+    "Key": "Web.CompanyName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اذهب الى الخطوة التالية",
+      "en-US": "Go to next step"
+    },
+    "Key": "web.Go to next step",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "خطأ",
+      "en-US": "Failed"
+    },
+    "Key": "web.Failed",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "غير متوافق مع متطلبات الوظيفة",
+      "en-US": "Not Compatible With Vacancy Requierment"
+    },
+    "Key": "Admin.NotCompatibleWithVacancyRequierment",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرجاء الاجابة على سؤال : ما سبب اختيارك لهذه الادارات؟",
+      "en-US": "-"
+    },
+    "Key": "Web.Reason ToChoose Administaration Can't be Empty",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرجاء ذكر سبب الرغبة  في العمل بإدارة معينة من إدارات الجهاز",
+      "en-US": "-"
+    },
+    "Key": "Web.Desire Work For Specific Can't beEmpty",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرجاء الاجابة عبى سؤال : هل تمانع عند اختيارك للعمل في إدارة أخرى",
+      "en-US": "-"
+    },
+    "Key": "Web.ProblemsWithWorkingCan'tbeEmpty",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرجاء ادخال الراتب بالطريقه الصحيحه",
+      "en-US": "Salary Can't be less or equal 0"
+    },
+    "Key": "Web.Salary Can't be less than 0",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اكتب بشكل مختصر",
+      "en-US": "Write your brief here"
+    },
+    "Key": "Write your brief here...",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اكتب بشكل مختصر",
+      "en-US": "Write your brief here"
+    },
+    "Key": "Web.Write your brief here...",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرجاء اكمال تحميل الملفات",
+      "en-US": "Not Complete Upload"
+    },
+    "Key": "Web.User.NotCompleteUpload",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرجاء تحميل كافة الوثائق في صفحة البيانات الشخصية قبل تقديم الطلب",
+      "en-US": "You Must Complete Appload Files"
+    },
+    "Key": "Admin.YouMustCompleteApploadFiles",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم استكمال تحميل الوثائق المطلوبه يمكنك الان التقدم للوظائف",
+      "en-US": "Complete Upload"
+    },
+    "Key": "Web.User.CompleteUpload",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "صورة البطاقة المدنية",
+      "en-US": "Attachment Civil ID"
+    },
+    "Key": "Web.AttachmentCivilID",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم المتقدم",
+      "en-US": "User Name"
+    },
+    "Key": "Admin.Vacancy.strUserName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مشاهدة السيره الذاتيه",
+      "en-US": "User Cv"
+    },
+    "Key": "Admin.Vacancy.User.Cv",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "معلومات المتقدم",
+      "en-US": "User Info"
+    },
+    "Key": "Admin.User.Info",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التحصيل العلمي",
+      "en-US": ".User Educational"
+    },
+    "Key": "Admin.User.UserEducational",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرقم المدني",
+      "en-US": "User Civil Id"
+    },
+    "Key": "Admin.User.CivilId",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم الثالث",
+      "en-US": "User Thread Name"
+    },
+    "Key": "Admin.User.ThreadName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "البلد",
+      "en-US": "User Country"
+    },
+    "Key": "Admin.User.Country",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حالة الوظيفة",
+      "en-US": "Job Approve"
+    },
+    "Key": "Admin.User.JobApprove",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مرفقات المتقدم",
+      "en-US": "User Attachment"
+    },
+    "Key": "Admin.User.Attachment",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تفاصيل لغة المتقدم",
+      "en-US": "User Language Details"
+    },
+    "Key": "Admin.User.UserLanguageDetails",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الشارع",
+      "en-US": "Street"
+    },
+    "Key": "Admin.User.Street",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم البناية",
+      "en-US": "Building Number"
+    },
+    "Key": "Admin.User.BuildingNumber",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الجنس",
+      "en-US": "Gender"
+    },
+    "Key": "Admin.User.Gender",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم المنزل",
+      "en-US": "House Number"
+    },
+    "Key": "Admin.User.HouseNumber",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرقم البريدي",
+      "en-US": "Postbox Number"
+    },
+    "Key": "Admin.User.PostboxNumber",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ الامتحان",
+      "en-US": "Exam Date"
+    },
+    "Key": "Admin.User.ExamDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "القراءة",
+      "en-US": ".Reading"
+    },
+    "Key": "Admin.Language.Reading",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الكتابة",
+      "en-US": "Writing"
+    },
+    "Key": "Admin.Language.Writing",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المحادثة",
+      "en-US": "Speaking"
+    },
+    "Key": "Admin.Language.Speaking",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الجامعة",
+      "en-US": "University"
+    },
+    "Key": "Admin.Vacancy.University",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "سنة التخرج",
+      "en-US": "Year Of Education"
+    },
+    "Key": "Admin.Vacancy.YearOfEducation",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مركز التدريب",
+      "en-US": "Training Institute"
+    },
+    "Key": "Admin.Vacancy.TrainingInstitute",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الدوره التدريبية",
+      "en-US": "Course Name"
+    },
+    "Key": "Admin.Vacancy.CourseName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الشهادة",
+      "en-US": "Certificat Name"
+    },
+    "Key": "Admin.Vacancy.CertificatName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "من تاريخ",
+      "en-US": "Date From"
+    },
+    "Key": "Admin.Vacancy.DateFrom",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الى تاريخ",
+      "en-US": "Date To"
+    },
+    "Key": "Admin.Vacancy.DateTo",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "السيره الذاتية للمتقدم للوظيفة",
+      "en-US": "Vacancy Post CV"
+    },
+    "Key": "Admin.VacancyPost.CV",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حالة الطلب",
+      "en-US": "IsApprove"
+    },
+    "Key": "IsApprove",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حالة الطلب",
+      "en-US": "IsApprove"
+    },
+    "Key": "IsApprove",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حالة الطلب",
+      "en-US": "IsApprove"
+    },
+    "Key": "Admin.Vacancy.strIsApprove",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Admin.Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرقم التسلسلي",
+      "en-US": "Serial Number"
+    },
+    "Key": "Admin.SerialNumber",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ التقديم",
+      "en-US": "Applied Date"
+    },
+    "Key": "Admin.AppliedDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المتقدمين للعمل",
+      "en-US": "Job Seekers"
+    },
+    "Key": "ADMIN.JOBSEEKERS",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عنوان الوظيفة",
+      "en-US": "Job Title"
+    },
+    "Key": "Admin.Vacancy.JobTitle",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم الكامل",
+      "en-US": "Full Name"
+    },
+    "Key": "Admin.Vacancy.FullName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أقارب يمكن الاتصال بهم",
+      "en-US": "Relatives to Call"
+    },
+    "Key": "Admin.User.Relative",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ذكر",
+      "en-US": "Male"
+    },
+    "Key": "Admin.User.Male",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أنثى",
+      "en-US": "Female"
+    },
+    "Key": "Admin.User.Female",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ليس لديه رغبة في العمل بإدارة معينة من إدارات الجهاز",
+      "en-US": "Doesn't have any Desire work for a specific administration or department"
+    },
+    "Key": "Admin.Doesntprefer",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ليس لديه أقرباء يعملون بالجهاز",
+      "en-US": "No Relatives Working Here"
+    },
+    "Key": "No Relatives Working Here",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أقرباء يعملون بالجهاز",
+      "en-US": "Relatives Working Here"
+    },
+    "Key": "Admin.User.RelativesWorkingHere",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "سبب ترك العمل السابق",
+      "en-US": "Reason For Left Job"
+    },
+    "Key": "Admin.Vacancy.LeftJobReson",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مراقبين",
+      "en-US": "Controllers"
+    },
+    "Key": "Admin.Vacancy.Managers",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الراتب",
+      "en-US": "Salary"
+    },
+    "Key": "Admin.Vacancy.Salary",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المسمى الوظيفي",
+      "en-US": "Position"
+    },
+    "Key": "Admin.Vacancy.Position",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "امتيازات أخرى",
+      "en-US": "Other Benefits"
+    },
+    "Key": "Admin.Vacancy.OtherBenifits",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وصف اخر وظيفة",
+      "en-US": "Job Rules"
+    },
+    "Key": "Admin.Vacancy.JobRules",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رؤساء أقسام",
+      "en-US": "Team Leader"
+    },
+    "Key": "Admin.Vacancy.Bereaus",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "موظفين",
+      "en-US": "Employees"
+    },
+    "Key": "Admin.Vacancy.TeamLeaders",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرغبة في العمل بإدارة معينة من إدارات الجهاز",
+      "en-US": "Desire work for a specific administration or department"
+    },
+    "Key": "Admin.Vacancy.DesireWorkForSpecific",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "سبب اختيار هذه الادارات",
+      "en-US": "The reason for choosing these departments"
+    },
+    "Key": "Admin.Vacancy.ReasonToChooseAdministaration",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "هل تمانع عند اختيارك للعمل في إدارة أخرى",
+      "en-US": "?Do you have any problems with working for any other administration"
+    },
+    "Key": "Admin.Vacancy.ProblemsWithWorking",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الهاتف",
+      "en-US": "Mobile Number"
+    },
+    "Key": "Admin.Vacancy.Mobile",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Admin.Vacancy.Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الهاتف",
+      "en-US": "Mobile Number"
+    },
+    "Key": "Admin.Vacancy.MobileNum",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا يمكن ان يكون اسم الدورة التدريبية فارغ",
+      "en-US": "Course Name ToChoose Administaration Can't be Empty"
+    },
+    "Key": "Web.Course Name ToChoose Administaration Can't be Empty",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا يمكن ان يكون اسم الجهة التدريبية فارغ",
+      "en-US": "Training Institute Can't be Empty"
+    },
+    "Key": "Web.Training Institute To Choose Administaration Can't be Empty",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا يمكن ان يكون جهة التدريب فارغ",
+      "en-US": "Training Institute Can't be Empty"
+    },
+    "Key": "Web.Training Institute ToChoose Administaration Can't be Empty",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم ارسال البريد الاكتروني بنجاح",
+      "en-US": "E-mail Sent Succesfully"
+    },
+    "Key": "Admin.sentSuccesfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "فشل ارسال البريد الاكتروني",
+      "en-US": "E-mail Sent Failed"
+    },
+    "Key": "Admin.sentFailed",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حالة البريد الاكتروني",
+      "en-US": "E-mail Status"
+    },
+    "Key": "Admin.EmailStatus",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ارسال بريد الاكتروني",
+      "en-US": "Send Email"
+    },
+    "Key": "Admin.SendEmail",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عدد المستخدمين",
+      "en-US": "User Count"
+    },
+    "Key": "Admin.EmailTransfer.UserCount",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرجاء تعبئة حقول التحصيل العلمي لكي تتمكن من الاستمرار",
+      "en-US": "Educational Form Is Not Entered"
+    },
+    "Key": "Web.EducationalFormIsNotEntered",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرجاء تعبئة حقول أقارب يمكن الاتصال بهم لكي تتمكن من الاستمرار",
+      "en-US": "Persons To Call Form Is Not Entered"
+    },
+    "Key": "Web.PersonsToCallFormIsNotEntered",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم الحذف بنجاح",
+      "en-US": "Successfully deleted"
+    },
+    "Key": "web.Your Relative has been deleted.",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرجاء تعبئة حقول الوظائف السابقة لكي تتمكن من الاستمرار",
+      "en-US": "Previous Work Form Is Not Entered"
+    },
+    "Key": "Web.PreviousWorkFormIsNotEntered",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مشاهدة المزيد",
+      "en-US": "See All"
+    },
+    "Key": "Admin.See All",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عدد المتقدمين للوظائف",
+      "en-US": "of Applicant is #"
+    },
+    "Key": "Admin.# of Applicant is",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "قام بتسجيل حساب",
+      "en-US": "is Regisred"
+    },
+    "Key": "Web.is Regisred",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "قام بتسجيل حساب جديد",
+      "en-US": "NewRegistered"
+    },
+    "Key": "Admin.NewRegistered",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عدد المتقدمين للوظيفه",
+      "en-US": "NumberOfApplicants"
+    },
+    "Key": "Admin.NumberOfApplicantis",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الصفحة الرئيسية",
+      "en-US": "Home"
+    },
+    "Key": "web.Home",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تصنيفات",
+      "en-US": "Categories"
+    },
+    "Key": "web.Categories",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "من نحن",
+      "en-US": "About Us"
+    },
+    "Key": "web.AboutUs",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تواصل معنا",
+      "en-US": "ContactUs"
+    },
+    "Key": "web.ContactUs",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "انضم الينا",
+      "en-US": "Join Us"
+    },
+    "Key": "web.JoinUs",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لوحة التحكم",
+      "en-US": "Admin Dashboard"
+    },
+    "Key": "web.AdminDashboard",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "احجز مكانك",
+      "en-US": "BOOK YOUR VENUE"
+    },
+    "Key": "web.BOOK YOUR VENUE",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تقديم الطعام",
+      "en-US": "CATERING"
+    },
+    "Key": "Web.CATERING",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تواصل معنا",
+      "en-US": "Connect With US"
+    },
+    "Key": "web.Connect With US",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ادفع عبر الإنترنت",
+      "en-US": "Pay online"
+    },
+    "Key": "web.Pay online",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "جميع الحقوق محفوظة تم",
+      "en-US": "@ Copyright 2019 Tam"
+    },
+    "Key": "web.@ Copyright 2019 Tam",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "كل الحقوق محفوظة",
+      "en-US": "All Rights Reserved"
+    },
+    "Key": "web.All Rights Reserved",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "دعم من شركة خط الكويت",
+      "en-US": "Powered by Seagull"
+    },
+    "Key": "web.Powered by Seagull",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "د.ك",
+      "en-US": "KW"
+    },
+    "Key": "Web.Currency",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ الحجز",
+      "en-US": "Booking Date"
+    },
+    "Key": "web.Booking Date:",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "القاعة",
+      "en-US": "Ball Room"
+    },
+    "Key": "web.Ballroom:",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المجموع",
+      "en-US": "Total Amount"
+    },
+    "Key": "web.Total Amount:",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العروض",
+      "en-US": "Package"
+    },
+    "Key": "web.Package:",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ملخص الخدمة",
+      "en-US": "Service Summery"
+    },
+    "Key": "web.Service Summery:",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الدفع",
+      "en-US": "Checkout"
+    },
+    "Key": "web.Checkout",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "قم بإيداع 10٪ من المبلغ بالكامل ويمكن استرداد المبلغ في غضون أسبوعين من تاريخ الحجز",
+      "en-US": "Deposit 10% of the full amount and it can be refund in two weeks of booking date"
+    },
+    "Key": "web.Deposit 10% of the full amount and it can be refund in two weeks of booking date",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "دفع كامل",
+      "en-US": "Full Payment"
+    },
+    "Key": "web.Full Payment",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "احجز",
+      "en-US": "Book An Appoinment"
+    },
+    "Key": "Web.Book An Appoinment",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تقديم",
+      "en-US": "CONFIRM"
+    },
+    "Key": "CONFIRM",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العروض",
+      "en-US": "PACKAGE"
+    },
+    "Key": "WEB.PACKAGE",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تفاصيل المصور ",
+      "en-US": "Photographer Details"
+    },
+    "Key": "web.Photographer Details",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "احجز الان ",
+      "en-US": "BookNow"
+    },
+    "Key": "Web.BookNow",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المزيد  ",
+      "en-US": "More"
+    },
+    "Key": "Web.More",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المصور  ",
+      "en-US": "PHOTOGRAPHER"
+    },
+    "Key": "Web.PHOTOGRAPHER",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الدفع  ",
+      "en-US": "CHECKOUT"
+    },
+    "Key": "WEB.CHECKOUT",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ملخص الخدمه ",
+      "en-US": "SERVICE SUMMERY"
+    },
+    "Key": "WEB.SERVICE SUMMERY",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المصور",
+      "en-US": "PHOTOGRAPHER"
+    },
+    "Key": "Web.Photographer",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ الحجز",
+      "en-US": "Booking Date"
+    },
+    "Key": "Web.Booking Date",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المبلغ الاجمالي ",
+      "en-US": "Total Amount"
+    },
+    "Key": "Web.Total Amount",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "دفع كلي ",
+      "en-US": "Full Payment"
+    },
+    "Key": "Web.Full Payment",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ البدء ",
+      "en-US": "StartDate"
+    },
+    "Key": "Web.Photographer.StartDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ الانتهاء ",
+      "en-US": "EndDate"
+    },
+    "Key": "Web.Photographer.EndDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ادفع",
+      "en-US": "Pay"
+    },
+    "Key": "Web.Pay",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المصورين",
+      "en-US": "PHOTOGRAPHERS"
+    },
+    "Key": "WEB.PHOTOGRAPHERS",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الخدمه غير متاحه في هذا التاريخ ",
+      "en-US": "No service Avialable in this date"
+    },
+    "Key": "web.No service Avialable in this date",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ الحجز فارغ !",
+      "en-US": "Appointment Date is null"
+    },
+    "Key": "web.Appointment Date is null",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اضافه",
+      "en-US": "Add"
+    },
+    "Key": "web.Add",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حفظ العنوان",
+      "en-US": "Save Address"
+    },
+    "Key": "web.Save Address",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اذهب للدفع",
+      "en-US": "Proceed To Payment"
+    },
+    "Key": "web.Proceed To Payment",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم حفظ العنوان بنجاح ",
+      "en-US": "Save Address Successfully"
+    },
+    "Key": "web.Save Address Successfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حدث خطأ !",
+      "en-US": "Error Happend"
+    },
+    "Key": "web.Error Happend",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا يمكن ان يكون العنوان فارغ !",
+      "en-US": "Address Name cant be null"
+    },
+    "Key": "web.Address Name cant be null",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم العماره ",
+      "en-US": "Building Number"
+    },
+    "Key": "Web.Building Number",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المنطقه",
+      "en-US": "Area"
+    },
+    "Key": "Web.Area",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الهاتف",
+      "en-US": "Mobile Number"
+    },
+    "Key": "Web.Mobile Number",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الطابق",
+      "en-US": "Floor(Optional)"
+    },
+    "Key": "Web.Floor(Optional)",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الشقه",
+      "en-US": "Appartment(Optional)"
+    },
+    "Key": "Web.Appartment(Optional)",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم العنوان",
+      "en-US": "Address Name"
+    },
+    "Key": "Web.Address Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اللغة",
+      "en-US": "Language"
+    },
+    "Key": "web.Language",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم تعديل العنوان بنجاح ",
+      "en-US": "Update Address Successfully"
+    },
+    "Key": "web.Update Address Successfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "خريطة جوجل",
+      "en-US": "Google Map"
+    },
+    "Key": "Web.Google Map",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تعبئة نموذج ",
+      "en-US": "Form"
+    },
+    "Key": "Web.Form",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تعديل العنوان ",
+      "en-US": "Update Address"
+    },
+    "Key": "Web.Update Address",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اضافة عنوان",
+      "en-US": "Add Address"
+    },
+    "Key": "web.Add Address",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان",
+      "en-US": "Address"
+    },
+    "Key": "Web.Address",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "جميع الحقول مطلوبه باستثناء الشقه والطابق ",
+      "en-US": "All Fields requierd , except floor and department"
+    },
+    "Key": "web. All Fields requierd , except floor and department",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "جميع الحقول مطلوبه ",
+      "en-US": "Address Name and Longitude and Latitude cant be null"
+    },
+    "Key": "web.Address Name and  Longitude and Latitude cant be null",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "قبول",
+      "en-US": "Accept"
+    },
+    "Key": "Admin.Order.Accept",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مقبول",
+      "en-US": "Accepted"
+    },
+    "Key": "Accepted",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اختر",
+      "en-US": "Choose Category"
+    },
+    "Key": "Choose Category",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مرفوض",
+      "en-US": "Rejected"
+    },
+    "Key": "Rejected",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاحكام والشروط",
+      "en-US": "Terms And Condition"
+    },
+    "Key": "Terms And Condition",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "السياسات",
+      "en-US": "Policy"
+    },
+    "Key": "Policy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اترك رساله ",
+      "en-US": "Drop a Message"
+    },
+    "Key": "Drop a Message",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الهاتف ",
+      "en-US": "Form.Number"
+    },
+    "Key": "Form.Number",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": " ارسل ",
+      "en-US": "Send"
+    },
+    "Key": "Form.Send",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": " معلومات الاتصال ",
+      "en-US": "Contact Information"
+    },
+    "Key": "Contact Information",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": " نص الرسالة",
+      "en-US": "Message"
+    },
+    "Key": "Message",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الشروط والأحكام",
+      "en-US": "Terms & Condition"
+    },
+    "Key": "web.Terms & Condition",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عربي",
+      "en-US": "Arabic"
+    },
+    "Key": "Arabic",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "English",
+      "en-US": "English"
+    },
+    "Key": "English",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "قريبا",
+      "en-US": "Coming Soon"
+    },
+    "Key": "web.Coming Soon",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حجوزاتي",
+      "en-US": "My Bookings"
+    },
+    "Key": "My Bookings",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اكتب عنوان البريد الإلكتروني الخاص بك",
+      "en-US": "Write Your Email Address"
+    },
+    "Key": "Write Your Email address",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاشتراك",
+      "en-US": "Subscribe"
+    },
+    "Key": "Subscribe",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "روابط سريعة",
+      "en-US": "Quick Links"
+    },
+    "Key": "Quick Links",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "طريقة الدفع",
+      "en-US": "Payment Method"
+    },
+    "Key": "Payment Method",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إنشاء عرض",
+      "en-US": "Create a Show"
+    },
+    "Key": "Create a Show",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الأحكام والشروط",
+      "en-US": "Terms and Condition"
+    },
+    "Key": "web.Terms and Condition",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "سياسة الخصوصية",
+      "en-US": "Privacy Policy"
+    },
+    "Key": "web.Privacy Policy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "احصل على التحديثات",
+      "en-US": "Get Regular Updates"
+    },
+    "Key": "web.Get Regular Updates",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العروض",
+      "en-US": "Show"
+    },
+    "Key": "Admin.Show",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "نوع العرض",
+      "en-US": "Show Type"
+    },
+    "Key": "Admin.Show.Type",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة العربية",
+      "en-US": "Name in Arabic"
+    },
+    "Key": "Admin.Show.NameAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة الانجليزية",
+      "en-US": "Name in English"
+    },
+    "Key": "Admin.Show.NameEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الصورة",
+      "en-US": "Poster"
+    },
+    "Key": "Admin.Show.Poster",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "فيديو",
+      "en-US": "Video"
+    },
+    "Key": "Admin.Show.Video",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم المنتج",
+      "en-US": "Producer Name"
+    },
+    "Key": "Admin.Show.ProducerName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عرض متعدد",
+      "en-US": "MultiShow"
+    },
+    "Key": "Admin.Show.MultiShow",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ العرض",
+      "en-US": "Show Date"
+    },
+    "Key": "Admin.Show.ShowDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مناسبة باللغة العربية",
+      "en-US": "Occasion in Arabic"
+    },
+    "Key": "Admin.Show.OccasionAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مناسبة باللغة الانجليزية",
+      "en-US": "Occasion in English"
+    },
+    "Key": "Admin.Show.OccasionEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عدد التذاكر المتوفرة",
+      "en-US": ".Available Ticket No"
+    },
+    "Key": "Admin.Show.AvailableTicketNo",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إلغاء",
+      "en-US": "Cancelation"
+    },
+    "Key": "Admin.Show.Cancelation",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التعليمات باللغة العربية",
+      "en-US": "Instructions in Arabic"
+    },
+    "Key": "Admin.Play.InstructionAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التعليمات باللغة الانجليزية",
+      "en-US": "Instructions in English"
+    },
+    "Key": "Admin.Play.InstructionEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل العروض",
+      "en-US": "Add or Edit Show"
+    },
+    "Key": "ADMIN.SHOW.ADDEDIT",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الموعد النهائي",
+      "en-US": "Deadline"
+    },
+    "Key": "Admin.Show.Deadline",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "سعر المقعد",
+      "en-US": "Seat Price"
+    },
+    "Key": "Admin.Show.SeatPrice",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مجموعة",
+      "en-US": "Package"
+    },
+    "Key": "Admin.Show.Package",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ العرض",
+      "en-US": "Show Date"
+    },
+    "Key": "Admin.Show.Date",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة تاريخ العرض",
+      "en-US": "Add Show Date"
+    },
+    "Key": "Admin.Show.Date.Add",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة مجموعة",
+      "en-US": "Add Package"
+    },
+    "Key": "Admin.Show.Package.Add",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مجاني",
+      "en-US": "Free"
+    },
+    "Key": "Admin.Show.IsFree",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "سعر التذكرة",
+      "en-US": "Ticket Price"
+    },
+    "Key": "Admin.Event.TicketPrice",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان",
+      "en-US": "Address"
+    },
+    "Key": "Admin.Event.Address",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "القطعة",
+      "en-US": "Block"
+    },
+    "Key": "Admin.Event.Block",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المنطقة",
+      "en-US": "Area"
+    },
+    "Key": "Admin.Event.Area",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الطابق",
+      "en-US": ".Floor No"
+    },
+    "Key": "Admin.Event.FloorNo",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم المبنى",
+      "en-US": ".Building No"
+    },
+    "Key": "Admin.Event.BuildingNo",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "خط الطول",
+      "en-US": "Longitude"
+    },
+    "Key": "Admin.Event.Longitude",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "خط العرض",
+      "en-US": "Latitude"
+    },
+    "Key": "Admin.Event.Latitude",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "قريبا",
+      "en-US": "Coming Soon"
+    },
+    "Key": "Admin.ComingSoon",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الشروط و الأحكام",
+      "en-US": "Terms & Conditions"
+    },
+    "Key": "WEB.TERMS AND CONDITIONS",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تواصل معنا",
+      "en-US": "Get In Touch"
+    },
+    "Key": "Get In Touch",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اختر",
+      "en-US": "Please Select"
+    },
+    "Key": "Admin.Please Select",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "صوره",
+      "en-US": "Image"
+    },
+    "Key": "Admin.Image",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "فيديو",
+      "en-US": "Video"
+    },
+    "Key": "Admin.Video",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وقت العرض",
+      "en-US": "Show Time"
+    },
+    "Key": "Admin.Show.Time",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة وقت العرض",
+      "en-US": "Add Show Time"
+    },
+    "Key": "Admin.Show.Time.Add",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الممثلون باللغة اإنجليزية",
+      "en-US": "Cast in English"
+    },
+    "Key": "Admin.Show.CastEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الممثلون باللغة العربية",
+      "en-US": "Cast in Arabic"
+    },
+    "Key": "Admin.Show.CastAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الممثلون",
+      "en-US": "Cast"
+    },
+    "Key": "Admin.Show.Cast",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاعلانات",
+      "en-US": "Advertisements"
+    },
+    "Key": "Admin.Advertisements",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "هذا الترتيب موجود ,  يرجى اختيار ترتيب اخر",
+      "en-US": "This slider order already exist , Please enter another one"
+    },
+    "Key": "Admin.slider.This slider order already exist , Please enter another one",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرجاء اختيار نوع المرفق ",
+      "en-US": "you must select upload type"
+    },
+    "Key": "Admin.slider.you must select upload type ",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يجب ان يتوافق المرفق مع نوعه ",
+      "en-US": "Upload file must match upload type"
+    },
+    "Key": "Admin.Upload file must match upload type",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يعرض الآن",
+      "en-US": "Now Showing"
+    },
+    "Key": "Admin.NowShowing",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "جديد",
+      "en-US": "Just In"
+    },
+    "Key": "Admin.JustIn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التذاكر المتاحة",
+      "en-US": "Available Tickets"
+    },
+    "Key": "web.Available",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تذكرة",
+      "en-US": "Ticket"
+    },
+    "Key": "web.Tickets",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ص",
+      "en-US": "AM"
+    },
+    "Key": "AM",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "م",
+      "en-US": "PM"
+    },
+    "Key": "PM",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "د",
+      "en-US": "Min"
+    },
+    "Key": "Min",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "معرفة المزيد",
+      "en-US": "Know More"
+    },
+    "Key": "Know More",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يعرض الآن",
+      "en-US": "Now Showing"
+    },
+    "Key": "Now Showing",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يعرض الآن",
+      "en-US": "Now Showing"
+    },
+    "Key": "Web.NowShowing",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "جديد",
+      "en-US": "Just In"
+    },
+    "Key": "web.JustIn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العروض",
+      "en-US": "Shows"
+    },
+    "Key": "Admin.ComingSoon.Shows",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إنشاء حساب",
+      "en-US": "Sign Up"
+    },
+    "Key": "web.SIGN UP",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "هل نسيت كلمة المرور ؟",
+      "en-US": "Forgot Password ?"
+    },
+    "Key": "web.ForgotPassword?",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تسجيل الدخول",
+      "en-US": "SUBMIT"
+    },
+    "Key": "web.SUBMIT",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التسجيل باستخدام ...",
+      "en-US": "QUICK SIGN UP USING..."
+    },
+    "Key": "QUICK SIGN UP USING...",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "نسيت كلمة المرور",
+      "en-US": "Forgot Password"
+    },
+    "Key": "ForGot Password",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "استرداد كلمة المرور",
+      "en-US": "Retrieve Your Password"
+    },
+    "Key": "Web.Retrive Your Password",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "استرداد كلمة المرور",
+      "en-US": "Retrieve Your Password"
+    },
+    "Key": "Web.RetriveYourPassword",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أوافق",
+      "en-US": "Agree"
+    },
+    "Key": "Agree",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "على الشروط و الأحكام",
+      "en-US": "Terms & Conditions"
+    },
+    "Key": "Terms & Conditions",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إنشاء حساب",
+      "en-US": "SUBMIT"
+    },
+    "Key": "web.SUBMITs",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تغيير كلمة المرور ؟",
+      "en-US": "Change Password ?"
+    },
+    "Key": "web.ChangePassword?",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "خروج",
+      "en-US": "LogOut"
+    },
+    "Key": "LogOut",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الملف الشخصي",
+      "en-US": "Profile"
+    },
+    "Key": "Profile",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المجموع النهائي للبحث ",
+      "en-US": "Total Search result"
+    },
+    "Key": "web.Total Search result",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الفعاليات",
+      "en-US": "Events"
+    },
+    "Key": "web.Events",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ابحث عن العروض والمسرحيات",
+      "en-US": "Search For Events and Plays"
+    },
+    "Key": "web.Search For movies events and Sports",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مسرحية",
+      "en-US": "Play"
+    },
+    "Key": "web.Play",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "فعالية",
+      "en-US": "Event"
+    },
+    "Key": "web.Event",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم المسرح",
+      "en-US": "Name Of Theater"
+    },
+    "Key": "Name Of Theater",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اختر نوع المسرح",
+      "en-US": "Select Stage Type"
+    },
+    "Key": "Select Stage Type",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عدد المقاعد المتاحة",
+      "en-US": "Number of Available Seats"
+    },
+    "Key": "web.Number of Available Seats",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التعليقات",
+      "en-US": "Comments"
+    },
+    "Key": "web.Comments",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التاريخ",
+      "en-US": "Date"
+    },
+    "Key": "web.Date",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوقت",
+      "en-US": "Time"
+    },
+    "Key": "web.Time",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المدة",
+      "en-US": "Duration"
+    },
+    "Key": "web.Duration",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رابط اليوتيوب",
+      "en-US": "Youtube Video Link"
+    },
+    "Key": "web.YoutupeVidoLink",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عدد العروض في اليوم",
+      "en-US": "Total number of Shows per day"
+    },
+    "Key": "web.Total number of Shows per day",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوصف",
+      "en-US": "Write Some Descriptions"
+    },
+    "Key": "web.Write Some Descriptions",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حدد سعر التذكرة",
+      "en-US": "Define your price range"
+    },
+    "Key": "web.Define your price range",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "د.ك",
+      "en-US": "KD"
+    },
+    "Key": "KD",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إرسال تفاصيل المسرحية / الفعالية",
+      "en-US": "Submit Your Play/Events Details"
+    },
+    "Key": "web.Submit Your Play/Events Details",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لم يتم اختيار ملف",
+      "en-US": "No File Selected"
+    },
+    "Key": "web.No File Selected",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إنشاء فعالية / مسرحية",
+      "en-US": "CREATE EVENT / PLAY"
+    },
+    "Key": "WEB.CREATE EVENT / PLAY",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تحميل مخطط المسرح",
+      "en-US": "Upload Seating Chart"
+    },
+    "Key": "web.Upload Seating Chart",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الترقيات",
+      "en-US": "Promotions"
+    },
+    "Key": "Promotions",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "يعرض قريبا",
+      "en-US": "Coming Soon Shows"
+    },
+    "Key": "Coming Soon Shows",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الترقيات",
+      "en-US": "Promotions"
+    },
+    "Key": "web.Promotions",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العروض",
+      "en-US": "List Of Show"
+    },
+    "Key": "Admin.ListOfShow",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الصورة",
+      "en-US": "Image"
+    },
+    "Key": "Admin.Show.Main.Image",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الصورة",
+      "en-US": "Image"
+    },
+    "Key": "Admin.Image/Video",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التصنيف",
+      "en-US": "Category"
+    },
+    "Key": "Admin.Show.Category",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وقت العرض",
+      "en-US": "Show Time"
+    },
+    "Key": "Admin.Show.ShowTime",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوصف باللغة الإنجليزية",
+      "en-US": "Description in English"
+    },
+    "Key": "Admin.ComingSoon.DescriptionEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوصف باللغة العربية",
+      "en-US": "Description in Arabic"
+    },
+    "Key": "Admin.ComingSoon.DescriptionAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الصور",
+      "en-US": "Banners"
+    },
+    "Key": "Admin.ComingSoon.Banner",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "شراء تذاكر",
+      "en-US": "BUY TICKETS"
+    },
+    "Key": "WEB.BUYTICKETS",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تعليمات المسرحيه ",
+      "en-US": "Play Instruction"
+    },
+    "Key": "web.Play Instructions",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حجوزات العرض",
+      "en-US": "Show Bookings"
+    },
+    "Key": "web.Show Bookings",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا يوجد تعليمات لهذه المسرحيه ",
+      "en-US": "No Play Instructions"
+    },
+    "Key": "web.No Play Instructions",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا يوجد تفاصيل لهذه المسرحيه ",
+      "en-US": "No Play Details"
+    },
+    "Key": "web.No Play Details",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": " تفاصيل المسرحيه ",
+      "en-US": "Play Details"
+    },
+    "Key": "web.Play Details",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العروض",
+      "en-US": "Shows"
+    },
+    "Key": "web.Shows",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "قيد المعالجة",
+      "en-US": "Pending"
+    },
+    "Key": "Pending",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مرفوض",
+      "en-US": "Declined"
+    },
+    "Key": "Declined",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا يوجد",
+      "en-US": "No Request"
+    },
+    "Key": "No Request",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم الإرسال",
+      "en-US": "Request Sent"
+    },
+    "Key": "Request Sent",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا",
+      "en-US": "NO"
+    },
+    "Key": "No",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا يوجد تذاكر متاحه لهذا العرض ",
+      "en-US": "No Available Ticket For This Show"
+    },
+    "Key": "web.No Available Ticket For This Show",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "د.ك",
+      "en-US": "KW"
+    },
+    "Key": "web.KW",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ارسل الكود",
+      "en-US": "Apply Code"
+    },
+    "Key": "web.Apply Code",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ملخص عمليةالحجز",
+      "en-US": "Booking Summery"
+    },
+    "Key": "web.Booking Summery",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ادفع الان ",
+      "en-US": "Pay Now"
+    },
+    "Key": "web.Pay Now",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الترجمات والمصطلحات",
+      "en-US": "Localization"
+    },
+    "Key": "Admin.Localization",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الترجمات والمصطلحات",
+      "en-US": "LOCALIZATIONS"
+    },
+    "Key": "ADMIN.LOCALIZATIONS",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الترجمات والمصطلحات",
+      "en-US": "List Of Localization"
+    },
+    "Key": "Admin.ListOfLocalizations",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "البريد الإلكتروني",
+      "en-US": "Email"
+    },
+    "Key": "ADMIN.Email",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الحالة",
+      "en-US": "Status"
+    },
+    "Key": "ADMIN.Status",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حالة الحساب",
+      "en-US": "Activation"
+    },
+    "Key": "Admin.User.Activation",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الدور الوظيفي",
+      "en-US": "User Role"
+    },
+    "Key": "UserRole",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل مستخدم",
+      "en-US": "Add or Edit User"
+    },
+    "Key": "Admin.AddEditUser",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم المستخدم",
+      "en-US": "User Name"
+    },
+    "Key": "Web.UserName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "البريد الإلكتروني",
+      "en-US": "Email"
+    },
+    "Key": "Admin.User.UserEmail",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الدور الوظيفي",
+      "en-US": "User Role"
+    },
+    "Key": "Admin.UserRoleStr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الإجراء",
+      "en-US": "Operation"
+    },
+    "Key": "Admin.operation",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المنتجون",
+      "en-US": "Producers"
+    },
+    "Key": "Admin.Proudeser",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الدور الوظيفي",
+      "en-US": "User Role"
+    },
+    "Key": "Admin.UserRole",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إدارة المسارح",
+      "en-US": "Theaters Management"
+    },
+    "Key": "Admin.TheaterManagement",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة العربية",
+      "en-US": "Name in Arabic"
+    },
+    "Key": "Admin.Theaters.TemplateNameAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة الإنجليزية",
+      "en-US": "Name in English"
+    },
+    "Key": "Admin.Theaters.TemplateNameEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة العربية",
+      "en-US": "Name in Arabic"
+    },
+    "Key": "Admin.Template NameAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة الإنجليزية",
+      "en-US": "Name in English"
+    },
+    "Key": "Admin.Template NameEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "نشط ؟",
+      "en-US": "Active ?"
+    },
+    "Key": "Admin.Is Active",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المسرح",
+      "en-US": "Theaters"
+    },
+    "Key": "Admin.Theaters",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "نموذج المسرح",
+      "en-US": "Theater Template"
+    },
+    "Key": "Admin.TheatersTemplate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Admin.Theaters.Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم نموذج المسرح",
+      "en-US": "Theater Template Name"
+    },
+    "Key": "Admin.Theaters.TheatersTemplateName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان",
+      "en-US": "Address"
+    },
+    "Key": "Admin.Theaters.Address",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التاريخ",
+      "en-US": "Created Date"
+    },
+    "Key": "Admin.Theaters.CreatedDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "Name"
+    },
+    "Key": "Admin.Theaters Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان",
+      "en-US": "Address"
+    },
+    "Key": "Admin.Theaters Address",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المسرحية",
+      "en-US": "Play"
+    },
+    "Key": "ShowId",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "نموذج المسرح",
+      "en-US": "Theater Template"
+    },
+    "Key": "TheatersTemplateId",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "خط العرض",
+      "en-US": "Latitude"
+    },
+    "Key": "Admin.Theaters latitude",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "خط الطول",
+      "en-US": "Longitude"
+    },
+    "Key": "Admin.Theaters longitude",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العروض",
+      "en-US": "Shows"
+    },
+    "Key": "Admin.Shows",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم الأول",
+      "en-US": "First Name"
+    },
+    "Key": "Admin.FirstName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم الأخير",
+      "en-US": "Last Name"
+    },
+    "Key": "Admin.LastName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الهاتف",
+      "en-US": "Mobile"
+    },
+    "Key": "Admin.Mobile",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم المسرح",
+      "en-US": "Theater Name"
+    },
+    "Key": "Admin.TheaterName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "النوع",
+      "en-US": "Type"
+    },
+    "Key": "Admin.TypeStr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "نوع المسرح",
+      "en-US": "Stage Type"
+    },
+    "Key": "Admin.StageType",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العنوان",
+      "en-US": "Address"
+    },
+    "Key": "Admin.Address",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عدد المقاعد المتاحة",
+      "en-US": "Number Of Available Seats"
+    },
+    "Key": "Admin.NumberOfAvailableSeats",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عدد العروض في اليوم",
+      "en-US": "Shows Per Day"
+    },
+    "Key": "Admin.ShowsPerDay",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التعليقات",
+      "en-US": "Comments"
+    },
+    "Key": "Admin.Comments",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوصف",
+      "en-US": "Descriptions"
+    },
+    "Key": "Admin.Descriptions",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "سعر التذكرة إلى",
+      "en-US": "To Price"
+    },
+    "Key": "Admin.ToPrice",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "سعر التذكرة من",
+      "en-US": "From Price"
+    },
+    "Key": "Admin.FromPrice",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التاريخ",
+      "en-US": "Date"
+    },
+    "Key": "Admin.Date",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوقت",
+      "en-US": "Time"
+    },
+    "Key": "Admin.Time",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المدة",
+      "en-US": "Duration"
+    },
+    "Key": "Admin.Duration",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رابط الفيديو",
+      "en-US": "Trailer Link"
+    },
+    "Key": "Admin.TrailerLink",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "صورة مخطط المسرح",
+      "en-US": "Seating Chart Image"
+    },
+    "Key": "Admin.SeatingChartImage",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الصورة",
+      "en-US": "Cover Image"
+    },
+    "Key": "Admin.coverimage",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الصورة الرئيسية",
+      "en-US": "Main Image"
+    },
+    "Key": "Admin .Show.Main.Image",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التفاصيل باللغة العربية",
+      "en-US": "Details in Arabic"
+    },
+    "Key": "Admin.Play.DetailsAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التفاصيل باللغة الإنجليزية",
+      "en-US": "Details in English"
+    },
+    "Key": "Admin.Play.DetailsEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الصورة",
+      "en-US": "Image"
+    },
+    "Key": "Admin.Show.Instruction.Image",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إنشاء مسرحية / فعالية",
+      "en-US": "Create Event/Play"
+    },
+    "Key": "Admin.Event/Play",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عملية الالغاء قيد المعالجه ",
+      "en-US": "This Cancelation Order Under Proccessing"
+    },
+    "Key": "web.This Cancelation Order Under Proccessing",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم الغاء هذا الحجز ",
+      "en-US": "This Order has been cancled"
+    },
+    "Key": "web.This Order has been cancled",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التصنيفات",
+      "en-US": "Categories"
+    },
+    "Key": "Admin.Category",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة العربية",
+      "en-US": "Name in Arabic"
+    },
+    "Key": "Admin.Category.NameAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة الإنجليزية",
+      "en-US": "Name in English"
+    },
+    "Key": "Admin.Category.NameEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل تصنيف",
+      "en-US": "Add Edit Category"
+    },
+    "Key": "Admin.AddEditCategory",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة العربية",
+      "en-US": "Name in Arabic"
+    },
+    "Key": "Admin.StageType.NameAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة الإنجليزية",
+      "en-US": "Name in English"
+    },
+    "Key": "Admin.StageType.NameEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل نوع المسرح",
+      "en-US": "Add Or Edit Stage Type"
+    },
+    "Key": "Admin.StageType.AddEdit",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة الإنجليزية",
+      "en-US": "Name in English"
+    },
+    "Key": "Admin.PromoCodeType.NameEn",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "بروموكود",
+      "en-US": "PromoCode"
+    },
+    "Key": "Admin.PromoCodeType",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم باللغة العربية",
+      "en-US": "Name in Arabic"
+    },
+    "Key": "Admin.PromoCodeType.NameAr",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرسالة",
+      "en-US": "Message"
+    },
+    "Key": "Admin.Message",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاشتراك",
+      "en-US": "Subscription"
+    },
+    "Key": "Admin.Subscription",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرسالة",
+      "en-US": "Message"
+    },
+    "Key": "Admin.Email.Message",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إلغاء الحجز",
+      "en-US": "Cancel Order"
+    },
+    "Key": "Admin.Cancel",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الرقم",
+      "en-US": "Id"
+    },
+    "Key": "Admin.Order.Id",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "User Name"
+    },
+    "Key": "Admin.Order.UserName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الهاتف",
+      "en-US": "Mobile"
+    },
+    "Key": "Admin.Order.Mobile",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "البريد الإلكتروني",
+      "en-US": "Email"
+    },
+    "Key": "Admin.Order.Email",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اسم العرض",
+      "en-US": "Show Name"
+    },
+    "Key": "Admin.Order.ShowName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ العرض",
+      "en-US": "Show Date"
+    },
+    "Key": "Admin.Order.ShowDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "وقت العرض",
+      "en-US": "Show Time"
+    },
+    "Key": "Admin.Order.ShowTime",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "السعر",
+      "en-US": "Price"
+    },
+    "Key": "Admin.Order.Value",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ملغاة ؟",
+      "en-US": "?Is Canceled"
+    },
+    "Key": "Admin.Order.IsCancled",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إلغاء الحجز",
+      "en-US": "Cancel Order"
+    },
+    "Key": "Admin.CancelledOrders",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم",
+      "en-US": "User Name"
+    },
+    "Key": "Admin.Order.strUserName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "السعر",
+      "en-US": "Price"
+    },
+    "Key": "Admin.Order.Price",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التاريخ",
+      "en-US": "Date"
+    },
+    "Key": "Admin.Order.Date",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الوقت",
+      "en-US": "Time"
+    },
+    "Key": "Admin.Order.Time",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "هل حضر ؟",
+      "en-US": "Is Done ?"
+    },
+    "Key": "Admin.Order.IsDone",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إلغاء",
+      "en-US": "Cancel"
+    },
+    "Key": "Admin.Order.Cancel",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إلغاء بواسطة",
+      "en-US": "Cancelled By"
+    },
+    "Key": "Admin.Order.CancelledBy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "موافق",
+      "en-US": "Approve"
+    },
+    "Key": "Admin.Order.Approve",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رفض",
+      "en-US": "Decline"
+    },
+    "Key": "Admin.Order.Decline",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تعديل",
+      "en-US": "Edit"
+    },
+    "Key": "ADMIN.ORDER.ADDEDIT",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إلغاء",
+      "en-US": "Cancel Order"
+    },
+    "Key": "Admin.CancelOrder",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الحجز",
+      "en-US": "Order"
+    },
+    "Key": "Admin.Order",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الحجوزات",
+      "en-US": "Orders"
+    },
+    "Key": "Admin.Orders",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا",
+      "en-US": "No"
+    },
+    "Key": "Admin.Order.NotDone",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "نعم",
+      "en-US": "Yes"
+    },
+    "Key": "Admin.Order.Done",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "نعم",
+      "en-US": "Yes"
+    },
+    "Key": "Yes",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مُوافق عليه",
+      "en-US": "Approved"
+    },
+    "Key": "Approved",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "لا",
+      "en-US": "Not Yet"
+    },
+    "Key": "Not Yet",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إلغاء ؟",
+      "en-US": "?Is Cancelled"
+    },
+    "Key": "Admin.Order.IsCanclled",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تاريخ الحجز",
+      "en-US": "Order Date"
+    },
+    "Key": "Admin.Order.CreatedDate",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الحجز :",
+      "en-US": "Order Number :"
+    },
+    "Key": "web.Order Number :",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "أختر تاريخ و وقت الحجز",
+      "en-US": "Please Select Day and Time"
+    },
+    "Key": "web.Please Select Day and Time",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "محجوز",
+      "en-US": "Reserved"
+    },
+    "Key": "web.Reserved",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "احجز الان",
+      "en-US": "Book Now"
+    },
+    "Key": "web.Book Now",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ادخل كود الخصم",
+      "en-US": "Enter Promo Code"
+    },
+    "Key": "web.Enter Promo Code",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم عملية الدفع بنجاح",
+      "en-US": "PAYMENT SUCCESSFUL"
+    },
+    "Key": "WEB.PAYMENT SUCCESSFUL",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مبروك !",
+      "en-US": "Congratulations !"
+    },
+    "Key": "web.Congratulations !",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم الدفع الخاص بك بنجاح",
+      "en-US": "Your Payment is successfully done"
+    },
+    "Key": "web.Your Payment is successfully done",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الطلب :",
+      "en-US": "Your Order ID is :"
+    },
+    "Key": "web.Your Order ID is :",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم المرجع",
+      "en-US": "Ref#:"
+    },
+    "Key": "web.Ref#:",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مشاهدت المزيد",
+      "en-US": "View More Shows/Plays"
+    },
+    "Key": "web.View More Shows/Plays",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "خطأ في الحجز",
+      "en-US": "Error In Booking"
+    },
+    "Key": "web.Error In Booking",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عدد المقاعد المراد حجزها اكبر من عدد التذاكر المتاحه !",
+      "en-US": "Selected Seat#  greater than Avialable Ticket !"
+    },
+    "Key": "web.Selected Seat#  greater than Avialable Ticket !",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المستخدمون",
+      "en-US": "Users"
+    },
+    "Key": "Pages.Users",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "ابحث",
+      "en-US": "Search"
+    },
+    "Key": "Admin.Search",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "اختر",
+      "en-US": "Select"
+    },
+    "Key": "Select",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تقرير حجوزات المستخدم",
+      "en-US": "User Order Report"
+    },
+    "Key": "Admin.UserOrderReport",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حالة الحجز",
+      "en-US": "Order Status"
+    },
+    "Key": "Admin.SystemReport.OrderStatus",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عدد المقاعد",
+      "en-US": "Number Of Seats"
+    },
+    "Key": "Admin.SystemReport.NumberOfSeats",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "السعر",
+      "en-US": "Value"
+    },
+    "Key": "Admin.SystemReport.Value",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "مجاني ام مدفوع",
+      "en-US": "Free Or Paid"
+    },
+    "Key": "Admin.SystemReport.FreeOrPaid",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "حجز بواسطة",
+      "en-US": "Booked By"
+    },
+    "Key": "Admin.SystemReport.BookedBy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المقاعد المحجوزة",
+      "en-US": "Blocked Seats"
+    },
+    "Key": "Admin.SystemReport.BlockedSeats",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تقارير النظام",
+      "en-US": "System Reports"
+    },
+    "Key": "Admin.SystemReport",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الحجوزات حسب العرض",
+      "en-US": "Orders By Show"
+    },
+    "Key": "Admin.OrderByShow",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "عدد الأيام",
+      "en-US": "Number Of Days"
+    },
+    "Key": "Admin.Report.#OfDays",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "طلبات الإلغاء",
+      "en-US": "Cancellation Requests"
+    },
+    "Key": "Admin.CancelationReport",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تم إلغاؤه بواسطة",
+      "en-US": "Canceled By"
+    },
+    "Key": "Admin.SystemReport.CanceledBy",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "English",
+      "en-US": "English"
+    },
+    "Key": "Admin.English",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "العربية",
+      "en-US": "العربية"
+    },
+    "Key": "Admin.Arabic",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المدراء",
+      "en-US": "Admins"
+    },
+    "Key": "Admin.Admin",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "المستخدمون",
+      "en-US": "Users"
+    },
+    "Key": "Admin.User",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "بحث",
+      "en-US": "Search"
+    },
+    "Key": "Admin.Search.Data",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة أو تعديل",
+      "en-US": "Add Or Edit"
+    },
+    "Key": "Admin.UserRole.AddEdit",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "التقارير",
+      "en-US": "Reports"
+    },
+    "Key": "Admin.Report",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "إضافة",
+      "en-US": "New"
+    },
+    "Key": "Admin.Localizations.New",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "الاسم الأخير",
+      "en-US": "Last Name"
+    },
+    "Key": "Admin.User.LastName",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "     التصنيف    ",
+      "en-US": "Category"
+    },
+    "Key": "web.SelectCategories",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "احجز مقعدك",
+      "en-US": "Book Your Seat"
+    },
+    "Key": "web.Book Your Seat",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "قائمة الفعاليات/المسرحيات",
+      "en-US": "Events/Shows Lists"
+    },
+    "Key": "web.Events/Shows Lists",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "رقم الحجز :",
+      "en-US": "Order Ref #"
+    },
+    "Key": "web.Order Ref #",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "تذاكري",
+      "en-US": "My Tickets"
+    },
+    "Key": "web.My Tickets",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar-AE": "طريقة الدفع",
+      "en-US": "Payment Type"
+    },
+    "Key": "PaymentType",
+    "Keys": null
+  }
+
+]

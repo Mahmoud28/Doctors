@@ -1,0 +1,31 @@
+﻿@font-face {
+    font-family: 'DroidArabicKufiBold';
+    src: url('DroidArabicKufiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DroidArabicKufiRegular';
+    src: url('DroidArabicKufiRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* The following rules are deprecated. */
+
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    src: url('DroidArabicKufiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    src: url('DroidArabicKufiRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

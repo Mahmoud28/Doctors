@@ -1,0 +1,4 @@
+=============Begin Knet Request ===========
+===========Start============= 6/10/2019 10:36:04 AM
+KnetModel: {"Action":"1","Amt":"30","Currency":"414","Language":"EN","TrackId":"421072","Alias":null,"Udf1":"User Defined Field 1","Udf2":"User Defined Field 2","Udf3":"+96541521457","Udf4":"User Defined Field 4","Udf5":"User Defined Field 5","PaymentId":null,"PaymentPage":null,"ErrorMsg":null,"transVal":0,"RawResponse":null,"ErrorUrl":null,"ResourcePath":null,"ResponseURL":null,"Result":null,"OrderId":42}
+===========End============= 6/10/2019 10:36:04 AM

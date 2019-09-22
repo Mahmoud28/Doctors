@@ -1,0 +1,43 @@
+﻿@model Seagull.Core.ViewModel.UserLoginView
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.Login");
+}
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-8">
+        <form sg-form name="myform" data-ctrl="Login" data-id="@Model" token="0" form-controller="Login" view="true">
+            <div id="middle-wizard">
+                <sg-input name="Email" label="@_localizer.GetString("Seagull.Login.Email")" type="text" ng-model="Email" ng-required="true" keyup="$event.keyCode == 13 ? $parent.EnterLogin() : null" placeholder="@_localizer.GetString("Seagull.Login.UserName")"></sg-input>
+                <sg-input name="Password" label="@_localizer.GetString("Seagull.Login.Password")" type="password" ng-model="Password" ng-required="true" keyup="$event.keyCode == 13 ? $parent.EnterLogin() : null" placeholder="@_localizer.GetString("Seagull.Login.Password")"></sg-input>
+            </div>
+            <div class="col text-center">
+                <button type="button" class="btn btn-success" ng-click="EnterLogin()">@_localizer.GetString("Seagull.Login.Enter")</button>
+            </div>
+        </form>
+        <script>
+        var app = LineApp.controller('Login', function ($scope, $filter, $http, $timeout, $rootScope) {
+            $scope.EnterLogin = function () {
+
+                if (!AdhocValidate($scope)) {
+                    return;
+                }
+                //Loading Ajax Busy
+                ShowLoading();
+                var postData = {
+                    "Email": $scope.Email,
+                "Password": $scope.Password,
+                "ReturnUrl": '@ViewData["ReturnUrl"]'
+            }
+            var json = { model: postData, continueEditing: false, token: 0, status: "" };
+                $http.post('@Url.Action("UserLogin", "Login" , new { area = "Admin"})', json).then(function (response) {
+            });
+            }
+        });
+        </script>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+

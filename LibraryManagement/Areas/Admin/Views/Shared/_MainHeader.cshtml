@@ -1,0 +1,119 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model Seagull.Core.Helper.IGlobalSettings
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+<script>
+    function ChangeLang(id) {
+         var _url = '@Url.Action("SetLang", "Users")' + "?id=" + id;
+        $.ajax({
+            url: _url,
+            success: function (result) {
+                location.reload();
+            }
+        });
+    }
+</script>
+<style>
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    .button5 {
+        border-radius: 50%;
+    }
+    
+</style>
+ <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+    <div class="container-fluid">
+        <div class="navbar-wrapper">
+            <div class="navbar-minimize">
+                <button id="minimizeSidebar" class="btn btn-just-icon btn-white btn-fab btn-round">
+                    <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
+                    <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
+                    <div class="ripple-container"></div>
+                </button>
+            </div>
+            @*<a class="navbar-brand" href="#pablo">Dashboard</a>*@
+            @Html.Partial("_BreadCrumb")
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            @(Model.CurrentUser.IsRtl ? @_localizer.GetString("Admin.Arabic") : @_localizer.GetString("Admin.English"))
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:ChangeLang(1)">@_localizer.GetString("Admin.English")</a>
+                            <a class="dropdown-item" href="javascript:ChangeLang(2)">@_localizer.GetString("Admin.Arabic")</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index","Home", new { area = ""})">@_localizer.GetString("Admin.PublicSite")</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="material-icons">notifications</i>
+                        <span class="notification" id="NotifyCount">0</span>
+                        <p class="d-lg-none d-md-block">
+                            Some Actions
+                        </p>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right " style="text-align:center" id="NotificationList" aria-labelledby="navbarDropdownMenuLink">
+                        @*<a id="notification" class="dropdown-item" href="#">Mike John responded to your email</a>
+                        <a class="dropdown-item" href="#">You have 5 new tasks</a>
+                        <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+                        <a class="dropdown-item" href="#">Another Notification</a>
+                        <a class="dropdown-item" href="#">Another One</a>*@
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="material-icons">person</i>
+                        <p class="d-lg-none d-md-block">
+                            @_localizer.GetString("Admin.Account")
+                        </p>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile" style="width: 270px;">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <a href="#">
+                                    <img src="~/dist/img/user2-160x160.jpg" class="user-image" alt="User Image" style="border-radius: 90px;width: 57px;height: 55px;">
+                                </a>
+                            </div>
+                            <div class="col-12 text-center">
+                                <br />
+                            </div>
+                            <div class="col-12 text-center">
+                                <span class="hidden-xs">@Model.CurrentUser.Name</span>
+                            </div>
+                            <div class="col-12"><hr /></div>
+                            <div class="col-12 text-center">
+                                <a asp-area="" asp-action="Logout" asp-controller="Login" class="btn btn-danger btn-flat button button5"><i class="fa fa-fw fa-sign-out"></i>@*@_localizer.GetString("Admin.Logout")*@</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End Navbar -->

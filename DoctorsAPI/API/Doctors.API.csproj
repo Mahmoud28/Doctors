@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>Balanta.API</AssemblyName>
+    <RootNamespace>Balanta.API</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Apis.YouTube.v3" Version="1.38.0.1488" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="4.0.1" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Reference Include="CodeBureau">
+      <HintPath>..\..\Package\CodeBureau.dll</HintPath>
+    </Reference>
+    <Reference Include="Seagull.Doctors">
+      <HintPath>..\..\LibraryManagement\bin\Debug\netcoreapp2.1\Seagull.Doctors.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing">
+      <HintPath>..\..\Package\ZXing.Net.0.16.4\lib\net461\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="APIHelper\Functions\" />
+  </ItemGroup>
+
+
+  <!--<ItemGroup>
+    <ProjectReference Include="..\..\LibraryManagement\Line.Balan6a.csproj" />
+  </ItemGroup>-->
+
+</Project>

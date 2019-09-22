@@ -1,0 +1,118 @@
+﻿@model int
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.PrepareEmail");
+    bool disable = Model > 0 ? true : false;
+    string canModify = Model > 0 ? false.ToString().ToLower() : true.ToString().ToLower();
+}
+
+<style>
+    .divDash {
+        outline-color: black;
+        outline-style: dashed;
+        padding: 11px;
+        margin: 9px 0px 18px 0px;
+    }
+
+    .blueDash {
+        outline-color: #dd4b39;
+    }
+
+    .greenDash {
+        outline-color: #4caf50;
+    }
+
+    .panel-title {
+        text-align: center;
+        margin-top: 2%;
+    }
+
+    .btn-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+
+    .form-control, label, input::placeholder {
+        line-height: 1.1;
+        height: 100% !important;
+    }
+
+    hr {
+        border: none;
+        height: 2px;
+        /* Set the hr color */
+        color: #13688c; /* old IE */
+        background-color: #13688c; /* Modern Browsers */
+    }
+</style>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<style>
+    .ta-editor {
+        min-height: 150px;
+        height: auto;
+        overflow: auto;
+        font-family: inherit;
+        font-size: 100%;
+    }
+
+    li {
+        font-size: 18px;
+        font-size: 100%;
+    }
+
+    .ta-toolbar > .btn-group > .btn {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background-color: white;
+        color: black;
+    }
+</style>
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-header card-header-tabs card-header-warning">
+                <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                        <ul class="nav nav-tabs" data-tabs="tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-toggle="tab">
+                                    <i class="material-icons">email</i> @_localizer.GetString("Admin.Email")
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <form sg-form name="myform" data-ctrl="SendEmail" data-id="@Model" token="0" form-controller="null">
+                <sg-form-toolbar savec="@canModify" save="@canModify"></sg-form-toolbar>
+
+                <div class="row form-group row bmd-form-group" style="width:100%">
+                    <div class="col-3">
+                        <label class="control-label col-md-3 ng-binding text-bold" style="min-width: 100%; color:black" ng-class="{'text-bold' : attrs.ngRequired == 'true'}">@_localizer.GetString("Admin.Email.Message")</label>
+                    </div>
+                    @if (Model > 0)
+                    {
+                        <div class="col-9" style="width:100%">
+                            <label id="lpl" style="width:100%; text-align: -webkit-center;" ng-bind-html="model.Message"></label>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-md-9 form-control-wrapper">
+                            <div text-angular="text-angular" name="EmailMassege" disabled="@disable" label="@_localizer.GetString("Admin.Email.Message")" ng-model="model.Message" ng-required="true"></div>
+                        </div>
+                    }
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $("#lpl").html();
+</script>

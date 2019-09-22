@@ -1,0 +1,58 @@
+﻿@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.PushNOtification");
+}
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-header card-header-tabs card-header-warning">
+                <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                        @*<span class="nav-tabs-title">Tasks:</span>*@
+                        <ul class="nav nav-tabs" data-tabs="tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#users" data-toggle="tab">
+                                    <i class="material-icons">library_books</i> @_localizer.GetString("Admin.PushNOtification")
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="users">
+                        <div>
+                            <div>
+                                <sg-table ctrl="PushNotification" datasrc="PushNotification/List" has-operation="{add: true, edit : false ,delete :true, customview: {show : false , tablename : 'Users' }}" delete_msg="{header : '@_localizer.GetString("")',bodyMsg: '@_localizer.GetString("")'}" create-action="@Url.Action("PreparePushNotification", "PushNotification",new { id = 0})" token="0">
+                                    <sg-col name="NotificationMessage" title="@_localizer.GetString("Admin.NotificationMessage")" type="text"></sg-col>
+                                    <sg-col name="UsersCount" title="@_localizer.GetString("Admin.UsersCount")" type="text"></sg-col>
+
+                                    <sg-colchild name="UserName" title="@_localizer.GetString("Web.UserName	")" type="text"></sg-colchild>
+                                    @*<sg-colchild name="UserEmail" title="@_localizer.GetString("Admin.User.Email")" type="text"></sg-colchild>
+                                        <sg-colchild name="EmailStatus" title="@_localizer.GetString("Admin.EmailStatus")" type="text"></sg-colchild>*@
+                                </sg-table>
+                            </div>
+                            <sg-tabs>
+                                <div id="VacancyRatingDiv" ng-show="showEmailTransferUser">
+                                    <table class="table form-table" style="display: inline-table;">
+                                        <tbody>
+                                            <tr ng-repeat="notification in model.Child">
+                                                <td>
+                                                    {{notification.UserName}}
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </sg-tabs>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

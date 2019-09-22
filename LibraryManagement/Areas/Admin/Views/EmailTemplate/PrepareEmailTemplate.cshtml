@@ -1,0 +1,31 @@
+﻿@model int
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.EmailTemplate.AddEdit");
+
+}
+<sg-page>
+    <form sg-form name="myform" data-ctrl="EmailTemplate" data-id="@Model" token="0" form-controller="null">
+        <sg-form-toolbar savec="true"></sg-form-toolbar>
+        <sg-input type="text" name="TemplateNameAr" label="@_localizer.GetString("Admin.EmailTemplate.TemplateNameAr")" ng-model="model.TemplateNameAr"></sg-input>
+        <sg-input type="text" name="TemplateNameEn" label="@_localizer.GetString("Admin.EmailTemplate.TemplateNameEn")" ng-model="model.TemplateNameEn"></sg-input>
+        <div class="row test">
+            <div class="col-2"><label>@_localizer.GetString("Admin.EmailTemplate.BodyAr")</label></div>
+            <div class="col-10 text-center">
+                <div text-angular="text-angular" name="BodyAr" label="@_localizer.GetString("Admin.EmailTemplate.BodyAr")" ng-model="model.BodyAr"></div>
+            </div>
+            <div class="col-2"><label>@_localizer.GetString("Admin.EmailTemplate.BodyEn")</label></div>
+            <div class="col-10 text-center">
+                <div text-angular="text-angular" name="BodyEn" label="@_localizer.GetString("Admin.EmailTemplate.BodyEn")" ng-model="model.BodyEn"></div>
+            </div>
+        </div>
+
+        @*<sg-input type="text" name="BodyAr" label="@_localizer.GetString("Admin.EmailTemplate.BodyAr")" ng-model="model.BodyAr"></sg-input>
+        <sg-input type="text" name="BodyEn" label="@_localizer.GetString("Admin.EmailTemplate.BodyEn")" ng-model="model.BodyEn"></sg-input>*@
+        <sg-input type="text" name="HeaderAr" label="@_localizer.GetString("Admin.EmailTemplate.HeaderAr")" ng-model="model.HeaderAr"></sg-input>
+        <sg-input type="text" name="HeaderEn" label="@_localizer.GetString("Admin.EmailTemplate.HeaderEn")" ng-model="model.HeaderEn"></sg-input>
+        <sg-input type="number" name="ServiceType" label="@_localizer.GetString("Admin.EmailTemplate.ServiceType")" ng-model="model.ServiceType" ng-required="true"></sg-input>
+
+    </form>
+</sg-page>

@@ -1,0 +1,31 @@
+﻿
+<div class="form-group row">
+    <div class="control-label col-md-3">{{::attrs.label}}</div>
+    <div class="col-md-9">
+        <div>
+            <div class="sg-select multi" style="position: relative;">
+                <div ng-click="vm.showModal();" class='form-control select-box' tabindex="0">
+                    <span ng-repeat="row in vm.selectedRows track by $index" class="multi-item">
+                        <span ng-bind="row[attrs.returnAs]"></span>
+                        <fa class="fa fa-trash" ng-click="vm.unSelectRow(row);$event.stopPropagation();"></fa>
+                    </span>
+                    <i class='fa fa-angle-right open' style="font-size:20px" ng-class="{'fa-angle-down' : $root.showbox[attrs.name]}"></i>
+                    <i  class="fa fa-remove text-primary remove" style="padding: 3px;" ng-show="vm.selectedRows.length > 0 && !attrs.disabled" ng-click="vm.selectedRows=[];$event.stopPropagation();"></i>
+                </div>
+                <div id="droplist">
+                    <input class="form-control search-box" ng-change="vm.undo()" ng-model="vm.search[attrs.returnAs]" placeholder="{{attrs.searchmessage}}" ng-model-options="{debounce : 600}" />
+                    <div class="sg-table" style="overflow: auto;max-height: 180px;margin-bottom: 0;margin-top:2px;border: 0;">
+                        <table class="table table-sm">
+                            <tr ng-repeat="row in vm.binding  track by $index" ng-click="vm.selectRow(row)" ng-if="vm.selectedIds.indexOf(row[attrs.returnCol]) === -1" ng-class="{'selected' : row[attrs.returnCol] == vm.selectedRow[attrs.returnCol]}">
+                                <td ng-bind="row[attrs.returnAs]"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="getMessage()">
+                <p class="ng-invalid"><i class="fa fa-warning"></i> {{getMessage()}}</p>
+            </div>
+        </div>
+    </div>
+</div>

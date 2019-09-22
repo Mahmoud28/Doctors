@@ -1,0 +1,411 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.0/backbone-min.js"></script>-->
+    <!--<link rel="stylesheet" href="jquery-ui.min.css">-->
+    <script data-require="jquery@2.1.1" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script data-require="raphael@2.1.0" data-semver="2.1.0" src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <!-- <script src="jquery.js"></script>-->
+    <script src="jquery-ui.js"></script>
+    <!--<script type="text/javascript" src="raphael.js"></script>-->
+
+</head>
+<body>
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12"><br /></div>
+                <div class="col-md-4">
+                    <div id="card-478690">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-478690" href="#card-element-157688">Add New Package</a>
+                            </div>
+                            <div id="card-element-157688" class="collapse">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="label label-control">Rows</label>
+                                            <input type="number" class="form-control" id="row" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="label label-control">Cols</label>
+                                            <input type="number" class="form-control" id="col" /><br />
+                                        </div>
+                                        <div class="col-md-3"><input type="button" class="form-control" value="add" id="section" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div id="card-478691">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-478691" href="#card-element-15788">Package Mode</a>
+                            </div>
+                            <div id="card-element-15788" class="collapse">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="color" id="color" name="favcolor" class="form-control" value="#ff0000">
+                                            <br />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="number" class="form-control" id="price" placeholder="Price" />
+                                            <br />
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input type="text" class="form-control" id="packageName" placeholder="Package Name" />
+                                            <br />
+                                        </div>
+                                        <input type="button" id="GetSelectedSets" value="GetSelectedSets" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div id="card-47867">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-47867" href="#card-element-123">Functions</a>
+                            </div>
+                            <div id="card-element-123" class="collapse">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="button" value="Delete" id="delete" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div id="raphael"></div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+   
+
+    <script>
+        var allCircleObj = [];
+
+        var EnAlphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+        var counter = 1;
+        var num = 0;
+        var sets = [];
+        var stagePackage = [];
+
+
+
+        $("#GetSelectedSets").click(function () {
+
+            var validation = Validation("PackageMode");
+            if (validation.isValid == false) {
+                alert(validation.Message);
+                return 0;
+            }
+
+            if (sets.length != 0) {
+                var packageArr = [];
+                sets.forEach(function (value, index) {
+                    packageArr.push(value);
+                    value.attr({
+                        fill: $("#color").val(),
+                    }).data('price', $("#price").val());
+                });
+                if (stagePackage.length == 0) {
+                    var model = {
+                        "packageName": $("#packageName").val(),
+                        "packagePrice": $("#price").val(),
+                        "packageSets": sets,
+                    };
+                    stagePackage.push(model);
+                } else {
+
+                    var packageName = $("#packageName").val()
+                    var searchReselt = searchByPackageName(packageName, stagePackage);
+                    if (searchReselt != undefined) {
+                      
+                            var oldPackage = searchReselt;
+                            //oldPackage.packageSets.push(sets);
+                            sets.forEach(function (value, index) {
+                                oldPackage.packageSets.push(value);
+                            });
+                    } else {
+                        var model = {
+                            "packageName": $("#packageName").val(),
+                            "packagePrice": $("#price").val(),
+                            "packageSets": sets,
+                        };
+                        stagePackage.push(model);
+                    }
+                }
+            }
+            sets = [];
+        });
+        $("#delete").click(function () {
+            var validation = Validation("Delete");
+            if (validation.isValid == false) {
+                alert(validation.Message);
+                return 0;
+            }
+
+            if (sets.length != 0) {
+                sets.forEach(function (value, index) {
+                    debugger
+                    if (stagePackage.length != 0)
+                        var reselt = DeleteFromModelById(value.id);
+                    var text = value.data('TextEelements');
+                    value.remove();
+                    text.remove();
+                });
+                sets = [];
+            }
+
+        });
+
+        $(function () {
+            var R = Raphael("raphael");
+           
+            var sectionSet = R.set();
+            $("#section").on("click", function () {
+
+                var validation = Validation("Package");
+                if (validation.isValid == false) {
+                    alert(validation.Message);
+                    return 0;
+                }
+                sections = 1;
+                rows = $("#row").val();
+                seats = $("#col").val();
+                sectionLayout(seats, sections, rows);
+            });
+
+            function sectionLayout(seats, sections, rows) {
+                var id;
+                var elementArray = [];
+                var radius = 15;
+                var diameter = 2 * radius;
+                var padding = 6;
+                var recWidth = seats * (padding + diameter);
+                var recHeight = rows * (padding + diameter);
+
+                R.setSize(recWidth + 35 , recHeight + 20);
+                for (var i = 0; i < sections; i++) {
+                    id = i;
+                    var recInitPosX = (i * (recWidth + padding));
+                    var recInitPosY = (i * (recWidth + padding));
+
+                    var rectangle = R.rect(recInitPosX, recInitPosY, recWidth + 35,
+                        recHeight +15, 5, 5).attr({
+                            fill: 'grey',
+                            stroke: 'none'
+                        }).data('id', 'section' + i);
+
+                    sectionSet.push(rectangle);
+
+                    for (var j = 0; j < rows; j++) {
+                        cy = recInitPosY + padding + radius + (j * (diameter + padding));
+                        var Alpha = EnAlphabet[j];
+                        if (Alpha == undefined) {
+                            if (EnAlphabet[counter] != undefined) {
+                                Alpha = EnAlphabet[num] + EnAlphabet[counter];
+                                counter = counter + 1;
+                            } else {
+                                num = num + 1;
+                                counter = 0;
+                                Alpha = EnAlphabet[0] + EnAlphabet[0];
+                            }
+                        }
+                        var textPosition = 10;
+                        R.text(10, cy, Alpha).toFront();
+
+                        
+
+                        var rowData = [];
+                        for (var k = 0; k < seats; k++) {
+                            var cx = recInitPosX + padding + radius + (k * (diameter + padding)) + 15;
+                            textPosition = cx + 15;
+                            var sectionSeat = R.set();
+                            var text = R.text(cx, cy, Alpha+"-"+(k + 1)).attr({
+                                fill: "white",
+                                'font-family': 'FranklinGothicFSCondensed-1, FranklinGothicFSCondensed-2',
+                                "cursor": "pointer",
+                            });
+                           
+                            var c = R.circle(cx, cy, radius).attr({
+                                fill: 'black',
+                                //stroke: 'none'
+                                "cursor": "pointer",
+                                
+                            }).data('TextEelements', text);
+                            //c.toBack();
+
+                            text.toFront();
+                            sectionSeat.push(c, text);
+                            sectionSeat.draggable();
+                            c.click(function () {
+                                
+                                if (this.attr().fill === "black") {
+                                    this.attr({
+                                        fill: "blue"
+                                    });
+                                    sets.push(this);
+                                } else {
+                                    this.attr({
+                                        fill: "black"
+                                    });
+                                    sets.pop(this);
+                                }
+                            });
+                            sectionSet.push(c);
+                            rowData.push(c);
+                        }
+                        var liftText = R.text(textPosition + 10, cy, Alpha).toFront();
+
+
+
+                        var row = {
+                            "RowName": Alpha,
+                            "Row": rowData
+                        };
+                        allCircleObj.push(row)
+                    }
+                }
+
+                console.log(allCircleObj);
+            }
+            Raphael.st.draggable = function () {
+                var w = this.paper.width - 35;
+                var h = this.paper.height - 35;
+                var me = this,
+                    lx = this.attr().cx,
+                    ly = this.attr().cy,
+                    ox = 0,
+                    oy = 0,
+                    moveFnc = function (dx, dy) {
+                        
+                        var newCx = ox + dx;
+                        var newCy = oy + dy;
+                        console.log("newCx :" + newCx + " - newCy : " + newCy + " -W : " + w + " -H : " + h);
+                        if (newCx < 36) {
+                            newCx = 36;
+                        }
+                        if (newCy < 21) {
+                            newCy = 21;
+                        }
+                        if (newCx > w) {
+                            newCx = w;
+                        }
+                        if (newCy > h) {
+                            newCy = h;
+                        }
+                        this.attr({ cx: newCx, cy: newCy  });
+                        var text = me.data("TextEelements").items[1];
+                        text.attr({ "x": newCx, "y": newCy })
+                    },
+                    startFnc = function () {
+                        ox = this.attr('cx');
+                        oy = this.attr('cy');
+
+                    },
+                    endFnc = function () {
+                        ox = lx;
+                        oy = ly;
+                    };
+
+                this.drag(moveFnc, startFnc, endFnc);
+            };
+        });
+    </script>
+    <script> //Functions
+        function searchByPackageName(nameKey, myArray) {
+            for (var i = 0; i < myArray.length; i++) {
+                if (myArray[i].packageName === nameKey) {
+                    return myArray[i];
+                }
+            }
+        }
+
+        function DeleteFromModelById(id) {
+            if (stagePackage.length != 0) {
+                stagePackage.forEach(function (value, index) {
+                    var arr = value.packageSets;
+                    value.packageSets.forEach(function (val, ind) {
+                        if (val.id == id) {
+                            arr.splice(val, 1);
+                        }
+                    });
+                });
+            }
+        }
+
+        function Validation(type) {
+            var validationModel = {
+                "isValid": true,
+                "Message": ""
+            };
+            switch (type) {
+                case "Package": {
+                    var row = $("#row").val();
+                    var col = $("#col").val();
+                    if (row == "" || row <= 0 || col == "" || col <= 0) {
+                        validationModel.isValid = false;
+                        validationModel.Message = "Erorr in Row Number Or Col Number";
+                    }
+                    if (sets.length == 0) {
+                        validationModel.Message = "Select A sets To Get your Action";
+                    }
+                    return validationModel;
+                }
+                case "PackageMode": {
+                    var price = $("#price").val();
+                    var packageName = $("#packageName").val();
+                    if (price == "" || price == undefined || price <= 0 || packageName == "" || packageName == undefined) {
+                        validationModel.isValid = false;
+                        validationModel.Message = "Erorr in Price Number Or Package Name";
+                    }
+                    if (sets.length == 0) {
+                        validationModel.Message = "Select a sets To get your action in this sets";
+                    }
+                    return validationModel;
+                }
+                case "Delete": {
+                    if (sets.length == 0) {
+                        validationModel.isValid = false;
+                        validationModel.Message = "Select a sets To get your action in this sets";
+                    }
+                    return validationModel;
+                }
+
+                default:
+                    return validationModel;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿@using Microsoft.Extensions.Localization
+@using Seagull.Core.Helper
+@inject IStringLocalizer _localizer
+@inject IGlobalSettings _globalSettings
+@{
+    ViewData["Title"] = "Error";
+    var _setting = _globalSettings.CurrentSystemSetting;
+    bool isRtl = _globalSettings.CurrentUser != null ? _globalSettings.CurrentUser.IsRtl : false;
+}
+
+@*<link href="~/CustomError/Error.css" rel="stylesheet" />*@
+
+<section class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <!--<h1 class="text-uppercase">Error</h1> -->
+                <img class="w-75 pt-5 pb-5" src="~/Balan6a/img/404.png" />
+            </div>
+        </div>
+    </div>
+</section>
+
+

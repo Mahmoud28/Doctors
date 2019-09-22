@@ -1,0 +1,83 @@
+﻿@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.ListOfLocalizations");
+}
+
+<sg-page >
+    <form sg-form name="myform" data-ctrl="Localization" data-id="0" token="0" form-controller="Localizationctrl" view="False">
+        <div style="margin-left: 15px;margin-bottom: 10px;">
+            <div class="row">
+                <a ng-class="IsAdd ?  'btn btn-success btn-sm': 'btn btn-danger btn-sm'" ng-click="ShowAddDiv()"><i ng-class="IsAdd ?  'fa fa-plus text-white': 'fa fa-minus text-white'"></i> {{IsAdd ? '@_localizer.GetString("Admin.Localizations.New")' :'@_localizer.GetString("Admin.Localizations.Dismiss")' }}</a>
+                <div ng-show="ShowAdd" class="col-md-12" id="focusdiv" tabindex="0">
+                    <sg-input type="text" name="Resources" label="@_localizer.GetString("Admin.Localization.Name")" ng-model="Resources" ng-required="true"></sg-input>
+                    <sg-input type="text" name="Arabic" label="@_localizer.GetString("Admin.Localization.Arabic")" ng-model="Arabic" ng-required="true"></sg-input>
+                    <sg-input type="text" name="English" label="@_localizer.GetString("Admin.Localization.English")" ng-model="English" ng-required="true"></sg-input>
+                    <div class="pull-right">
+                        <a class="btn btn-success btn-sm" ng-click="AddOrUpdate()"><i class="fa fa-save text-white"></i>@_localizer.GetString("Admin.Localizations.Save")</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <sg-tabs>
+                <sg-table ctrl="Localization" datasrc="Localization/List" has-operation="false" delete_msg="{header : '@_localizer.GetString("Admin.Delete.Localizations")',bodyMsg: '@_localizer.GetString("Admin.Delete.Confirm.Localizations")' }" create-action="@Url.Action("PrepareLocalization", "Localization" ,new { id=0 })" token="0" additionalpaging="">
+                    <sg-col name="Resource" title="@_localizer.GetString("Admin.Localization.Name")" type="text"></sg-col>
+                    <sg-col name="Arabic" title="@_localizer.GetString("Admin.Localization.Arabic")" type="text"></sg-col>
+                    <sg-col name="English" title="@_localizer.GetString("Admin.Localization.English")" type="text"></sg-col>
+                    <sg-col>
+                        <span class="btn btn-sm btn-warning" ng-click="$parent.$parent.$parent.Edit(row)"><i class="fa fa-info-circle"></i></span>
+                    </sg-col>
+                </sg-table>
+        </sg-tabs>
+    </form>
+</sg-page>
+
+<script>
+    var app = LineApp.controller('Localizationctrl', function ($scope, $filter, $http, $timeout, $rootScope) {
+
+        $scope.ShowAdd = false;
+        $scope.IsAdd = true;
+        $scope.focusdiv = false;
+
+        $scope.ShowAddDiv = function () {
+            $scope.ShowAdd = !$scope.ShowAdd;
+            $scope.IsAdd = !$scope.IsAdd;
+            $scope.Resources = "";
+            $scope.Arabic = "";
+            $scope.English = "";
+        }
+
+        $scope.AddOrUpdate = function () {
+             if (!AdhocValidate($scope))
+                return;
+            ShowLoading();
+
+            var data = {
+                "Resource": $scope.Resources,
+                "Arabic": $scope.Arabic,
+                "English": $scope.English,
+            };
+            jsonData = { model: data, continueEditing: false, token: 0 };
+            $http.post('@Url.Action("CreateOrEdit", "Localization")', jsonData).then(function (response) {
+                if (response.data.success) {
+                    //to refresh current page
+                    location.reload();
+                } else if (response.data.success === false && response.data.FormErrors) {
+                }
+                RemoveLoading();
+            });
+        }
+
+        $scope.Edit = function (row) {
+            //$("#focusdiv").scroll();
+            $scope.ShowAdd = true;
+            $scope.IsAdd = false;
+            $scope.Resources = row.Resource;
+            $scope.Arabic = row.Arabic;
+            $scope.English = row.English;
+
+            setTimeout(function () { document.getElementById('focusdiv').focus(); }, 200);
+        }
+    });
+</script>
+

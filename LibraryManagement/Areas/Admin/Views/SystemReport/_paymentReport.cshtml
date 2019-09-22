@@ -1,0 +1,58 @@
+﻿@using Microsoft.Extensions.Localization
+@using Seagull.Core.Helper
+@inject IStringLocalizer _localizer
+@inject IGlobalSettings _userService
+
+@{
+    string isRtl = _userService.CurrentUser.IsRtl.ToString().ToLower();
+}
+<form sg-form name="myform" data-ctrl="Session" data-id="0" token="0" view="False" form-controller="PaymentReportCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <sg-input token="0" label="@_localizer.GetString("Admin.Report.CustomerName")" type="text" ng-model="CustomerName"></sg-input>
+            <sg-input token="0" label="@_localizer.GetString("Admin.Report.FromDate")" type="date" ng-model="FromDate"></sg-input>
+            <sg-input token="0" label="@_localizer.GetString("Admin.Report.ToDate")" type="date" ng-model="ToDate"></sg-input>
+            <sg-select token="0" label="@_localizer.GetString("Admin.Report.PaymentType")" datasrc="GenericGets/PaymentType" return-col="Id" return-as="Name" ng-model="PaymentType"></sg-select>
+        </div>
+        <div class="col-12 pull-center">
+            <div id="PaymentReportSearchButtons" class="pull-right">
+                <span class="btn btn-success pull-right " ng-click="PaymentReportSearch()">@_localizer.GetString("Admin.Search")</span>
+            </div>
+        </div>
+    </div>
+    <div class="box-body">
+        <div id="PaymentReportView">
+        </div>
+    </div>
+</form>
+<script>
+    var app = LineApp.controller('PaymentReportCtrl', function ($scope, $filter, $http, $timeout, $rootScope) {
+        $scope.PaymentReportSearch = function (canprint, type) {
+            if (!AdhocValidate($scope))
+                return;
+            debugger
+            var _payentReport = buildSearchCriteriaUrlDynamicForReport('@Url.Action("GetPaymentReport", "SystemReport")', true, $scope, "", []);
+            _payentReport += "&CustomerName=" + $scope.CustomerName+"&ToDate=" + $scope.ToDate+"&FromDate=" + $scope.FromDate+"&PaymentType=" + $scope.PaymentType;
+            var model = [
+                { label: 'Id', name: 'Id', align: "center", hidden: true },
+                { label: '@_localizer.GetString("Admin.SystemReport.CustomerName")', name: 'CustomerName', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.OrderDate")', name: 'Date', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.TicketPrice")', name: 'TicketPrice', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.NumberOfTicket")', name: 'NumberOfTicket', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.TotalPrice")', name: 'TotalPrice', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.OrderStatus")', name: 'OrderStatus', align: "center" },
+            ];
+            subGridTable = "GridOrderByShow";  
+
+            BuildReportDiv("PaymentReportView", "jqGridPayment", "jqGridPaymentReportPagers");
+
+            buildGrid(model, "jqGridPayment", _payentReport, '@int.MaxValue', "jqGridPaymentReportPagers",
+                false, false, false, false, true, false, '@(isRtl.Equals("true") ? "rtl" : "ltr")', false, "tab-content", "POST", 0, "", "PaymentReportSearchButtons**SearchPrint('jqGridOrderByShow', 1)")
+
+            $("#alertmod_jqGridPayment").css("display", "none");
+            $(".ui-jqgrid-labels").attr('style', "text-align: center;");
+            $(".glyphicon-refresh").attr("style", "padding-left: 24px;");
+            $(".ui-pg-button").attr("style", "padding-left: 24px;");
+        }
+    });
+</script>

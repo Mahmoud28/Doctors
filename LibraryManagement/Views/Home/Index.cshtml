@@ -1,0 +1,44 @@
+﻿@using Seagull.Core.Helper
+@using Microsoft.Extensions.Localization
+@using Seagull.Doctors.ViewModel
+@using Seagull.Doctors.Areas.Admin.ViewModel;
+@inject IGlobalSettings _userService
+@inject IStringLocalizer _localizer
+
+@model HomeWebViewModel
+
+
+@{
+    ViewData["Title"] = "";
+
+    bool isRtl = _userService.CurrentUser != null ? _userService.CurrentUser.IsRtl : false;
+}
+
+<section class="topslider">
+    <div class="swiper-container slidertop" id="shows"></div>
+    <div class="swiper-container slidertop">
+
+        <div class="swiper-pagination">
+
+        </div>
+
+        <div id="nextPageination" hidden class="swiper-pagination">
+
+        </div>
+    </div>
+
+
+
+    <div id="prebtn" class="swiper-button-prev"></div>
+    <div id="nextbtn" class="swiper-button-next"></div>
+
+
+    
+</section>
+<div class="clearfix"></div>
+<script>
+
+    $("#nolink").click(function (e) {
+        e.preventDefault();
+    });
+</script>

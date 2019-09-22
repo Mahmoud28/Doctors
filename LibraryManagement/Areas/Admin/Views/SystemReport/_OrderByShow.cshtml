@@ -1,0 +1,52 @@
+﻿@using Microsoft.Extensions.Localization
+@using Seagull.Core.Helper
+@inject IStringLocalizer _localizer
+@inject IGlobalSettings _userService
+@{
+    string isRtl = _userService.CurrentUser.IsRtl.ToString().ToLower();
+}
+<form sg-form name="myform" data-ctrl="Session" data-id="0" token="0" view="False" form-controller="OrderbyShowCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <sg-select token="0" label="@_localizer.GetString("Admin.Report.Shows")" datasrc="GenericGets/GetAllShows" return-col="Id" return-as="Name" ng-model="ShowId"></sg-select>
+        </div>
+        <div class="col-md-12">
+            <div id="ShowSearchButtons" class="pull-right">
+                <span class="btn btn-success pull-right " ng-click="ShowSearch()">@_localizer.GetString("Admin.Search")</span>
+            </div>
+        </div>
+    </div>
+    <div class="box-body">
+        <div id="ShowsView">
+        </div>
+    </div>
+</form>
+<script>
+    var app = LineApp.controller('OrderbyShowCtrl', function ($scope, $filter, $http, $timeout, $rootScope) {
+        $scope.ShowSearch = function (canprint, type) {
+            if (!AdhocValidate($scope))
+                return;
+            var _orderbyshow = buildSearchCriteriaUrlDynamicForReport('@Url.Action("GetOrderByShow", "SystemReport")', true, $scope, "", []);
+            _orderbyshow += "&ShowId=" + $scope.ShowId;
+            var model = [
+                { label: 'Id', name: 'Id', align: "center", hidden: true },
+                { label: '@_localizer.GetString("Admin.SystemReport.BookedBy")', name: 'UserName', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.OrderStatus")', name: 'OrderStatus', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.Value")', name: 'Price', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.FreeOrPaid")', name: 'strIsPaidOrFree', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.NumberOfSeats")', name: 'NumberOfSeats', align: "center" }, 
+                { label: '@_localizer.GetString("Admin.SystemReport.BlockedSeats")', name: 'BlockedSeats', align: "center" },
+            ];
+            subGridTable = "GridOrderByShow";
+            BuildReportDiv("ShowsView", "jqGridOrderByShow", "jqGridOrderByShowPagers");
+
+            buildGrid(model, "jqGridOrderByShow", _orderbyshow, '@int.MaxValue', "jqGridOrderByShowPagers",
+                false, false, false, false, true, false, '@(isRtl.Equals("true") ? "rtl" : "ltr")', false, "tab-content", "POST", 0, "", "ShowSearchButtons**SearchPrint('jqGridOrderByShow', 1)")
+           
+            $("#alertmod_jqGridOrderByShow").css("display", "none");
+            $(".ui-jqgrid-labels").attr('style', "text-align: center;");
+            $(".glyphicon-refresh").attr("style", "padding-left: 24px;");
+            $(".ui-pg-button").attr("style", "padding-left: 24px;");
+        }
+    });
+</script>

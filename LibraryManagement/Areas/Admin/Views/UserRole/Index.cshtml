@@ -1,0 +1,19 @@
+﻿@using Microsoft.Extensions.Localization
+@using Seagull.Doctors.Helper
+@inject IStringLocalizer _localizer
+@model PreparePageViewModel
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.ListOfUserRole");
+}
+
+<sg-page >
+    <sg-tabs>
+        <sg-tab title="@_localizer.GetString("Admin.UserRole")">
+            <sg-table ctrl="User" datasrc="UserRole/List" has-operation="{add: @Model.Add.ToString().ToLower(), edit : @Model.Edit.ToString().ToLower() ,delete :@Model.Delete.ToString().ToLower(), customview: {show : false , tablename : 'Users' }}" delete_msg="{header : '@_localizer.GetString("Admin.Delete.User")',bodyMsg: '@_localizer.GetString("Admin.Delete.Confirm.User")'}" create-action="@Url.Action("PrepareUserRole", "UserRole",new { id = 0 })" token="0">
+                <sg-col name="Id" title="@_localizer.GetString("Admin.User.Id")" type="number"></sg-col>
+                <sg-col name="Name" title="@_localizer.GetString("Admin.User.Name")" type="text"></sg-col>
+            </sg-table>
+        </sg-tab>
+    </sg-tabs>
+</sg-page>
+

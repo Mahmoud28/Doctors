@@ -1,0 +1,70 @@
+﻿@using Microsoft.Extensions.Localization
+@using Seagull.Core.Helper
+@inject IStringLocalizer _localizer
+@inject IGlobalSettings _userService
+
+@{
+    string Isrtl = _userService.CurrentUser.IsRtl.ToString().ToLower();
+}
+
+<form sg-form name="myform" data-ctrl="Session" data-id="0" token="0" view="False" form-controller="UserOrderCtrl">
+    <div class="row">
+
+        <div class="col-12">
+            <sg-select token="0" label="@_localizer.GetString("Pages.Users")" datasrc="GenericGets/GetAllUsers" return-col="Id" return-as="Name" ng-model="Users"></sg-select>
+        </div>
+        <div class="col-md-12">
+            <div id="UserOrderSearchButtons" class="pull-right">
+                <span class="btn btn-success pull-right " ng-click="UserOrderSearch()">@_localizer.GetString("Admin.Search")</span>
+            </div>
+        </div>
+
+    </div>
+    <div id="UserOrderView">
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr />
+        </div>
+    </div>
+
+</form>
+
+<script>
+    var app = LineApp.controller('UserOrderCtrl', function ($scope, $filter, $http, $timeout, $rootScope) {
+        $scope.SearchPrint = function (tableName, type) {
+            @*window.location = buildSearchCriteriaUrlDynamicForReport('@Url.Action("VacancyDetailsReportReport", "SystemReport")', true, $scope, "", $('#jqGridTestReport').getGridParam("postData"));
+            return;*@
+        }
+        $scope.UserOrderSearch = function (canprint, type) {
+            if (!AdhocValidate($scope))
+                return;
+            var _urlUserOrderReport = buildSearchCriteriaUrlDynamicForReport('@Url.Action("UserOrderReport", "SystemReport")', true, $scope, "", []);
+
+            _urlUserOrderReport += "&usersIds=" + $scope.Users;
+            var model = [
+                { label: 'Id', name: 'Id', align: "center", hidden: true },
+                { label: '@_localizer.GetString("Admin.SystemReport.BookedBy")', name: 'strUser', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.OrderStatus")', name: 'strStatus', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.NumberOfSeats")', name: 'NumberOfSeats', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.Value")', name: 'Price', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.FreeOrPaid")', name: 'strIsPaidOrFree', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.BlockedSeats")', name: 'BlockedSeats', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.UserType")', name: 'UserType', align: "center" },
+            ];
+            subGridTable = "GridCompetitionDetails";
+
+            BuildReportDiv("UserOrderView", "jqGridUserOrder", "jqGridUserOrderPager");
+
+            buildGrid(model, "jqGridUserOrder", _urlUserOrderReport, '@int.MaxValue', "jqGridUserOrderPager",
+                false, false, false, false, true, false, '@(Isrtl.Equals("true") ? "rtl" : "ltr")', false, "tab-content", "POST", 0, "", "UserOrderSearchButtons**SearchPrint('jqGridUserOrder', 1)")
+            $("#alertmod_jqGridUserOrder").css("display", "none");
+            $("#jqGridUserOrder_subgrid").css("display", "none");
+            $(".ui-jqgrid-labels").attr('style', "text-align: center;");
+            $(".glyphicon-refresh").attr("style", "padding-left: 24px;");
+            $(".ui-pg-button").attr("style", "padding-left: 24px;");
+            //$("#ProgramView").css("display", "none");
+
+        }
+    });
+</script>

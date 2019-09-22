@@ -1,0 +1,13 @@
+﻿@model int
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.UserRole.AddEdit");
+}
+<sg-page>
+    <form sg-form name="myform" data-ctrl="UserRole" data-id="@Model" token="0" form-controller="null">
+        <sg-form-toolbar savec="true"></sg-form-toolbar>
+        <sg-input type="text" name="Name" label="@_localizer.GetString("Admin.User.Name")" ng-model="model.Name" ng-required="true"></sg-input>
+         
+    </form>
+</sg-page>

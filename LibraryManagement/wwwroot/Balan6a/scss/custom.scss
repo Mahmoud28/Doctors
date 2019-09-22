@@ -1,0 +1,12 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+row-a {
+  $var: 5;
+
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      top: -#{$var}px;
+      $var: $var + 5;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+﻿@using Seagull.Core.Helper
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@model Seagull.Core.Helper.IGlobalSettings
+
+<div class="navbar-brand">
+    <g></g><g></g>
+</div>
+@{ if (!ViewContext.RouteData.Values["action"].ToString().Contains("AccessDenied"))
+    {
+        if (ViewContext.RouteData.Values["Controller"].ToString().Contains("Dashboard"))
+        {
+            <text>
+                <a class="navbar-brand" href="@Url.Action("Index", ViewContext.RouteData.Values["controller"].ToString())">@_localizer.GetString(string.Format("Admin.{0}", ViewContext.RouteData.Values["controller"].ToString())).Value</a>
+            </text>
+
+        }
+        else
+        {
+            <text>
+                <a class="navbar-brand" href="@Url.Action("Index", "Dashboard")">@_localizer.GetString(string.Format("Admin.{0}", "Dashboard")).Value</a>
+                <i class="fa fa-arrow-circle-@(Model.CurrentUser.IsRtl ? "left" : "right")" style="font-size:35px;color:red"></i>
+            </text>
+            <text>
+                <a class="navbar-brand" href="@Url.Action("Index", ViewContext.RouteData.Values["controller"].ToString())">@_localizer.GetString(string.Format("Admin.{0}", ViewContext.RouteData.Values["controller"].ToString())).Value</a>
+            </text>
+        }
+    }
+}

@@ -1,0 +1,355 @@
+﻿@using Microsoft.Extensions.Localization
+@using Seagull.Core.Helper
+@using Seagull.Core.Helper.StaticVariables
+@using Seagull.Core.Data.Interfaces
+@inject IPermissionRepository _permission
+@inject IStringLocalizer _localizer
+
+@model Seagull.Core.Helper.IGlobalSettings
+
+
+<style>
+    .textalign {
+        text-align: -webkit-match-parent !important;
+        font-size: 23px;
+        padding-top: 5px;
+    }
+
+    .marginleft {
+        margin-left: 8%;
+    }
+
+    #navM::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
+        border-radius: 50px;
+    }
+
+    #navM::-webkit-scrollbar {
+        width: 7px;
+        background-color: #F5F5F5;
+    }
+
+    #navM::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(156, 39, 176)), color-stop(0.72, rgba(156, 39, 176, 0.22)), color-stop(0.86, rgba(156, 39, 176, 0.1)));
+    }
+
+    .sidebar .nav li.active > a, .sidebar .nav li.active > a i {
+        color: #fff;
+        padding: 4px;
+        padding-bottom: 6px;
+    }
+</style>
+<div class="sidebar" data-color="purple" data-background-color="white" data-image="@Url.Content("~/TamTemplateDashboard/assets/img/sidebar-3.jpg")">
+    <div class="logo">
+        <div class="user-panel">
+            <div class="text-center">
+                <b>@_localizer.GetString("Seagull.System")</b>
+            </div>
+
+        </div>
+    </div>
+    <div class="sidebar-wrapper ps-container ps-theme-default ps-active-y scrollbar" data-ps-id="faf8eb5d-d85c-ec83-6f30-8d879033cc54" id="navM" style="overflow-y:auto !important">
+        <ul class="nav">
+            @*@if (_permission.CheckAccess(PermissionsName.BannerDelete))
+        {*@
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "Dashboard")">
+                    <i class="material-icons textalign">dashboard</i>
+                    <p>@_localizer.GetString("Admin.Dashboard")</p>
+                </a>
+            </li>
+            @*}*@
+            @if (_permission.CheckAccess(PermissionsName.UserList))
+            {
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-toggle="collapse" href="#pagesExamples">
+                        <i class="material-icons textalign">person</i>
+                        <p>@_localizer.GetString("Admin.User")</p>
+                    </a>
+                    <div class="collapse" id="pagesExamples">
+                        <ul class="nav marginleft">
+                            @if (_permission.CheckAccess(PermissionsName.UserList))
+                            {
+                                <li class="nav-item  ">
+                                    <a class="nav-link" href="@Url.Action("Index", "Users")">
+                                        <i class="material-icons textalign">content_paste</i>
+                                        <p>@_localizer.GetString("Admin.Users")</p>
+                                    </a>
+                                </li>
+                            }
+                            @if (_permission.CheckAccess(PermissionsName.PermissionAdd))
+                            {
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="@Url.Action("Permissions","Users")">
+                                        <i class="material-icons textalign">lock</i>
+                                        <p>@_localizer.GetString("Admin.Permissions")</p>
+                                    </a>
+                                </li>
+                            }
+
+                            @if (_permission.CheckAccess(PermissionsName.UserRoleList))
+                            {
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="@Url.Action("Index", "UserRole")">
+                                        <i class="material-icons textalign">how_to_reg</i>
+                                        <p> @_localizer.GetString("Admin.UserRole")</p>
+                                    </a>
+                                </li>
+                            }
+                            @if (_permission.CheckAccess(PermissionsName.AdminLocalizationList))
+                            {
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="@Url.Action("Index", "Localization")">
+                                        <i class="material-icons textalign">import_contacts</i>
+                                        <p>@_localizer.GetString("Admin.Localization")</p>
+                                    </a>
+                                </li>
+                            }
+
+                        </ul>
+                    </div>
+                </li>
+            }
+            @if (_permission.CheckAccess(PermissionsName.SystemSetting))
+            {
+                <li class="nav-item ">
+                    <a class="nav-link collapsed" data-toggle="collapse" href="#pagesExamples222">
+                        <i class="material-icons textalign">settings</i>
+                        <p>@_localizer.GetString("Admin.SystemSetting")</p>
+                    </a>
+                    <div class="collapse" id="pagesExamples222" style="">
+                        <ul class="nav marginleft">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("PrepareSystemSetting", "SystemSetting")">
+                                    <i class="material-icons textalign">build</i>
+                                    <p>@_localizer.GetString("Admin.SystemSetting")</p>
+                                </a>
+                            </li>
+                            @if (_permission.CheckAccess(PermissionsName.PromoCodesList))
+                            {
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="@Url.Action("Index", "PromoCodes")">
+                                        <i class="material-icons textalign">attach_money</i>
+                                        <p>@_localizer.GetString("Admin.PromoCodes")</p>
+                                    </a>
+                                </li>
+                            }
+
+
+                        </ul>
+                    </div>
+                </li>
+            }
+            @if (_permission.CheckAccess(PermissionsName.TheatersList))
+            {
+                <li class="nav-item ">
+                    <a class="nav-link collapsed" data-toggle="collapse" href="#pagesE4">
+                        <i class="material-icons textalign">local_activity</i>
+                        <p>@_localizer.GetString("Admin.Raphael TIC")</p>
+                    </a>
+                    <div class="collapse" id="pagesE4" style="">
+                        <ul class="nav marginleft">
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index", "RaphaelTemplate")">
+                                    <i class="material-icons textalign">local_activity</i>
+                                    <p>@_localizer.GetString("Admin.RaphaelTemplate")</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index", "Raphael")">
+                                    <i class="material-icons textalign">local_activity</i>
+                                    <p>@_localizer.GetString("Admin.Raphael Thaeter")</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            }
+            @if (_permission.CheckAccess(PermissionsName.TheatersList))
+            {
+                @*<li class="nav-item ">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#pagesExamples45">
+                    <i class="material-icons textalign">account_balance</i>
+                    <p>@_localizer.GetString("Admin.TheaterManagement")</p>
+                </a>
+                <div class="collapse" id="pagesExamples45" style="">
+                    <ul class="nav marginleft">
+                        @if (_permission.CheckAccess(PermissionsName.TheatersTemplateList))
+                        {
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Index","TheatersTemplate")">
+                                    <i class="material-icons textalign">account_balance</i>
+                                    <p>@_localizer.GetString("Admin.TheatersTemplate")</p>
+                                </a>
+                            </li>
+                        }
+                        @if (_permission.CheckAccess(PermissionsName.TheatersList))
+                        {
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Index","Theaters")">
+                                    <i class="material-icons textalign">account_balance</i>
+                                    <p>@_localizer.GetString("Admin.Theaters")</p>
+                                </a>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+            </li>*@
+            }
+            @if (_permission.CheckAccess(PermissionsName.ShowList))
+            {
+                <li class="nav-item ">
+                    <a class="nav-link collapsed" data-toggle="collapse" href="#pagesExamples451">
+                        <i class="material-icons textalign">video_library</i>
+                        <p>@_localizer.GetString("Admin.Shows")</p>
+                    </a>
+                    <div class="collapse" id="pagesExamples451" style="">
+                        <ul class="nav marginleft">
+                            @if (_permission.CheckAccess(PermissionsName.CreateEventPlayList))
+                            {
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="@Url.Action("Index","CreateEventPlay")">
+                                        <i class="material-icons textalign">class</i>
+                                        <p>@_localizer.GetString("Admin.Play/Event Submitted Request")</p>
+                                    </a>
+                                </li>
+                            }
+                            @if (_permission.CheckAccess(PermissionsName.ShowList))
+                            {
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="@Url.Action("Index", "Show")">
+                                        <i class="material-icons textalign">video_library</i>
+                                        <p>@_localizer.GetString("Admin.Event/Play")</p>
+                                    </a>
+                                </li>
+                            }
+
+                        </ul>
+                    </div>
+                </li>
+            }
+            @if (_permission.CheckAccess(PermissionsName.ComingSoonList))
+            {
+                <li class="nav-item ">
+                    <a class="nav-link" href="@Url.Action("Index", "ComingSoon")">
+                        <i class="material-icons textalign">event</i>
+                        <p>@_localizer.GetString("Admin.ComingSoon")</p>
+                    </a>
+                </li>
+            }
+            @if (_permission.CheckAccess(PermissionsName.OrderList))
+            {
+                <li class="nav-item ">
+                    <a class="nav-link collapsed" data-toggle="collapse" href="#pagesExamples214">
+                        <i class="material-icons textalign">local_activity</i>
+                        <p>@_localizer.GetString("Admin.Order")</p>
+                    </a>
+                    <div class="collapse" id="pagesExamples214" style="">
+                        <ul class="nav marginleft">
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index", "Order")">
+                                    <i class="material-icons textalign">local_activity</i>
+                                    <p>@_localizer.GetString("Admin.Orders")</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index", "CancelOrder")">
+                                    <i class="material-icons textalign">highlight_off</i>
+                                    <p>@_localizer.GetString("Admin.Cancel")</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            }
+            @if (_permission.CheckAccess(PermissionsName.ContactUsList)) //check permission for contact us
+            {
+                <li class="nav-item ">
+                    <a class="nav-link collapsed" data-toggle="collapse" href="#pagesExamples3" aria-expanded="false">
+                        <i class="material-icons textalign">widgets</i>
+                        <p>@_localizer.GetString("Admin.Management")</p>
+                    </a>
+                    <div class="collapse" id="pagesExamples3" style="">
+                        <ul class="nav marginleft">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Index", "ContactUs")">
+                                    <i class="material-icons textalign">comment</i>
+                                    <p>@_localizer.GetString("Admin.ContactUs")</p>
+                                </a>
+                            </li>
+                            @if (_permission.CheckAccess(PermissionsName.SendEmailList))
+                            {
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="@Url.Action("Index","SendEmail")">
+                                        <i class="material-icons textalign">email</i>
+                                        <p>@_localizer.GetString("Admin.Subscription")</p>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </li>
+            }
+            @if (_permission.CheckAccess(PermissionsName.CategoryList))
+            {
+                <li class="nav-item ">
+                    <a class="nav-link collapsed" data-toggle="collapse" href="#pagesExamples2" aria-expanded="false">
+                        <i class="material-icons textalign">search</i>
+                        <p>@_localizer.GetString("Admin.Lookups")</p>
+                    </a>
+                    <div class="collapse" id="pagesExamples2" style="">
+                        <ul class="nav marginleft">
+                            @if (_permission.CheckAccess(PermissionsName.CategoryList))
+                            {
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="@Url.Action("Index", "Category")">
+                                        <i class="material-icons textalign">category</i>
+                                        <p>@_localizer.GetString("Admin.Category")</p>
+                                    </a>
+                                </li>
+                            }
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Index", "StageType")">
+                                    <i class="material-icons textalign">border_all</i>
+                                    <p>@_localizer.GetString("Admin.StageType")</p>
+                                </a>
+                            </li>
+                            @*@if (_permission.CheckAccess(PermissionsName.PromoCodesList))
+                        {
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Index", "PromoCodeType")">
+                                    <i class="material-icons textalign">settings_appl</i>
+                                    <p>@_localizer.GetString("Admin.PromoCodeType")</p>
+                                </a>
+                            </li>
+                        }*@
+                        </ul>
+                    </div>
+                </li>
+            }
+            @if (_permission.CheckAccess(PermissionsName.SystemReport))
+            {
+                <li class="nav-item ">
+                    <a class="nav-link" href="@Url.Action("Index", "SystemReport")">
+                        <i class="material-icons textalign">file_copy</i>
+                        <p>@_localizer.GetString("Admin.SystemReport")</p>
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+<script>
+    var url = window.location.pathname;
+
+    $('#navM ul li').find('a').each(function () {
+        if (url == $(this).attr('href')) {
+            $(this).parents().addClass("active");
+            $(this).parent().parent().parent().addClass("show");
+        }
+    });
+</script>

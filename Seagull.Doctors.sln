@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seagull.Doctors", "LibraryManagement\Seagull.Doctors.csproj", "{9EAA3851-91DD-4FB2-ACE5-5519FBA9BE1E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doctors.API", "DoctorsAPI\API\Doctors.API.csproj", "{1A609A23-6526-4E55-BB81-450BECD8B097}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{2281DBEB-B90A-49C3-BFA8-F942BE9450B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EAA3851-91DD-4FB2-ACE5-5519FBA9BE1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EAA3851-91DD-4FB2-ACE5-5519FBA9BE1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EAA3851-91DD-4FB2-ACE5-5519FBA9BE1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EAA3851-91DD-4FB2-ACE5-5519FBA9BE1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A609A23-6526-4E55-BB81-450BECD8B097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A609A23-6526-4E55-BB81-450BECD8B097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A609A23-6526-4E55-BB81-450BECD8B097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A609A23-6526-4E55-BB81-450BECD8B097}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {222500BB-17C9-4C72-85CB-BAE41A6D5594}
+	EndGlobalSection
+EndGlobal

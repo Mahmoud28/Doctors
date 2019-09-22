@@ -1,0 +1,194 @@
+﻿@using Microsoft.Extensions.Localization
+@using Seagull.Core.Helper;
+@using Microsoft.Extensions.Localization
+
+@inject IStringLocalizer _localizer
+@inject IGlobalSettings _globalSettings
+@inject IStringLocalizer _localizer
+@model UserViewModel
+
+
+@{
+
+    bool isRtl = _globalSettings.CurrentUser != null ? _globalSettings.CurrentUser.IsRtl : false;
+}
+
+<style>
+
+    .arSearch {
+        height: 50px;
+        background-color: #edebee;
+        margin-right: -3px;
+        border: none;
+        margin-right: -6px;
+        border-radius: 4px !important;
+    }
+
+    .arInput {
+        border-radius: 4px !important;
+        letter-spacing: -1px !important;
+    }
+
+    /*header button[type=button] {
+        height: 35px;
+    }*/
+    .arSignIn {
+        width: 116px;
+    }
+
+    .arSignUp {
+        width: 100px;
+    }
+
+    .arNAvSignUp {
+        padding-left: 14px
+    }
+</style>
+<header>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light d-block">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <a href="@Url.Action("Index", "Home")" class="navbar-brand"><img src="~/Balan6a/img/logo.png" /></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-md-7">
+                    <form class="form-inline my-2 my-lg-0" onsubmit="SearchResult(event)">
+                        <input id="searchText" class="@(isRtl ? "arInput" : "form-control mr-sm-0")" type="search" placeholder="@_localizer.GetString("web.Search For movies events and Sports")">
+                        <button id="btnSearch" class="@(isRtl ? "arSearch" : "btn my-0 my-sm-0")" onclick="navigateToEvents()" type="button" style=""><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+                <div class="col-md-3">
+                    <ul class="navbar-nav mr-auto rightmenu">
+                        @{
+
+                            @if (Model == null || Model.SelectedUserRoles == null || Model.SelectedUserRoles == "0")
+                            {
+                                <li class="nav-item">
+                                    <a class="@(isRtl ? "nav-link arSignIn" : "nav-link")" href="@Url.Action("UserLogin", "Login")">@_localizer.GetString("Web.SignIn")</a>
+                                </li>
+                                <li class="@(isRtl ? "nav-item arNAvSignUp" : "nav-item")">
+                                    <a class="@(isRtl ? "nav-link signuplink yellowbg arSignUp " : "nav-link signuplink yellowbg")" href="@Url.Action("RegisterUser", "Login")">@_localizer.GetString("web.Sign Up")</a>
+                                </li>
+                            }
+                            else
+                            {
+                                @if (_globalSettings.CurrentUser.UserRoleName.FirstOrDefault() == "Register User")
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="@Url.Action("profile", "Profile")" style="width:max-content">@_localizer.GetString("Profile")</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link signuplink yellowbg" href="@Url.Action("Logout", "Login")">@_localizer.GetString("LogOut")</a>
+                                    </li>
+                                }
+                                @if (_globalSettings.CurrentUser.UserRoleName.FirstOrDefault() == "Ticketing User")
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link signuplink yellowbg" href="@Url.Action("Logout", "Login")">@_localizer.GetString("LogOut")</a>
+                                    </li>
+                                }
+
+                                else if (_globalSettings.CurrentUser.UserRoleName.FirstOrDefault() == "Admin")
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="@Url.Action("Index", "Dashboard",new { Area = "Admin"})">@_localizer.GetString("Admin")</a>
+                                    </li>
+
+                                }
+                                else if (_globalSettings.CurrentUser.UserRoleName.FirstOrDefault() == "Producers")
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="@Url.Action("Index", "Dashboard",new { Area = "Admin"})">@_localizer.GetString("Producer")/@_globalSettings.CurrentUser.Name</a>
+                                    </li>
+
+                                }
+                            }
+                        }
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle language" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:90px !important;width: 90px !important">
+                                @(_globalSettings.CurrentUser.IsRtl ? _localizer.GetString("Arabic") : _localizer.GetString("English"))
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @if (_globalSettings.CurrentUser.IsRtl)
+                                {
+                                    <a class="dropdown-item" href="javascript:ChangeLang(1)">@_localizer.GetString("English")</a>
+                                }
+                                else
+                                {
+                                    <a class="dropdown-item" href="javascript:ChangeLang(2)">@_localizer.GetString("Arabic")</a>
+                                }
+                            </div>
+                        </li>
+                    </ul>
+                    @*<a class="nav-link signuplink " href="@Url.Action("Index", "System")">url</a>*@
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto" id="myTab">
+                            <li class="nav-item active">
+                                <a class="nav-link pt-0" href="@Url.Action("Index", "Home")">@_localizer.GetString("web.Home")</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link pt-0" href="@Url.Action("MyReservations", "Profile")" @*onclick="navigateToReservation()" *@>@_localizer.GetString("My Bookings")</a>
+                            </li>
+                            @if ((_globalSettings.CurrentUser.UserRoleName.FirstOrDefault() != "Ticketing User"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link pt-0" href="@Url.Action("ComingSoon", "Home")">@_localizer.GetString("web.Coming Soon")</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link pt-0" href="@Url.Action("Promotion", "Home")">@_localizer.GetString("web.Promotions")</a>
+                                </li>
+                            }
+
+                            @if ((_globalSettings.CurrentUser.UserRoleName.FirstOrDefault() == "Ticketing User"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link pt-0" href="@Url.Action("TicketingView", "Home")">@_localizer.GetString("web.Shows")</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+</header>
+<script>
+    function navigateToEvents() {
+
+        text = $("#searchText").val();
+        window.location = '/WebShow/Events?text=' + text;
+    }
+
+
+    function navigateToReservation() {
+        window.location = '/Profile/MyReservations';
+    }
+
+
+    //$("#searchText").keyup(function (event) {
+    //    debugger;
+    //    if (event.keyCode === 13) {
+    //        //$("#searchText").click();
+    //        navigateToEvents();
+    //    }
+    //});
+
+    function SearchResult(e) {
+
+        e.preventDefault();
+        text = $("#searchText").val();
+        window.location = '/WebShow/Events?text=' + text;
+    }
+
+</script>

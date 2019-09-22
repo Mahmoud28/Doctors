@@ -1,0 +1,62 @@
+﻿@using Microsoft.Extensions.Localization
+@using Seagull.Core.Helper
+@inject IStringLocalizer _localizer
+@inject IGlobalSettings _userService
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.ListEmailTransfer");
+}
+<style>
+    .headTable {
+        background: #13688c;
+        color: white;
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="~/css/ProgressBar/skins/tiny-green/progressbar.css" />
+<link rel="stylesheet" type="text/css" href="~/css/ProgressBar/skins/jquery-ui-like/progressbar.css" />
+<script src="~/js/ProgressBar/progressbar.js"></script>
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-header card-header-tabs card-header-warning">
+                <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                        @*<span class="nav-tabs-title">Tasks:</span>*@
+                        <ul class="nav nav-tabs" data-tabs="tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#users" data-toggle="tab">
+                                    <i class="material-icons">library_books</i> @_localizer.GetString("Admin.EmailTransfarePerUser")
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="users">
+                        <div ng-controller="sendEmailCntrl">
+                            <div>
+                                <sg-table ctrl="SendEmail" datasrc="SendEmail/List" has-operation="{add: true, edit : true ,delete :false, customview: {show : false , tablename : '' }}" delete_msg="{header : '@_localizer.GetString("")',bodyMsg: '@_localizer.GetString("")'}" create-action="@Url.Action("PrepareEmail", "SendEmail",new { id = 0,type = 0})" token="0">
+                                    <sg-col name="Message" title="@_localizer.GetString("Admin.Message")" type="text" >@*<p ng-bind-html="Message"></p>*@</sg-col>
+                                    <sg-col name="UserCounts" title="@_localizer.GetString("Admin.EmailTransfer.UserCount")" type="text"></sg-col>
+                                    <sg-colchild name="UserEmail" title="@_localizer.GetString("Admin.Email")" type="text"></sg-colchild>
+                                    <sg-colchild name="EmailStatus" title="@_localizer.GetString("Admin.EmailStatus")" type="text"></sg-colchild>
+                                </sg-table>
+                            </div>
+                     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+<script>
+    var app = LineApp.controller('sendEmailCntrl', function ($scope, $filter, $http, $timeout, $rootScope) {
+
+        //app.filter("trustHtmlContent", ['$sce', $sce => htmlCode => $sce.trustAsHtml(htmlCode)]);
+
+    });
+</script>

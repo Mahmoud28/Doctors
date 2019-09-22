@@ -1,0 +1,20 @@
+﻿@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.ListOfUserAddress");
+}
+
+<sg-page >
+    <sg-tabs>
+        <sg-table ctrl="UserAddress" datasrc="UserAddress/List" has-operation="{add: true, edit : true ,delete :true, customview: {show : false , tablename : 'UserAddress' }}" delete_msg="{header : '@_localizer.GetString("Admin.Delete.UserAddress")',bodyMsg: '@_localizer.GetString("Admin.Delete.Confirm.UserAddress")'}" create-action="@Url.Action("PrepareUserAddress", "UserAddress",new { id = 0 })" token="0">
+            <sg-col name="Area" title="@_localizer.GetString("Admin.UserAddress.Area")" type="text"></sg-col>
+            <sg-col name="Block" title="@_localizer.GetString("Admin.UserAddress.Block")" type="text"></sg-col>
+            <sg-col name="Street" title="@_localizer.GetString("Admin.UserAddress.Street")" type="text"></sg-col>
+            <sg-col name="BuildingNumber" title="@_localizer.GetString("Admin.UserAddress.BuildingNumber")" type="number"></sg-col>
+            <sg-col name="Floor" title="@_localizer.GetString("Admin.UserAddress.Floor")" type="text"></sg-col>
+            <sg-col name="Appartment" title="@_localizer.GetString("Admin.UserAddress.Appartment")" type="text"></sg-col>
+            <sg-col name="MobileNumber" title="@_localizer.GetString("Admin.UserAddress.MobileNumber")" type="text"></sg-col>
+        </sg-table>
+    </sg-tabs>
+</sg-page>
+

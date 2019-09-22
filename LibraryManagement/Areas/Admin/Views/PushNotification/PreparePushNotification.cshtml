@@ -1,0 +1,119 @@
+﻿@model int
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.PreparePushNotification");
+    bool disable = Model > 0 ? true : false;
+    string canModify = Model > 0 ? false.ToString().ToLower() : true.ToString().ToLower();
+}
+
+<style>
+    .divDash {
+        outline-color: black;
+        outline-style: dashed;
+        padding: 11px;
+        margin: 9px 0px 18px 0px;
+    }
+
+    .blueDash {
+        outline-color: #dd4b39;
+    }
+
+    .greenDash {
+        outline-color: #4caf50;
+    }
+
+    .panel-title {
+        text-align: center;
+        margin-top: 2%;
+    }
+
+    .btn-toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+
+    .form-control, label, input::placeholder {
+        line-height: 1.1;
+        height: 100% !important;
+    }
+
+    hr {
+        border: none;
+        height: 2px;
+        /* Set the hr color */
+        color: #13688c; /* old IE */
+        background-color: #13688c; /* Modern Browsers */
+    }
+</style>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<style>
+    .ta-editor {
+        min-height: 150px;
+        height: auto;
+        overflow: auto;
+        font-family: inherit;
+        font-size: 100%;
+    }
+
+    li {
+        font-size: 18px;
+        font-size: 100%;
+    }
+
+    .ta-toolbar > .btn-group > .btn {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background-color: white;
+        color: black;
+    }
+</style>
+
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-header card-header-tabs card-header-warning">
+                <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                        @*<span class="nav-tabs-title">Tasks:</span>*@
+                        <ul class="nav nav-tabs" data-tabs="tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#users" data-toggle="tab">
+                                    <i class="material-icons">library_books</i> @_localizer.GetString("Admin.AddEditPushNOtification")
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="users">
+                        <form sg-form name="myform" data-ctrl="PushNotification" data-id="@Model" token="0" form-controller="PushNotification">
+                            <sg-form-toolbar save="true"></sg-form-toolbar>
+                            <sg-select token="0" label="@_localizer.GetString("ADMIN.Users")" datasrc="GenericGets/GetAllUsersHasFCMToken" ng-required="true" @*ng-change="check()" *@ return-col="Id" return-as="Name" ng-model="model.strUser" multi="false"></sg-select>
+                            <sg-input type="text" name="NotificationMessage" label="@_localizer.GetString("Admin.Send.Notification")" ng-model="model.NotificationMessage" ng-required="true"></sg-input>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var app = LineApp.controller('PushNotification', function ($scope, $filter, $http, $timeout, $rootScope) {
+
+        //$scope.check = function () {
+        //    var value = $scope.model.strUser;
+
+        //    var hasAll = value.includes("1");
+        //    if (hasAll) {
+
+        //    }
+        //}
+    });
+</script>

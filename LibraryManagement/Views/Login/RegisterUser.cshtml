@@ -1,0 +1,170 @@
+﻿@model Seagull.Core.ViewModel.UserRegisterModel
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = _localizer.GetString("Web.CreateAccount");
+}
+
+
+
+<section class="pt-5 pb-5 signbg">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 text-center">
+                <div class="blackoverlay"></div>
+
+                <div class="form-horizontal signinform p-5" method="post" action="#">
+
+
+                    <h3 style ="text-align:center" class="form_title text-white mb-4">@_localizer.GetString("web.Sign Up")</h3>
+                    <div class="form-group align-items-center">
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <input type="text" value="@Model.Name" class="form-control" name="name" id="name" placeholder="@_localizer.GetString("Web.Name")" required />
+                                @*@Html.TextBoxFor(a => a.Name, null, new { placeholder = _localizer.GetString("Enter your Name"), @class = "form-control", @required = "required" })*@
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group align-items-center">
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="mobile" id="mobile" placeholder="@_localizer.GetString("Web.YourMobile")" maxlength="13" required />
+                                @*@Html.TextBoxFor(a => a.Mobile, null, new { id = "mobileInput", @maxlength = "13", placeholder = _localizer.GetString("Enter your Mobile Number"), @class = "form-control", @required = "required" })*@
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group align-items-center">
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></span>
+                                <input type="email" class="form-control" value="@Model.Email" name="email" id="email" placeholder="@_localizer.GetString("Form.Email")" required />
+                                @*@Html.TextBoxFor(a => a.Email, null, new { placeholder = _localizer.GetString("Enter your Email"), @class = "form-control", @required = "required" })*@
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group  row">
+                        <div class="col-sm-6">
+                            <div class="input-group mb-3">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input type="password" class="form-control" name="password" id="password" min="8" placeholder="@_localizer.GetString("Web.YourPassword")" required />
+                                @*@Html.PasswordFor(a => a.Password, new { placeholder = _localizer.GetString("Enter your Password"), @class = "form-control", @required = "required" })*@
+
+
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+
+                                <input type="password" class="form-control" name="repassword" id="repassword" placeholder="@_localizer.GetString("Web.ConfirmPassword")" required />
+                                @*@Html.PasswordFor(a => a.ConfirmPassword, new { placeholder = _localizer.GetString("Retype your Password"), @class = "form-control", @required = "required" })*@
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row m-3 form-group align-items-center text-left text-white">
+                        <input type="checkbox" id="accepted" class=" w-auto h-auto mr-2 float-left" required />@_localizer.GetString("Agree") &nbsp;<a href="@Url.Action("TermsAndConditions","Home")" class="text-danger">@_localizer.GetString("Terms & Conditions")</a>
+                        @*@Html.CheckBoxFor(a => a.AcceptCondition, new { @required = "required", @class = "w-auto h-auto mr-2 float-left" })Agree &nbsp; <a href="@Url.Action("TermsAndConditions","Home")" class="text-danger">@_localizer.GetString("Terms & Conditions")</a>*@
+
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="btnsubmit" class="yellowbg d-block w-100 border-0 p-2 font-weight-bold h4 border-radius">@_localizer.GetString("web.SUBMITs")</button>
+                    </div>
+
+                    <div class="mt-5"></div>
+                    <div class="quicksignup">
+                        <h5 class="text-uppercase text-left text-white"style="display: flex;">@_localizer.GetString("Quick Sign Up Using...")</h5>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col-sm-6 mb-3">
+                            <a  href="@Url.Action("Facebook", "Login")"><img class="w-100" src="~/Balan6a/img/Fb.png" /></a>
+                        </div>
+                        @*<div class="col-sm-6">
+                                <a href="#"><img class="w-100" src="~/Balan6a/img/Google.png" /></a>
+                            </div>*@
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+
+    
+    $("#btnsubmit").click(function (e) {
+    
+        var model = {
+            Name: $("#name").val(),
+            Email: $("#email").val(),
+            Mobile: $("#mobile").val(),
+            Password: $('#password').val(),
+            ConfirmPassword: $('#repassword').val(),
+            AcceptCondition: $('#accepted').is(':checked') ? true : false,
+            //AcceptCondition: $("#accepted").attr("checked") ? true: false,
+            //$('#' + id).is(":checked")
+
+        };// end of model
+    
+       
+                ShowLoading();
+                $.ajax({
+                    url: "@Url.Action("RegisterUser", "Login")",
+                    type: "post",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify(model),
+                    success: function (result)
+                    {
+                        
+                        if (result.MessageType)
+                        {
+                            
+                            RemoveLoading();
+                            //window.location.href = result.returnUrl;
+                            window.location.href = "/Profile/profile";
+                        }
+                        else
+                        {
+                            
+                            RemoveLoading();
+                            Swal.fire(result.Header, result.Message, result.SwalType);
+
+                        }
+                    },
+                    error: function ()
+                    {
+                        
+                        Swal.fire('@_localizer.GetString("web.Failed")', '@_localizer.GetString("web.Error Happend")', 'error')
+                        RemoveLoading();
+                        $("#name").val("");
+                        $("#email").val("");
+                        $("#mobile").val("");
+                        $('#password').val("");
+                        $('#repassword').val("");
+                    }
+
+                });
+           
+    });// end of submit
+
+
+</script>
+

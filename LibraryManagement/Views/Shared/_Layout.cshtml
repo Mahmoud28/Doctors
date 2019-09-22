@@ -1,0 +1,30 @@
+﻿@using Seagull.Core.Helper
+@using Microsoft.Extensions.Localization
+@using Seagull.Core.Helper.StaticVariables
+@using Seagull.Doctors.Data.Interfaces
+@inject IGlobalSettings _globalSettings
+
+@inject IGlobalSettings _userService
+@inject IStringLocalizer _localizer
+@inject IGlobalSettings _userService
+@{
+    var user = _userService.CurrentUser;
+    bool isRtl = user != null ? user.IsRtl : false;
+}
+<!DOCTYPE html>
+<html lang="@(isRtl ? "ar" : "en")" dir="@(isRtl ? "rtl" : "ltr")" content="text/html; charset=utf-8">
+
+<head>
+   
+</head>
+
+<body class="Arfont">
+    @*hidden*@
+   
+    @RenderBody()
+
+    
+</body>
+
+</html>
+

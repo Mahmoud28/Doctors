@@ -1,0 +1,46 @@
+﻿@using Microsoft.Extensions.Localization
+@using Seagull.Core.Helper;
+@inject IStringLocalizer _localizer
+@inject IGlobalSettings _globalSettings
+@model UserViewModel
+<script>
+    function ChangeLang(id) {
+         var _url = '@Url.Action("SetLang", "Home")' + "?id=" + id;
+        $.ajax({
+            url: _url, success: function (result) {
+                location.reload();
+            }
+        });
+    }
+</script>
+<div class="header-top">
+    <div class="container">
+        <div class="bottom_header_left">
+            <div class="w3_fr wow zoomIn" data-wow-duration="0.5s" data-wow-delay="0.5s"> <a href="#"> <i class="fa fa-mobile" aria-hidden="true"></i> </a> <a href="#contact" class="scroll"> @_localizer.GetString("Web.ContactNumber") - @_globalSettings.CurrentSystemSetting.SystemContactNumber </a> </div>
+        </div>
+        <div class="nav-wrapper">
+            <div class="sl-nav">
+                <ul class="languages1">
+                    <li>
+                        @if (!_globalSettings.CurrentUser.IsRtl)
+                        {
+                            <b>@_localizer.GetString("Lang.English.Mini")</b><img src="~/Taqween/images/USA_Flag.png"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        }
+                        else
+                        {
+                            <b>@_localizer.GetString("Lang.Arabic.Mini")</b><img src="~/Taqween/images/KW_Flag.png"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        }
+                        <ul>
+                            <li> <a href="javascript:ChangeLang(1)"><span>@_localizer.GetString("Lang.English")</span></a> </li>
+                            <li> <a href="javascript:ChangeLang(2)"><span>@_localizer.GetString("Lang.Arabic")</span></a> </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="btn_sets">
+                    <li><a href="@Url.Action("Index","findADoctor")">@_localizer.GetString("Web.FindADoctor")</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>

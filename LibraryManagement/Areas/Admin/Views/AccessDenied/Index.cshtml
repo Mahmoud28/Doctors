@@ -1,0 +1,15 @@
+﻿@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = "AdminCoreBusiness";
+}
+
+<html>
+<body style="text-align: center; background-color:wheat ">
+    <div style="margin: 100px auto;width: 900px; font-size: 200px">404</div>
+    <div style="margin: 100px auto;width: 400px;  border: 5px dotted #911f12;font-size: 120px; border-radius:25px">
+        <h1> @_localizer.GetString("Admin.AccessDenied")</h1>
+    </div>
+</body>
+</html>
+

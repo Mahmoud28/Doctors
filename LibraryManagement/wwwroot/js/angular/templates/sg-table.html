@@ -1,0 +1,189 @@
+﻿<style>
+    .custom-filter {
+        background: none;
+        border-radius: .25rem;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .marginleft {
+        margin-left: 7%;
+        font-size: 23px;
+    }
+</style>
+<div class="toolbar">
+    <!--{{hasOperation}}-->
+    <table>
+        <tr>
+            <td ng-if="hasOperation.customadd.show">
+                <button class="btn btn-success btn-sm" type="button" ng-click="vm.addCustomRow(hasOperation.customadd.function)" ng-show="!vm.showEditForm"><i class="fa fa-plus-square"></i> <span class="hidden-md-down" translate="seagull.buttons.ADD">Add New</span></button>
+            </td>
+            <td>
+                <button ng-if="hasOperation.add" class="btn btn-success btn-sm" ng-click="vm.addRow()" ng-show="!vm.showEditForm"><i class="fa fa-plus-square"></i> <span class="hidden-md-down" translate="seagull.buttons.ADD">Add New</span></button>
+                <button ng-show="hasOperation.add" class="btn btn-info btn-sm" ng-click="vm.undo()"><i class="fa fa-undo"></i> <span class="hidden-md-down" translate="seagull.buttons.REFRESH">Refresh</span></button>
+                <button ng-if="hasOperation.export.excell" class="btn btn-warning btn-sm" ng-click="vm.undo(1)"><i class="fa fa-file-excel-o"></i> <span class="hidden-md-down"></span></button>
+            </td>
+            <td ng-if="hasImport">
+                <span class="btn btn-success pull-right fileinput-button">
+                    <i class="fa fa-plus"></i>
+                    <span>Import From Excal</span>
+                    <input id="file" type="file" name="files[]" onchange="angular.element(this).scope().improt(this)" ng-model='model.File'>
+                </span>
+            </td>
+            <td class="hidden-md-down"><span>{{ 'seagull.labels.TOTAL_ROWS'|translate }} {{vm.binding.data_count}}</span></td>
+        </tr>
+    </table>
+</div>
+
+<div class="sg-table" ng-show="!vm.showEditForm">
+    <table id="Table" ng-table="tableParams" class="table table-sm table-striped  table-hover" style="min-width: 100%!important;">
+        <thead>
+            <tr class="sg-table-filter">
+                <th ng-repeat="col in vm.cols" ng-class="{'sortable' : col.name}">
+                    <div ng-switch="::col.type">
+                        <div ng-switch-when="text|number" ng-switch-when-separator="|" class="dropdown" ng-class="cso_color[col.name] || 'text-primary'">
+                            <input ng-model='col_search[col.name]' ng-model-options="{updateOn: 'change blur'}" sg-field-type="{{col.type}}" class="form-control" />
+                            <i class="mdi mdi-filter-outline" data-toggle="dropdown"></i>
+                            <!--Edit-->
+                            <i class="filter-menu dropdown-menu custom-filter">
+                                <span ng-repeat="o in ::vm.filter_operators | filter:{filter:col.type}" ng-click="vm.pick_filter(col.name,o);" class="marginleft mdi {{::o.title}} {{::o.color}} " tooltip="{{::o.tooltip}} dropdown-item"></span>
+                            </i>
+                        </div>
+                        <div ng-switch-when="date">
+                            <input ng-model='col_search[col.name]' ng-model-options="{updateOn: 'change blur'}" class="k-datepicker form-control" k-datepicker />
+                            <i class="mdi mdi-filter-outline " style="margin-right:25px !important;" data-toggle="dropdown"></i>
+                            <div class="filter-menu">
+                                <div ng-repeat="o in ::vm.Date_filter_operators" ng-click="vm.pick_filter(col.name,o);" class="mdi {{::o.title}} {{::o.color}}" tooltip="{{::o.tooltip}}"></div>
+                            </div>
+                        </div>
+                        <div ng-switch-when="checkbox" class="text-center">
+                            <div class="btn-group" style="display:block;">
+                                <a class="btn btn-sm btn-primary" ng-class="{'btn-warning' : col_search[col.name] === 'true'}" style="width:33%;" ng-click="col_search[col.name] = 'true'"><fa class="fa fa-check"></fa></a>
+                                <a class="btn btn-sm btn-primary" ng-class="{'btn-warning' : !col_search[col.name]}" style="width:33%;" ng-click="col_search[col.name] = ''"><fa class="fa fa-minus"></fa></a>
+                                <a class="btn btn-sm btn-primary" ng-class="{'btn-warning' : col_search[col.name] === 'false'}" style="width:33%;" ng-click="col_search[col.name] = 'false'"><fa class="fa fa-remove"></fa></a>
+                            </div>
+                        </div>
+                        <div ng-switch-when="select">
+                            <sg-select ng-model="col_search[col.name]" datasrc="{{col.selectDatasrc}}" return-col="Id" return-as="Name"></sg-select>
+                        </div>
+                    </div>
+                </th>
+                <th ng-if="hasOperation.edit || hasOperation.delete"></th>
+            </tr>
+            <tr class="sg-table-header">
+                <th ng-repeat="col in vm.cols" ng-click="vm.sort(col)" ng-class="{'sortable' : col.name}">{{::col.title}}<i ng-class="{'mdi-sort' : vm.orderby != col.name && col.name, 'mdi-sort-ascending' : vm.orderby === col.name && !vm.reverse,  'mdi-sort-descending' : vm.orderby === col.name && vm.reverse}" class="mdi"></i></th>
+                <th ng-if="hasOperation.edit || hasOperation.delete || hasOperation.customview||row.Child.length > 0" translate="seagull.labels.OPERATION">Operation</th>
+            </tr>
+            <tr class="sg-table-loader"><td colspan="{{vm.cols.length + 1 }}"><loader ng-if="vm.isLoading"></loader></td></tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat-start="row in filterd = (vm.binding.data) | limitTo:limit" ng-hide="row.$operation === 'delete'" ng-click="vm.selectRow(row)" ng-class="rowClass(row)">
+                <td ng-repeat="col in ::vm.cols">
+                    <sg-output meta="::col" value="::row[col.name]"></sg-output>
+                </td>
+                <td ng-if="hasOperation.edit || hasOperation.delete || hasOperation.customview.show ||row.Child.length > 0" style="white-space: nowrap;">
+                    <button ng-if="hasOperation.edit" class=" btn btn-sm btn-warning" ng-click="vm.editRow(row)"><i class="fa fa-edit"></i></button>
+                    <button ng-if="hasOperation.delete" class=" btn btn-sm btn-danger" sg-confirm="vm.deleteRow(row)" modal-header="vm.delete_msg.header" modal-body="vm.delete_msg.bodyMsg"><i class="fa fa-trash"></i></button>
+                    <button ng-if="hasOperation.customview.show" class=" btn btn-sm btn-info" ng-click="vm.CustomViewObject(row ,hasOperation.customview.tablename)"><i class="fa fa-info"></i></button>
+                    <button ng-if="row.Child.length > 0" class="btn btn-sm" ng-class="row.show ?  'btn-danger': 'btn-primary'" ng-click="vm.ShowChild(row)"><i ng-class="row.show ?  'fa fa-angle-up fa-lg': 'fa fa-angle-down fa-lg'"></i></button>
+                    <!--<a ng-if="row.Child.length > 0" class="btn btn-sm" ng-class="row.show ?  'glyphicon glyphicon-collapse-up faa-burst animated': 'glyphicon glyphicon-collapse-down'" ng-click="vm.ShowChild(row)"></a>-->
+                </td>
+                <!--<td style="padding:0;">
+                    <div style="height:100%; width:100%; background-color:#abc; position:relative;">
+                        <img style="left:90px; position:absolute;" src="../Content/Images/attachment.png" />
+                        test of really long content that causes the height of the cell to increase dynamically
+                    </div>
+                </td>-->
+            </tr>
+            <tr ng-repeat-end ng-if="row.show">
+                <td colspan="4">
+                    <table class="table table-sm table-striped  table-hover">
+                        <thead>
+                            <tr class="sg-table-header">
+                                <!--<th ng-repeat="childcol in vm.childcols" ng-click="vm.sort(childcol)" ng-class="{'sortable' : childcol.name}">{{::childcol.title}}<i ng-class="{'mdi-sort' : vm.orderby != childcol.name && childcol.name, 'mdi-sort-ascending' : vm.orderby === childcol.name && !vm.reverse,  'mdi-sort-descending' : vm.orderby === childcol.name && vm.reverse}" class="mdi"></i></th>-->
+                                <th ng-repeat="childcol in vm.childcols">{{::childcol.title}}</th>
+                                <!--<th ng-if="hasOperation.edit || hasOperation.delete || hasOperation.customview||row.Child.length > 0" translate="seagull.labels.OPERATION">Operation</th>-->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="child in filterd = row.Child" ng-click="vm.selectRow(child)" ng-class="rowClassChild(child)">
+                                <td ng-repeat="ccol in ::vm.childcols">
+                                    <sg-Childoutput meta="::ccol" value="::child[ccol.name]"></sg-Childoutput>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr ng-if="!vm.binding.data.length" style="height:180px;">
+                <td translate="seagull.messages.NO_DATA" colspan="{{vm.cols.length + 1 }}" style="vertical-align:middle;text-align:center" ng-if="!vm.isLoading"></td>
+                <td translate="seagull.messages.LOADING" colspan="{{vm.cols.length + 1 }}" style="vertical-align:middle;text-align:center" ng-if="vm.isLoading"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+<div>
+    <table class="pull-right paging">
+        <tr>
+            <td class="sg-table-paging">
+                <i name="LeftDouble" tooltip="{{'seagull.buttons.FIRST'|translate}}" ng-click="page_no != 1 && vm.paging('first');" class="mdi"></i>
+                <i name="Left" tooltip="{{'seagull.buttons.PREVIOUS'|translate}}" ng-click="page_no != 1 && vm.paging('previous');" class="mdi"></i>
+            </td>
+            <td>
+                <div class="paging-input">
+                    <span class="d-inline-block hidden-md-down" translate="seagull.labels.PAGE">Page</span>
+                    <input ng-model="page_no" style="width: {{10+page_no.length*10}}px;" />
+                    <span class="d-inline-block hidden-md-down" translate="seagull.labels.OF"> of &nbsp;</span>
+                    <span class="d-inline-block hidden-md-down" ng-bind="vm.page_count">1</span>
+                </div>
+            </td>
+            <td class="sg-table-paging">
+                <i name="Right" tooltip="{{'seagull.buttons.NEXT'|translate}}" ng-click="page_no != vm.page_count && vm.paging('next');" class="mdi"></i>
+                <i name="RightDouble" tooltip="{{'seagull.buttons.LAST'|translate}}" ng-click="page_no != vm.page_count && vm.paging('last');" class="mdi"></i>
+            </td>
+            <td translate="seagull.labels.PAGE_ROWS">Rows Per Page: </td>
+            <td>
+                <select style="width: 70px" ng-model="vm.limit" ng-options="x.val as x.title for x in vm.limit_list"></select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <!--<select style="width: 70px" ng-model="vm.limit" ng-options="x.val as x.title for x in vm.limit_list"></select>-->
+            </td>
+        </tr>
+    </table>
+    <span class="clearfix"></span>
+</div>
+
+<ng-transclude></ng-transclude>
+
+<script>
+    $(document).ready(function () {
+
+        var Right = $("i[name='Right']");
+        var RightDouble = $("i[name='RightDouble']");
+
+        var LeftDouble = $("i[name='LeftDouble']");
+        var Left = $("i[name='Left']");
+
+     
+
+
+        var directory = this.dir;
+        if (directory == "ltr") {
+            Right.addClass(" mdi-chevron-right");
+            RightDouble.addClass(" mdi-chevron-double-right");
+            LeftDouble.addClass(" mdi-chevron-left");
+            Left.addClass(" mdi-chevron-double-left");
+        } else {
+            //default language -rtl-
+            Right.addClass(" mdi-chevron-left");
+            RightDouble.addClass(" mdi-chevron-double-left");
+            LeftDouble.addClass(" mdi-chevron-right");
+            Left.addClass(" mdi-chevron-double-right");
+        }
+    });
+</script>

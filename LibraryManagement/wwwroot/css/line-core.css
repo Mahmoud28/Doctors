@@ -1,0 +1,785 @@
+﻿.text-white {
+    color: #fff !important;
+}
+.ui-tooltip {
+    display:none!important;
+}
+.form-table {
+    border: solid 1px #d5d5d5;
+    box-shadow: -1px 1px 3px 1px #337ab7;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.form-table > tbody > tr > th, .form-table > tbody > tr > td {
+    text-align: center;
+    border: 0;
+    border-bottom: 1px solid #d5d5d5;
+}
+.content-wrapper {
+    box-shadow: inset 5px 4px 4px 0 rgba(0, 0, 0, 0.32);
+}
+.toolbar {
+    padding: 7.5px 0;display: inline-block;
+}
+
+sg-page {
+    background-color: #fff;
+    border: solid 2px #343a40;
+    border-radius: 2px;
+    box-shadow: 0 0 5px 1px rgb(0, 0, 0);
+    display: block;
+}
+.sg-page-title {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 15px;
+    background-color: #13688c;
+    /*text-transform: uppercase;*/
+}
+.sg-page-content {
+    padding:15px;
+}
+
+.tooltip-text {
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 12px !important;
+    position: absolute;
+    padding: 3px 10px !important;
+    color: #fff !important;
+    background: #000;
+    max-width: 200px;
+    text-align: center;
+    border-radius: 4px;
+    transition: opacity .4s ease-out;
+}
+
+    .tooltip-text:before {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        border: solid transparent;
+        margin-bottom: -5px;
+        margin-left: -5px;
+        border-width: 5px 5px 0 5px;
+        border-top-color: #000;
+    }
+/* k-datepick form control start*/
+.k-datepicker.form-control {
+    padding: 0;
+    border: 0;
+}
+
+    .k-datepicker.form-control .k-picker-wrap {
+        padding-right: 0;
+    }
+
+input.k-datepicker.form-control ~ .k-select {
+    border: 0;
+    top: 50%;
+width: 16px;
+    height: 16px;
+    min-height: 16px;
+    line-height: 16px;
+    z-index: 5;
+    margin-top: -8px;
+    right: 10px;
+    color:#23527c;
+}
+/* k-datepick form control end*/
+/*sg-select style*/
+sg-select {
+    cursor: pointer;
+}
+
+    sg-select .sg-select.open, sg-select #droplist {
+        box-shadow: #777 0 0 1px 1px;
+    }
+
+    sg-select #droplist {
+        visibility:hidden;
+        position: absolute;
+        width: 100%;
+        z-index: 1000;
+        background: #fff;
+        padding: 5px;
+        border: 1px solid #ccc;
+    }
+
+    sg-select .sg-select.open #droplist {
+        visibility:visible;
+    }
+
+    sg-select .search-box {
+        height: 30px;
+        padding: 5px 10px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+
+    sg-select table tr.selected {
+        background-color: #4d90fe;
+        color: #fff;
+    }
+
+
+ .sg-select .multi-item{       
+    padding: 4px 7px;
+    margin-right: 5px;
+    margin-bottom:4px;
+    border-radius: 4px;
+    background: #607D8B;
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+    transition:all .3s ease-out;
+}
+.sg-select i {
+    width:15px;
+    height:20px;
+    text-align:center;
+}
+.sg-select .open {
+    font-size: 20px;
+    position: absolute;
+    top: 7px;
+    right: 12px;
+}
+.sg-select .remove {
+    padding: 3px;
+    position: absolute;
+    top: 7px;
+    right: 33px;
+}
+.sg-select.multi .form-control {
+    height: 10%;
+    min-height : 20px;
+    padding-right: 40px;
+    padding-bottom: 0;
+    padding-top: 3px;
+}
+/*.sg-input-container style start*/
+[sg-form] {
+    padding: 15px;
+    border: 1px solid #d5d5d5;
+    background-color:white;
+}
+
+.sg-input-container {
+    display: block;
+    border-bottom: solid 1px #d5d5d5;
+    padding: 0 10px 5px;
+    box-shadow: 0 1px #fff;
+    margin-bottom: 5px;
+}
+
+table.table .sg-input-container,table.table sg-select {
+    /*padding: 0 0 5px;*/
+    margin-bottom: 0;
+}
+
+    .sg-input-container .form-group {
+        margin-bottom: 0;
+    }
+
+    .sg-input-container input[type=checkbox] {
+        margin-top: 5px !important;
+        width: 20px;
+        height: 20px;
+    }
+
+    .sg-input-container .form-control:focus {
+        outline: none;
+        background-image: linear-gradient(#4d90fe, #4d90fe);
+        animation: input-highlight 0.5s forwards;
+        box-shadow: none !important;
+        background-size: 0 2px;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+
+@keyframes input-highlight {
+    0% {
+        background-size: 0 2px;
+    }
+
+    100% {
+        background-size: 100% 2px;
+    }
+}
+
+.sg-input-container .control-label {
+    margin-top: 5px;
+    background: #13688c;
+    color: white;
+    border: 1px solid white;
+    border-radius: 13px;
+}
+
+.sg-input-container p.ng-invalid {
+    display: none;
+    color: #F44336;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: .5rem;
+}
+
+    .sg-input-container p.ng-invalid.ng-form-error{
+        display: block !important;
+        animation: slide .4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    }
+
+
+.sg-input-container.ng-invalid.ng-touched p.ng-invalid,
+.sg-form.ng-submitted .sg-input-container.ng-invalid p.ng-invalid
+ {
+    display: block;
+    animation: slide .4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.sg-input-container i.ng-valid, .sg-input-container i.ng-invalid {
+    visibility: hidden;
+}
+
+.sg-input-container.ng-invalid.ng-touched .form-control ~ i.ng-invalid, .sg-form.ng-submitted .sg-input-container.ng-invalid i.ng-invalid,
+.sg-input-container.ng-valid.ng-touched .form-control ~ i.ng-valid, .sg-form.ng-submitted .sg-input-container.ng-valid i.ng-valid {
+    visibility: visible;
+}
+
+.sg-input-container.ng-invalid.ng-touched .form-control,
+.sg-form.ng-submitted .sg-input-container.ng-invalid .form-control {
+    border-color: #d9534f;
+    box-shadow: 0 0 5px 0 #d9534f;
+}
+
+.sg-input-container.ng-valid p.ng-invalid {
+    display: none;
+}
+
+.sg-input-container.ng-valid.ng-touched.ng-not-empty .form-control,
+.sg-form.ng-submitted .sg-input-container.ng-valid .form-control {
+    border-color: #2c9031;
+}
+
+.sg-input-container i.valid-sign {
+    position: absolute;
+    right: 18px;
+    top: 3px;
+    padding: 7px;
+    background-color: #fff;
+}
+/*.sg-input-container style end*/
+/*sg-table style start*/
+.toolbar td {
+    white-space: nowrap;
+}
+
+.sg-table {
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+    .sg-table td, .sg-table th {
+        font-size: 13px;
+    }
+
+    .sg-table .table {
+        max-width: 100%;
+        table-layout: auto;
+        margin-bottom: 0;
+        border:1px solid #dccfcf;
+    }
+
+i, .fa {
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.1, 1.1, 0.34, 1.15);
+}
+
+.toolbar .btn {
+    transition: all .15s;
+}
+
+ .toolbar    .btn:active {
+        transform: translateY(2px);
+    }
+
+ .toolbar    .btn:hover {
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.2), 0 0 10px 0 rgba(0,0,0,0.19);
+    }
+
+  .toolbar .btn:hover i {
+            transform: rotateY(360deg);
+        }
+
+table.paging td {
+    padding : 0 5px;
+}
+.sg-table-paging {
+    text-align: center;
+    white-space: nowrap;
+    font-size: 22px;
+}
+
+.sg-table thead > tr > th {
+    position: relative;
+}
+
+.sg-table tr.sg-table-header > th.sortable {
+    padding-right: 2em !important;
+}
+
+thead .filter-menu {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    margin-top: -12px;
+    white-space: nowrap;
+    cursor: pointer;
+    opacity: 0;
+    display: none;
+    z-index: 99999;
+}
+
+thead .open > .filter-menu {
+    display: block;
+    animation: show-from-side 400ms cubic-bezier(0.1, 1.1, 0.34, 1.15) 0.2s forwards;
+    transform-origin: right;
+}
+
+thead .filter-menu div {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    background-color: #eee;
+    border-left: 1px solid #d5d5d5;
+    display: inline-block;
+}
+
+.sg-table thead i {
+    position: absolute;
+    margin-top: -8px;
+    font-size: 16px;
+    line-height: 16px;
+    top: 50% !important;
+    padding: 0 !important;
+    right: .5em;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.1, 1.1, 0.34, 1.15);
+}
+
+thead tr.sg-table-filter .open i {
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.sg-table-paging .i {
+    padding: 0 3px !important;
+}
+
+.sg-table .table > thead > tr > th, .sg-table .table > tbody > tr > th,
+.sg-table .table > tfoot > tr > th, .sg-table .table > thead > tr > td,
+.sg-table .table > tbody > tr > td, .sg-table .table > tfoot > tr > td {
+    padding: 4px 7px;
+    border-bottom: 1px solid #dccfcf;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.toolbar table > tbody > tr > td {
+    vertical-align: middle;
+    padding: 3px;
+}
+
+.sg-table .table .btn.btn-sm {
+    margin: 0;
+    padding: 3px 8px;
+}
+
+.sg-table-header th {
+    background: #6991a9 !important;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+    color: #fff;
+    line-height: 2 !important;
+}
+
+    .sg-table-header th:hover {        
+        background: #e02315;
+    }
+    .sg-table-header th:active {        
+        background: linear-gradient(#e02315,#dccfcf);
+    }
+
+.sg-table-filter th {
+    background: #f6f6f6;
+}
+.sg-table-filter .sg-input-container {
+    margin:0!important;
+    padding:0!important;
+    border:none!important;
+}
+.sg-table-filter .form-control[ng-model],
+.sg-table-filter .form-control.select-box {
+    width: 100%;
+    border: 2px solid #c9c1bf;
+    line-height: 20px;
+    height: 34px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 150px;
+}
+
+.paging-input {
+    border-bottom: 2px solid #e84e34;
+    padding: 1px 5px;
+    direction: ltr;
+}
+
+    .paging-input input {
+        display: inline-block;
+        width: 30px;
+        text-align: center;
+        border: none;
+        outline: none;
+        background: none;
+        padding: 0;
+        height: 22px;
+    }
+
+@keyframes show-from-side {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateX(40px);
+    }
+
+    100% {
+        opacity: 100;
+        transform: scale(1) translateX(0);
+    }
+}
+
+.sg-table-loader td {
+    position: relative;
+    overflow: hidden;
+    height: 2px;
+    padding: 0 !important;
+}
+
+    .sg-table-loader td loader {
+        top: 0;
+        animation: sg-table-loader 2s cubic-bezier(0.41, 0.29, 0.85, 0.65) infinite;
+        background-color: #333 !important;
+        height: 1px;
+        padding: 0 !important;
+        width: 500px;
+        left: 0;
+        position: absolute;
+        transform-origin: left;
+    }
+
+@keyframes sg-table-loader {
+    0% {
+        transform: translateX(-5%) scaleX(0);
+    }
+
+    70% {
+        transform: translateX(60%) scaleX(1);
+    }
+
+    100% {
+        transform: translateX(200%) scaleX(1);
+        transform-origin: right;
+    }
+}
+/*sg-table style end*/
+#messages {
+    -moz-perspective: 1300px;
+    -ms-perspective: 1300px;
+    -webkit-perspective: 1300px;
+    perspective: 1300px;
+}
+
+    #messages .card {
+        border-radius: 0;
+        border: 1px solid #d5d5d5;
+        box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.7);
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -moz-animation: messageAnim 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        -o-animation: messageAnim 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        -webkit-animation: messageAnim 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        animation: messageAnim 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    }
+
+    #messages .msg-close {
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        right: 15px;
+    }
+
+    #messages .card-header {
+        color: #fff;
+        background-color: #dd4b39;
+        padding-right: 35px;
+        position: relative;
+        border-radius: 0;
+    }
+
+    #messages .card-block {
+        background-color: #666;
+        color: #fff;
+        border: 0;
+        border-radius: 0;
+    }
+
+    #messages .error-list {
+        background-color: #666;
+        padding: 10px 30px;
+        list-style: square;
+        border: 1px solid #777;
+        margin-bottom: 10px;
+    }
+
+    #messages .card.ng-leave-active {
+        transition: all 0.5s ease-in-out;
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+
+    #messages.ng-hide {
+        transition: all 0.5s ease-in-out;
+    }
+
+@keyframes messageAnim {
+    0% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes vex-flipin-horizontal {
+    0% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+        -webkit-transform: rotateY(-90deg);
+        -moz-transform: rotateY(-90deg);
+        -ms-transform: rotateY(-90deg);
+        -o-transform: rotateY(-90deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+    }
+}
+
+@keyframes vex-flipout-horizontal {
+    0% {
+        opacity: 1;
+        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+        -webkit-transform: rotateY(-90deg);
+        -moz-transform: rotateY(-90deg);
+        -ms-transform: rotateY(-90deg);
+        -o-transform: rotateY(-90deg);
+    }
+}
+
+#notifications .card {
+    border-radius: 15px;
+    background-color: rgba(76, 175, 80, 0.8);
+    transition: all 0.3s ease-in-out;
+    animation: notifyAnim 0.4s ease-in-out;
+}
+
+    #notifications .card.ng-hide {
+        transform: translate(-500px,0);
+    }
+
+@keyframes notifyAnim {
+    0% {
+        transform: translate(-500px,0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0,0);
+        opacity: 0.5;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes btn-show {
+    0% {
+        transform: translateX(-200px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+.form-control{
+    text-align: center;
+}
+
+
+/* tree */
+.obj-tree ul {
+        list-style: none;
+        padding: 0  0 0 15px;
+        margin-left: 15px;
+        position: relative;
+    }
+
+        .obj-tree ul li {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .obj-tree ul:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            height: 100%;
+            border-left: solid 2px #337ab7;
+            margin-top: 10px;
+            left: -5px;
+        }
+
+        .obj-tree ul ul:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 30px;
+            border-bottom: solid 2px #337ab7;
+            margin-top: 10px;
+            margin-left: -50px;
+            top: 0;
+        }
+
+    .obj-tree li:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 20px;
+        border-bottom: solid 2px #337ab7;
+        margin-top: 10px;
+        margin-left: -20px;
+        top: 0;
+    }
+
+.modal-dialog {
+    width: 59em;
+    /*height: 100%;*/
+    /*margin: 0;*/
+    padding: 0;
+}
+
+.modal-content {
+    height: auto;
+    /*min-height: 100%;*/
+    border-radius: 0;
+}
+.bg-CustomGreen {
+    color: white;
+    background-color: #335d05 !important;
+}
+
+/*Gear Animated*/
+g {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 18px;
+    /*left: 30px;*/
+    background: url('lobxb.png');
+    -webkit-animation: barrelRoll 2s infinite linear;
+    -webkit-animation-play-state: paused;
+}
+
+    g:last-of-type {
+        top: 5px;
+        left: -6px;
+        -webkit-animation-name: invertBarrelRoll;
+    }
+
+div > g {
+    -webkit-animation-play-state: running;
+}
+
+@-webkit-keyframes barrelRoll {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes invertBarrelRoll {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg);
+    }
+}

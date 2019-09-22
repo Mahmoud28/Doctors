@@ -1,0 +1,143 @@
+﻿@using Microsoft.Extensions.Localization
+@using Seagull.Doctors.Helper
+@using Seagull.Core.Helper
+@using Seagull.Core.Helper.StaticVariables
+@inject IStringLocalizer _localizer
+@inject IGlobalSettings _userService
+
+@model PreparePageViewModel
+@{
+    //  ViewData["Title"] = _localizer.GetString("Admin.ListOfUsers");
+    string active = "";
+    if (_userService.CurrentUser.UserRoleName.FirstOrDefault() == "Admin")
+    {
+        active = "";
+    }
+    else
+    {
+        active = "active";
+    }
+    bool isProducersUser = (_userService.CurrentUser.UserRoleName[0] == "Producers" ? true : false);
+
+}
+<link href="~/Balan6a/css/customCss.css" rel="stylesheet" />
+
+<div class="col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header card-header-tabs card-header-warning">
+            <div class="nav-tabs-navigation">
+                <div class="nav-tabs-wrapper">
+                    @*<span class="nav-tabs-title">Tasks:</span>*@
+                    <ul class="nav nav-tabs" data-tabs="tabs">
+                        @if (_userService.CurrentUser.UserRoleName.FirstOrDefault() == "Admin")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#users" data-toggle="tab">
+                                    <i class="material-icons">group</i> @_localizer.GetString("Admin.User")
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#admins" data-toggle="tab">
+                                    <i class="material-icons">perm_identity</i> @_localizer.GetString("Admin.Admin")
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                        }
+
+                        <li class="nav-item">
+                            <a class="nav-link @active" href="#proudeser" data-toggle="tab">
+                                <i class="material-icons">transfer_within_a_station</i> @_localizer.GetString("Admin.Proudeser")
+                                <div class="ripple-container"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="tab-content">
+                @if (_userService.CurrentUser.UserRoleName.FirstOrDefault() == "Admin")
+                {
+                    <div class="tab-pane active" id="users">
+                        <sg-table ctrl="User" datasrc="Users/List?type=Register User" has-operation="{add: @Model.Add.ToString().ToLower(), edit : @Model.Edit.ToString().ToLower() ,delete :@Model.Delete.ToString().ToLower(), customview: {show : false , tablename : 'Users' }}" delete_msg="{header : '@_localizer.GetString("Admin.Delete.User")',bodyMsg: '@_localizer.GetString("Admin.Delete.Confirm.User")'}" create-action="@Url.Action("PrepareUser", "Users", new { id = 0 })" token="0">
+                            <sg-col name="Name" title="@_localizer.GetString("Admin.User.Name")" type="text"></sg-col>
+                            <sg-col name="Email" title="@_localizer.GetString("Admin.User.Email")" type="text"></sg-col>
+                            <sg-col name="Mobile" title="@_localizer.GetString("Admin.User.Mobile")" type="text"></sg-col>
+                            <sg-col name="Activation" title="@_localizer.GetString("Admin.User.Activation")" type="checkbox"></sg-col>
+                        </sg-table>
+                    </div>
+
+                    <div class="tab-pane" id="admins">
+                        <sg-table ctrl="User" datasrc="Users/List?type=Admin"  has-operation="{add: @Model.Add.ToString().ToLower(), edit : @Model.Edit.ToString().ToLower() ,delete :@Model.Delete.ToString().ToLower(), customview: {show : false , tablename : 'Users' }}" delete_msg="{header : '@_localizer.GetString("Admin.Delete.User")',bodyMsg: '@_localizer.GetString("Admin.Delete.Confirm.User")'}" create-action="@Url.Action("PrepareUser", "Users", new { id = 0 })" token="0">
+                            <sg-col name="Name" title="@_localizer.GetString("Admin.User.Name")" type="text"></sg-col>
+                            <sg-col name="Mobile" title="@_localizer.GetString("Admin.User.Mobile")" type="text"></sg-col>
+                            <sg-col name="Email" title="@_localizer.GetString("Admin.User.Email")" type="text"></sg-col>
+                            <sg-col name="Activation" title="@_localizer.GetString("Admin.User.Activation")" type="checkbox"></sg-col>
+                        </sg-table>
+                    </div>
+                }
+                <div class="tab-pane @active" id="proudeser">
+                    <div ng-controller="User">
+                        <div>
+                            <sg-table ctrl="Users" datasrc="Users/List?type=Producers" has-operation="{add: @Model.Add.ToString().ToLower(), edit : @Model.Edit.ToString().ToLower() ,delete :!@isProducersUser.ToString().ToLower(), customview: {show : false , tablename : 'Users' }}" delete_msg="{header : '@_localizer.GetString("Admin.Delete.User")',bodyMsg: '@_localizer.GetString("Admin.Delete.Confirm.User")'}" create-action="@Url.Action("PrepareUser", "Users",new { id = 0 })" token="0">
+                                <sg-col name="Name" title="@_localizer.GetString("Admin.Name")" type="text"></sg-col>
+                                <sg-col name="Email" title="@_localizer.GetString("ADMIN.Email")" type="text"></sg-col>
+                                <sg-col name="Activation" title="@_localizer.GetString("ADMIN.Status")" type="checkbox"></sg-col>
+
+                                @*<sg-colchild name="UserId" title="@_localizer.GetString("Admin.UserId")" type="text"></sg-colchild>*@
+                                <sg-colchild name="UserName" title="@_localizer.GetString("Web.UserName")" type="text"></sg-colchild>
+                                <sg-colchild name="UserEmail" title="@_localizer.GetString("Admin.User.UserEmail")" type="text"></sg-colchild>
+                                <sg-colchild name="Status" title="@_localizer.GetString("Admin.Status")" type="checkbox"></sg-colchild>
+                                <sg-colchild name="UserRoleStr" title="@_localizer.GetString("Admin.UserRoleStr")" type="text"></sg-colchild>
+                                <sg-colchild name="UserId" title="@_localizer.GetString("Admin.operation")" type="text">
+                                    <span class="btn btn-sm btn-warning" ng-click="$parent.$parent.$parent.$parent.$parent.GoUrl(this.child.UserId)"><i class="fa fa-info-circle"></i></span>
+                                    @*<span class="btn btn-sm btn-danger" ng-click="$parent.$parent.$parent.$parent.$parent.deleteuser(this.child.UserId)"><i class="fa fa-trash"></i></span>*@
+                                </sg-colchild>
+                            </sg-table>
+                        </div>
+                        <sg-tabs>
+                            <table class="table form-table" style="display: inline-table;">
+                                <tbody>
+                                    <tr ng-repeat="ProducerUser in model.Child">
+                                        <td>
+                                            {{ProducerUser.UserName}}
+                                        </td>
+                                        <td>{{ProducerUser.UserEmail}}</td>
+                                        <td>
+                                            {{ProducerUser.Status}}
+                                        </td>
+                                        <td>
+                                            {{ProducerUser.UserRoleStr}}
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </sg-tabs>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var app = LineApp.controller('User', function ($scope, $filter, $http, $timeout, $rootScope) {
+        $scope.GoUrl = function (Id) {
+            var url = '@Url.Action("PrepareUser", "Users")/' + Id;
+            window.location = url;
+            //alert(url);
+        }
+
+        @*$scope.deleteuser = function (Id) {
+            debugger
+            ShowLoading();
+            var model = { Id :Id};
+            $http.post('@Url.Action("Delete")', model).then(function (response) {
+                                     
+            });
+       
+        }*@
+    });
+</script>

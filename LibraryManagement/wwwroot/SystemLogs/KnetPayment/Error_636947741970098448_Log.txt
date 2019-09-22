@@ -1,0 +1,7 @@
+=============Error Logging ===========
+===========Start============= 5/30/2019 12:49:57 AM
+Error Message: The operation has timed out.
+Error Message: 
+Stack Trace:    at System.Net.HttpWebRequest.GetResponse()
+   at Seagull.Doctors.ViewModel.WebShowController.Checkout(OrderCheckout model) in D:\Projects\Code\balanta\LibraryManagement\Controllers\WebShowController.cs:line 1215
+===========End============= 5/30/2019 12:49:57 AM

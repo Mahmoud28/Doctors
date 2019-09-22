@@ -1,0 +1,11 @@
+﻿@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+
+<div class="container wow fadeInDown Arfont">
+    <div class="row">
+        <div class="book-venue" >
+            <h3 id="firsttitle Arfont"style="font-family: 'Cairo', sans-serif !important;">@_localizer.GetString("web.BOOK YOUR VENUE")</h3>
+            <input id="vivek1" placeholder="@_localizer.GetString("web.Search")" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'" type="text" class="datepic1"> <img src="~/Tam/images/search.png" class="search" id="ser"> <img src="~/Tam/images/calendar-2.png" class="calendar-2" id="cal">
+        </div>
+    </div>
+</div>

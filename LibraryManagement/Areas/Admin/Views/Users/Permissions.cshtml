@@ -1,0 +1,152 @@
+﻿
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = "Create";
+}
+<style>
+    /*.content {
+        padding: 15px;
+        margin: 15px;
+        background-color: #fafafa;
+    }*/
+
+    ul.tree {
+        overflow: hidden;
+        position: relative;
+        transition: opacity .4s ease-out;
+    }
+
+        ul.tree *::selection {
+            background-color: transparent;
+        }
+
+        ul.tree.disabled {
+            opacity: .3;
+        }
+
+            ul.tree.disabled:before {
+                content: " ";
+                width: 100%;
+                height: 100%;
+                display: block;
+                z-index: 100;
+                position: absolute;
+                cursor: not-allowed;
+            }
+
+        ul.tree i.fa.fa-angle-right {
+            width: 18px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        ul.tree ul {
+            border: solid 1px #d5d5d5;
+            padding: 5px 20px;
+            margin-top: 5px;
+        }
+
+    .fa-angle-down ~ ul > li {
+        animation: fadein .4s ease-out forwards;
+    }
+
+    ul.tree div > .btn-group {
+        margin-top: 5px;
+        transform: translateX(-200px);
+    }
+
+    .fa-angle-down ~ div > .btn-group {
+        animation: btn-show .4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    ul.tree > li {
+        border-bottom: solid 1px #d2d6de;
+        padding: 7px;
+        cursor: pointer;
+        color: #dd4b39;
+        transition: all .5s;
+    }
+
+        ul.tree > li:hover {
+            background-color: #f1f1f1;
+        }
+
+    ul.tree a {
+        color: #333;
+        font-size: 16px;
+    }
+
+        ul.tree a.btn {
+            color: #fff;
+        }
+</style>
+
+<sg-page ng-controller="permCtrl" ng-init="0">
+    <div style="max-width:600px;" class="form-group">
+        <sg-select token="0" name="permission_id" label="@_localizer.GetString("UserRole")" datasrc="UserRole/List" return-col="Id" return-as="Name" ng-model="RoleId" ng-change="getPermissions()"></sg-select>
+
+        <button class="btn btn-primary btn-sm" ng-click="setPermissions(false)" ng-disabled="!RoleId||editLock"><i class="fa fa-save"></i><span translate="seagull.buttons.SAVE"></span></button>
+        <button class="btn btn-primary btn-sm" ng-click="setPermissions(true)" ng-disabled="!RoleId||editLock"><i class="fa fa-save"></i><span translate="seagull.buttons.SAVE_CONTINUE"></span></button>
+        <button class="btn btn-warning btn-sm" ng-click="getPermissions()" ng-disabled="!RoleId||editLock"><i class="fa fa-undo"></i><span translate="seagull.buttons.UNDO"></span></button>
+    </div>
+    <ul class="tree list-unstyled" ng-class="{disabled:!RoleId||editLock}">
+        <li ng-repeat="perm in tree" ng-click="!show[$index] ? show[$index] = true : show[$index] = false">
+            <i class="fa fa-angle-right" ng-class="{'fa-angle-down' : show[$index]}"></i> <a href="" ng-bind="perm.title"></a>
+            <i class="pull-right"> ({{ (perm.childs|filter:{$selected:true}).length + ' of '+perm.childs.length+' included'}})</i>
+            <div>
+                <span class="btn-group" ng-show="show[$index]">
+                    <button class="btn btn-danger btn-xs" ng-click="toggleCheck(perm.childs,true,$event)"><i class="fa fa-check-square"></i><span>Check All</span></button>
+                    <button class="btn btn-danger btn-xs" ng-click="toggleCheck(perm.childs,false,$event)"><i class="fa fa-square-o"></i><span>Uncheck All</span></button>
+                </span>
+            </div>
+            <ul class="list-unstyled" ng-if="perm.childs.length" ng-show="show[$index]" ng-click="$event.stopPropagation()">
+                <li ng-repeat="child in perm.childs"><label><input type="checkbox" name="{{child.id}}" ng-model="child.$selected" /> <span ng-bind="child.title"></span></label></li>
+            </ul>
+        </li>
+    </ul>
+</sg-page>
+
+<script>
+    LineApp.controller('permCtrl', function ($scope, $http) {
+        $scope.show = {};
+        $scope.toggleCheck = function (childs, boolean, $event) {
+            angular.forEach(childs, function (c) { c.$selected = boolean; })
+            $event.stopPropagation()
+        };
+        var treeInflator = function (cb) {
+            angular.forEach($scope.tree, function (parent) { angular.forEach(parent.childs, function (child) { cb(child); }); });
+        };
+        $scope.setPermissions = function (continueEditing) {
+            var selected = [];
+            $scope.editLock = true;
+            treeInflator(function (child) {
+                if (child.$selected) selected.push(child.id);
+            })
+            var perms = { UserRoleId: $scope.RoleId, Permissions: selected, continueEditing: continueEditing };
+            $http.post('@Url.Action("PermissionsSave", "Users")', perms ).then(function () {
+                $scope.editLock = false;
+            });
+        };
+        $scope.getPermissions = function () {
+            if (!$scope.RoleId) {
+                $scope.tree = angular.copy($scope.treeClone);
+                return;
+            }
+            $scope.editLock = true;
+            $http.post('@Url.Action("GetAllPermissionsForSelectedUserRole", "Users")', $scope.RoleId).then(function (response) {
+                var selected = response.data;
+                $scope.tree = angular.copy($scope.treeClone);
+                treeInflator(function (child) {
+                    if (selected.indexOf(child.id) !== -1) child.$selected = true;
+                });
+                $scope.editLock = false;
+            });
+        };
+        $http.post('@Url.Action("PreparePermission", "Users")').then(function (response) {
+            $scope.tree = response.data;
+            $scope.treeClone = angular.copy($scope.tree);
+        });
+    });
+</script>

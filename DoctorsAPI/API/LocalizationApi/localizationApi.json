@@ -1,0 +1,628 @@
+﻿[
+  {
+    "LocalizedValue": {
+      "ar": "البريد الاكتروني مستخدم",
+      "en": "Duplicate Email"
+    },
+    "Key": "Admin.Duplicate Email",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تم الارسال بنجاح",
+      "en": "send successfully"
+    },
+    "Key": "Admin.Send Successful",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "يجب تعبئة جميع الحقول",
+      "en": "All fields must be filled"
+    },
+    "Key": "All fields must be filled",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تم ارسال بنجاح ..نشكرك على تواصلك معنا",
+      "en": "Your Message Send successfully ThankYou"
+    },
+    "Key": "admin.YourMessageSendSuccessfulThankYou",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "المستخدم غير موجود",
+      "en": "User Not Found"
+    },
+    "Key": "Admin.UserNotFound",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تم تعديل بنجاح",
+      "en": "Updataed Successfully"
+    },
+    "Key": "Admin.UpdataSuccessfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تم اضافة بنجاح",
+      "en": "Add To Favourite Successfully"
+    },
+    "Key": "Admin.AddToFavourite.Successfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تم التعديل بنجاح",
+      "en": "Update Favourite Successfully"
+    },
+    "Key": "Admin.UpdateFavourite.Successfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "حصل خطأ ارجو المحاولة لاحقا",
+      "en": "please try later"
+    },
+    "Key": "Admin.error handling",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تم تعديل العنوان بنجاح",
+      "en": "Update User Address Successfully"
+    },
+    "Key": "Admin.UpdateUserAddress.Successfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تم اضافة عنوان جديد بنجاح",
+      "en": "Add Address Successfully"
+    },
+    "Key": "Admin.AddUserAddress.Successfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "يجب ارسال رقم المستخدم",
+      "en": "User Id Can't Be Null"
+    },
+    "Key": "Admin.UserIdCantBeNull",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تم تعديل كلمة المرور بنجاح",
+      "en": "Update Password Successfully"
+    },
+    "Key": "Admin.Update Password.successful",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "كلمة المرور غي متطابقة",
+      "en": "Password not match"
+    },
+    "Key": "Admin.password not match",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "كلمة المرور غير صحيحة",
+      "en": "Password Incorrect"
+    },
+    "Key": "Admin.Password Incorrect",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "كلمة المرور غير صحيحة , عدد المحاولات المتبقيه -",
+      "en": "Your Password Incorrect Number of  attempts to log in  - "
+    },
+    "Key": "Admin.Your Password Incorrect Number of  attempts to log in  - ",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "Please wait for account activation form admin",
+      "en": "ارجو انتظار تفعيل الحساب من قبل الادارة"
+    },
+    "Key": "Admin.Please wait for account activation",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": " : البريد الاكتروني",
+      "en": "Email : "
+    },
+    "Key": "Email",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "كلمة المرور : ",
+      "en": "Password :"
+    },
+    "Key": "Password",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تم ارسال الطلب بنجاح",
+      "en": "Your Order send Successfully"
+    },
+    "Key": "Admin.Your Order send Successfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "",
+      "en": ""
+    },
+    "Key": "",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "",
+      "en": ""
+    },
+    "Key": "",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "",
+      "en": ""
+    },
+    "Key": "",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "",
+      "en": ""
+    },
+    "Key": "",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "",
+      "en": ""
+    },
+    "Key": "",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "",
+      "en": ""
+    },
+    "Key": "",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "",
+      "en": ""
+    },
+    "Key": "",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "",
+      "en": ""
+    },
+    "Key": "",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "",
+      "en": ""
+    },
+    "Key": "",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "",
+      "en": ""
+    },
+    "Key": "",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "",
+      "en": ""
+    },
+    "Key": "",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "",
+      "en": ""
+    },
+    "Key": "",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "رقم الهاتف غير صحيح يجب ان يتكون من 8 خانات",
+      "en": "Invalid Mobile number , must contain 8 characters"
+    },
+    "Key": "Admin.Invalid Mobile number",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "جميع الحقول مطلوبه",
+      "en": "All fields must be filled"
+    },
+    "Key": "All fields must be filled",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "بيانات اعتماد غير صحيحة",
+      "en": "InCorrect Credential"
+    },
+    "Key": "InCorrect Credential",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "عدد محاولات تسجيل الدخول الغير صحيحه",
+      "en": "Your Password Incorrect Number of  attempts to log in -"
+    },
+    "Key": "Admin.Your Password Incorrect Number of  attempts to log in -",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تم تسجيل الدخول بنجاح",
+      "en": "Successfully logged In"
+    },
+    "Key": "Admin.Successfully logged In",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "الرجاء اختيار تاريخ ووقت الحجز ",
+      "en": "Please choose your booking date and time"
+    },
+    "Key": "web.Please choose your booking date and time",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "انتهت مدة الجلسة",
+      "en": "Session Time Out"
+    },
+    "Key": "web.Session Time Out",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "هناك حجز في نفس التاريخ لهذا العرض",
+      "en": "There is Order in same Date for this show"
+    },
+    "Key": "There is Order in same Date for this show",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "هناك حجز في هذا التاريخ ",
+      "en": "There is Order in same Date"
+    },
+    "Key": "There is Order in same Date",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "رقم الحجز ورقم الخصم لا يمكن ان يكون فارغ  ",
+      "en": "OrderId And PromoCode Cant be null !"
+    },
+    "Key": "OrderId And PromoCode Cant be null !",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "رمز الخصم  هذا غير موجود أو غير نشط!  ",
+      "en": "This Promo Code dosent Exist, Or Not Active !"
+    },
+    "Key": "This Promo Code dosent Exist, Or Not Active !",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "  قيمة الخصم اعلى من قيمة الحجز",
+      "en": "PromoCode Value greater than Order Price"
+    },
+    "Key": "Admin.PromoCode Value greater than Order Price",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "غير مسموح لك",
+      "en": "your not allowed"
+    },
+    "Key": "web.your not allowed",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "الرجاء تسجيل الدخول",
+      "en": "Please log in"
+    },
+    "Key": "web.Please log in",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "جميع الحقول إلزامية",
+      "en": "all fields  mandatory"
+    },
+    "Key": "web.all fields  mandatory",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تـم ارسال رسالتك بنجاح",
+      "en": "Your Message Send Successfully Thank you"
+    },
+    "Key": "admin.YourMessageSendSuccessfullThankYou",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "المستخدم غير موجود",
+      "en": "User Not Found"
+    },
+    "Key": "Admin.UserNotFound",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "لا يمكن ان يكون البريد الالكتروني فارغ",
+      "en": "Email Cant Be Null"
+    },
+    "Key": "Admin.EmailCantBeNull",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "البريد الإلكتروني للمستخدم غير موجود",
+      "en": "User Email Not Exists"
+    },
+    "Key": "Admin.UserEmailNotExists",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تحقق من بريدك الإلكتروني لإعادة تعيين كلمة المرور الخاصة بك",
+      "en": "Check your email to reset your Password"
+    },
+    "Key": "Admin.Check your email to reset your Password",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "الرجاء اختيار التاريخ ",
+      "en": "Please, select date"
+    },
+    "Key": "Please, select date",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "لا يمكن ان يكون اسم المسرحيه فارغ",
+      "en": "play Name Cant be null"
+    },
+    "Key": "Admin.playNameCantbenull",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": " رقم العرض فارغ او تم حذف هذا العرض",
+      "en": "showId Cant be Null Or Th,w has been Deleted"
+    },
+    "Key": "web.showIdCantbeNullOrThisShowhasbeenDeleted",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": " الى سعر لا يمكن ان يكون فارغ او صفر او اقل من صفر",
+      "en": "To Price Cant Be Null Or Zero Or Less Than Zero"
+    },
+    "Key": "web.ToPriceCantBeNullOrZeroOrLessThanZero",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": " لا يمكن ان يكون البريد الالكتروني فارغ ",
+      "en": "Email Cant Be Null"
+    },
+    "Key": "web.EmailCantBeNull",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": " من سعر لا يمكن ان يكون فارغ او صفر او اقل من صفر",
+      "en": "From Price Cant Be Null Or Zero Or Less Than Zero"
+    },
+    "Key": "web.FromPriceCantBeNullOrZeroOrLessThanZero",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "الاسم الاول لا يمكن ان يكون فارغ ",
+      "en": "First Name Cant Be Empty"
+    },
+    "Key": "web.FirstNameCantBeEmpty",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "الاسم الاخير لا يمكن ان يكون فارغ ",
+      "en": "Last Name Cant Be Empty"
+    },
+    "Key": "web.LastNameCantBeEmpty",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "رقم الهاتف غير صحيح  يجب ان يتكون من 8 خانات  ",
+      "en": "Invalid Mobile number, must be 8 charecters"
+    },
+    "Key": "web.Invalid Mobile number",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "البريد الكتروني غير صحيح",
+      "en": "Invalid Email Address"
+    },
+    "Key": "web.Invalid Email Address",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "اسم المسرح  لا يمكن ان يكون فارغ",
+      "en": "Theater Name Cant Be Empty"
+    },
+    "Key": "web.TheaterNameCantBeEmpty",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "العنوان  لا يمكن ان يكون فارغ",
+      "en": "Address Cant Be Empty"
+    },
+    "Key": "web.AddressCantBeEmpty",
+    "Keys": null
+  },
+
+  {
+    "LocalizedValue": {
+      "ar": "عدد التذاكر المتاحه لا يمكن ان يكون فارغ او صفر ",
+      "en": "Number Of Available Seats Cant Be Null Or Zero"
+    },
+    "Key": "web.NumberOfAvailableSeatsCantBeNullOrZero",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "اختر نوع المنصه",
+      "en": "Select Stage Type"
+    },
+    "Key": "web.Select Stage Type",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "عدد العروض لكل يوم لا يمكن ان يكون فارغ او صفر",
+      "en": "Number of Shows Per Day Cant be NULL or  less than zero"
+    },
+    "Key": "web.Number of Shows Per Day Cant be NULL or  less than zero",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "اختر اسم الفئات",
+      "en": "Select Categorys Name "
+    },
+    "Key": "web.Select Categorys Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "اختر النوع ",
+      "en": "Select Type Name"
+    },
+    "Key": "web.Select Type Name",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تم ارسال العرض الى المدير بنجاح ",
+      "en": "Your Show Send To Admin Successfully"
+    },
+    "Key": "web.Your Show Send To Admin Successfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تم التعديل بنجاح ",
+      "en": "Updated Successfully"
+    },
+    "Key": "Admin.UpdataSuccessfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "البريد الاكتروني مكرر",
+      "en": "Duplicate Email"
+    },
+    "Key": "Admin.Duplicate Email",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "كلمة المرور القديمه يجب ان تكون معبئه ",
+      "en": "Old Password must be filled"
+    },
+    "Key": "Old Password must be filled",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "كلمة المرور الجديده يجب ان تكون معبئه ",
+      "en": "New Password must be filled"
+    },
+    "Key": "New Password must be filled",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": " تأكيد كلمة المرور  يجب ان تكون معبئ ",
+      "en": "Confirm Password must be filled"
+    },
+    "Key": "Confirm Password must be filled",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "تم تعديل كلمة المرور بنجاح",
+      "en": "Update Password successfully"
+    },
+    "Key": "Admin.Update Password successfully",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "كلمتي المرور غير متطابقه",
+      "en": "password not match"
+    },
+    "Key": "Admin.password not match",
+    "Keys": null
+  },
+  {
+    "LocalizedValue": {
+      "ar": "كلمة المرور خاطئه",
+      "en": "Password Incorrect"
+    },
+    "Key": "Admin.Password Incorrect",
+    "Keys": null
+  }
+]
+

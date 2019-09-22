@@ -1,0 +1,21 @@
+.jquery-ui-like {
+    border-radius: 4px;
+    background: #DD4B39;
+    border: 2px solid #3C8DBC;
+    overflow: hidden;
+    width: 50%;
+    margin: 0 auto;
+}
+
+    .jquery-ui-like div {
+        background-image: url(pbar-ani.gif);
+        border-right: 1px solid #AAA;
+        font-weight: bold;
+        color: #0c5e8d;
+        letter-spacing: 1px;
+    }
+
+    .whiteProgress div
+    {
+        color: white !important;
+    }

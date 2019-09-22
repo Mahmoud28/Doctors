@@ -1,0 +1,56 @@
+﻿@using Microsoft.Extensions.Localization
+@using Seagull.Core.Helper
+@inject IStringLocalizer _localizer
+@inject IGlobalSettings _userService
+
+@{
+    string isRtl = _userService.CurrentUser.IsRtl.ToString().ToLower();
+}
+<form sg-form name="myform" data-ctrl="Session" data-id="0" token="0" view="False" form-controller="ShowReportCtrl">
+    <div class="row">
+        <div class="col-12">
+            <sg-select token="0" label="@_localizer.GetString("Admin.Report.Shows")" datasrc="GenericGets/GetAllShows" multi return-col="Id" return-as="Name" ng-model="ShowReportId"></sg-select>
+        </div>
+        <div class="col-12 pull-center">
+            <div id="ShowReportSearchButtons" class="pull-right">
+                <span class="btn btn-success pull-right " ng-click="ShowReportSearch()">@_localizer.GetString("Admin.Search")</span>
+            </div>
+        </div>
+    </div>
+    <div class="box-body">
+        <div id="ShowReportView">
+        </div>
+    </div>
+</form>
+<script>
+    var app = LineApp.controller('ShowReportCtrl', function ($scope, $filter, $http, $timeout, $rootScope) {
+        $scope.ShowReportSearch = function (canprint, type) {
+            if (!AdhocValidate($scope))
+                return;
+            debugger
+            var _showReport = buildSearchCriteriaUrlDynamicForReport('@Url.Action("GetShowReport", "SystemReport")', true, $scope, "", []);
+            _showReport += "&ShowReportId=" + $scope.ShowReportId;
+            var model = [
+                { label: 'Id', name: 'Id', align: "center", hidden: true },
+                { label: '@_localizer.GetString("Admin.SystemReport.ShowName")', name: 'Name', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.NumberOfTotalTicket")', name: 'NumberOfTotalTicket', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.NumberOfTotalPaidTickets")', name: 'NumberOfTotalPaidTickets', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.NumberOfBlockedUnpaidTicket")', name: 'NumberOfBlockedUnpaidTicket', align: "center" },
+                { label: '@_localizer.GetString("Admin.SystemReport.NumberOfCanceledTicket")', name: 'NumberOfCanceledTicket', align: "center" },
+                   { label: '@_localizer.GetString("Admin.SystemReport.PercentageTicket")', name: 'PercentageTicket', align: "center" },
+
+            ];
+            subGridTable = "GridOrderByShow";
+
+            BuildReportDiv("ShowReportView", "jqGridShowReport", "jqGridShowReportPagers");
+
+            buildGrid(model, "jqGridShowReport", _showReport, '@int.MaxValue', "jqGridShowReportPagers",
+                false, false, false, false, true, false, '@(isRtl.Equals("true") ? "rtl" : "ltr")', false, "tab-content", "POST", 0, "", "ShowReportSearchButtons**SearchPrint('jqGridOrderByShow', 1)")
+
+            $("#alertmod_jqGridShowReport").css("display", "none");
+            $(".ui-jqgrid-labels").attr('style', "text-align: center;");
+            $(".glyphicon-refresh").attr("style", "padding-left: 24px;");
+            $(".ui-pg-button").attr("style", "padding-left: 24px;");
+        }
+    });
+</script>

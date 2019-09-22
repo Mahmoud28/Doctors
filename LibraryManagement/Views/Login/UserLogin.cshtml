@@ -1,0 +1,120 @@
+﻿
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@model Seagull.Core.ViewModel.UserLoginView
+@{
+    ViewData["Title"] = _localizer.GetString("Web.SignIn");
+    Model.returnUrl = this.ViewData["ReturnUrl"] == null ? null:this.ViewData["ReturnUrl"].ToString();
+}
+
+
+<section class="pt-5 pb-5 signbg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 text-center">
+                <div class="blackoverlay"></div>
+                <div class="form-horizontal signinform p-5" method="post" action="#">
+                    <h3 style="text-align:center" class="form_title text-white">@_localizer.GetString("Web.SignIn")</h3>
+                    <div class="form-group align-items-center">
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <input type="hidden" value="@Model.returnUrl" name="returnUrl" id="returnUrl"/>
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <input type="email"  value="@Model.Email" class="form-control" name="email1" id="email1" placeholder="@_localizer.GetString("Form.Email")" />
+                                @*@Html.TextBoxFor(a => a.Email, null, new { placeholder = _localizer.GetString("Form.Email"), @class = "form-control" })*@
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group align-items-center">
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input type="password" class="form-control" name="password1" id="password1" placeholder="@_localizer.GetString("Web.YourPassword")" />
+                                @*@Html.PasswordFor(a => a.Password, new { placeholder = _localizer.GetString("Web.YourPassword"), @class = "form-control" })*@
+
+
+                            </div>
+                            <p class="text-right"><a href="@Url.Action("ForgotPassword","Profile")" class="text-white">@_localizer.GetString("web.ForgotPassword?")</a></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="btnlogin" class="yellowbg d-block w-100 border-0 p-2 font-weight-bold h4 border-radius">@_localizer.GetString("web.SUBMIT")</button>
+                    </div>
+                    @*<div class="form-group">
+                            <button type="button" class="d-block w-100 border p-2 font-weight-bold bg-transparent text-white h4 border-radius">Continue as Guest</button>
+                        </div>*@
+                    <div class="mt-5"></div>
+                    <div class="quicksignup">
+                        <h5 class="text-uppercase text-left text-white" style="display: flex;">@_localizer.GetString("Quick Sign Up Using...")</h5>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col-sm-6 mb-3">
+                            @*<a href="@Url.Action("Facebook", "Login")"><i class="fa fa-facebook"></i></a>*@
+                            <a  href="@Url.Action("Facebook", "Login")"><img class="w-100" src="~/Balan6a/img/Fb.png" /></a>
+                        </div>
+                        @*<div class="col-sm-6">
+                                <a href="#"><img class="w-100" src="~/Balan6a/img/Google.png" /></a>
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+
+
+    $("#btnlogin").click(function (e) {
+
+        var model = {         
+            Email: $("#email1").val(),
+            Password: $('#password1').val(),
+            returnUrl: $("#returnUrl").val()
+        };// end of model
+                ShowLoading();
+                $.ajax({
+                    url: "@Url.Action("UserLogin", "Login")",
+                    type: "post",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    data: JSON.stringify(model),
+                    success: function (result)
+                    {
+                        debugger
+                        if (result.MessageType)
+                        {
+                            if (result.Url != null) {
+                                RemoveLoading();
+                                window.location.href = result.Url;
+                            } else {
+                                RemoveLoading();
+                                window.location.href = "/Profile/profile";
+                            }
+                        }
+                        else
+                        {
+                            RemoveLoading();
+                            Swal.fire(result.Header, result.Message, result.SwalType);
+                        }
+                    },
+                    error: function ()
+                    {
+                        Swal.fire('@_localizer.GetString("web.Failed")', '@_localizer.GetString("web.Error Happend")', 'error')
+                        RemoveLoading();
+                        $("#email1").val("");
+                        $('#password1').val("");
+                    }
+
+        }); 
+        
+    });// end of submit
+
+
+</script>
+

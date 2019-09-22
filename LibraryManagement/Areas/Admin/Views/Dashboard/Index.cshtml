@@ -1,0 +1,698 @@
+﻿@using Microsoft.Extensions.Localization
+@using Seagull.Core.Helper
+@inject IStringLocalizer _localizer
+@inject IGlobalSettings _globalSetting
+@model int
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.Dashboard");
+    var initialLocaleCode = _globalSetting.CurrentUser.IsRtl ? "ar" : "en";
+}
+<link href='~/fullcalendar-3.10.0/fullcalendar.min.css' rel='stylesheet' />
+<link href='~/fullcalendar-3.10.0/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<script src='~/fullcalendar-3.10.0/lib/moment.min.js'></script>
+<script src='~/fullcalendar-3.10.0/fullcalendar.min.js'></script>
+<script src='~/fullcalendar-3.10.0/locale-all.js'></script>
+<script src="~/fullcalendar-3.10.0/demos/js/theme-chooser.js"></script>
+<style>
+
+
+    body {
+        margin: 40px 10px;
+        padding: 0;
+        font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+        font-size: 14px;
+    }
+
+    #calendar {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .fc-today-button {
+        top: 10px !important;
+    }
+</style>
+<div>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card card-stats">
+                    <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">info_outline</i>
+                        </div>
+                        <p class="card-category">@_localizer.GetString("Admin.QuoteOfTheDay")</p>
+                        <h3 class="card-title"><span id="Quote"></span></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">local_offer</i><span id="Author"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+@if (Model == 1)
+{
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header card-header-warning card-header-icon">
+                            <div class="card-icon">
+                                <i class="material-icons">content_copy</i>
+                            </div>
+                            <p class="card-category">Used Space</p>
+                            <h3 class="card-title">
+                                49/50
+                                <small>GB</small>
+                            </h3>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <i class="material-icons text-danger">warning</i>
+                                <a href="#pablo">Get More Space...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header card-header-success card-header-icon">
+                            <div class="card-icon">
+                                <i class="material-icons">store</i>
+                            </div>
+                            <p class="card-category">Revenue</p>
+                            <h3 class="card-title">$34,245</h3>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <i class="material-icons">date_range</i> Last 24 Hours
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header card-header-danger card-header-icon">
+                            <div class="card-icon">
+                                <i class="material-icons">info_outline</i>
+                            </div>
+                            <p class="card-category">Fixed Issues</p>
+                            <h3 class="card-title">75</h3>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <i class="material-icons">local_offer</i> Tracked from Github
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header card-header-info card-header-icon">
+                            <div class="card-icon">
+                                <i class="fa fa-twitter"></i>
+                            </div>
+                            <p class="card-category">Followers</p>
+                            <h3 class="card-title">+245</h3>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <i class="material-icons">update</i> Just Updated
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card card-chart">
+                        <div class="card-header card-header-success">
+                            <div class="ct-chart" id="dailySalesChart"></div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Daily Sales</h4>
+                            <p class="card-category">
+                                <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <i class="material-icons">access_time</i> updated 4 minutes ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-chart">
+                        <div class="card-header card-header-warning">
+                            <div class="ct-chart" id="websiteViewsChart"></div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Email Subscriptions</h4>
+                            <p class="card-category">Last Campaign Performance</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <i class="material-icons">access_time</i> campaign sent 2 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-chart">
+                        <div class="card-header card-header-danger">
+                            <div class="ct-chart" id="completedTasksChart"></div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Completed Tasks</h4>
+                            <p class="card-category">Last Campaign Performance</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                <i class="material-icons">access_time</i> campaign sent 2 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-tabs card-header-primary">
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper">
+                                    <span class="nav-tabs-title">Tasks:</span>
+                                    <ul class="nav nav-tabs" data-tabs="tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#profile" data-toggle="tab">
+                                                <i class="material-icons">bug_report</i> Bugs
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#messages" data-toggle="tab">
+                                                <i class="material-icons">code</i> Website
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#settings" data-toggle="tab">
+                                                <i class="material-icons">cloud</i> Server
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="profile">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="" checked>
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                                        <i class="material-icons">edit</i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                                        <i class="material-icons">close</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                                        <i class="material-icons">edit</i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                                        <i class="material-icons">close</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                                                </td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                                        <i class="material-icons">edit</i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                                        <i class="material-icons">close</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="" checked>
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                                        <i class="material-icons">edit</i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                                        <i class="material-icons">close</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane" id="messages">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="" checked>
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                                                </td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                                        <i class="material-icons">edit</i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                                        <i class="material-icons">close</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                                        <i class="material-icons">edit</i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                                        <i class="material-icons">close</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane" id="settings">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="">
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                                        <i class="material-icons">edit</i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                                        <i class="material-icons">close</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="" checked>
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                                                </td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                                        <i class="material-icons">edit</i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                                        <i class="material-icons">close</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox" value="" checked>
+                                                            <span class="form-check-sign">
+                                                                <span class="check"></span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                                        <i class="material-icons">edit</i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                                        <i class="material-icons">close</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-warning">
+                            <h4 class="card-title">Employees Stats</h4>
+                            <p class="card-category">New employees on 15th September, 2016</p>
+                        </div>
+                        <div class="card-body table-responsive">
+                            <table class="table table-hover">
+                                <thead class="text-warning">
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Salary</th>
+                                <th>Country</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Dakota Rice</td>
+                                        <td>$36,738</td>
+                                        <td>Niger</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Minerva Hooper</td>
+                                        <td>$23,789</td>
+                                        <td>Curaçao</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Sage Rodriguez</td>
+                                        <td>$56,142</td>
+                                        <td>Netherlands</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Philip Chaney</td>
+                                        <td>$38,735</td>
+                                        <td>Korea, South</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else if (Model == 2)
+{
+
+
+
+    <div class="content" style="background: white;padding:3em;border-radius: 65px;">
+        <div id="theme-system-selector" class="selector" hidden>
+            Theme System:
+
+            <select>
+                <option value="bootstrap4" selected="">Bootstrap 4</option>
+                <option value="bootstrap3">Bootstrap 3</option>
+                <option value="jquery-ui">jQuery UI</option>
+                <option value="standard">unthemed</option>
+            </select>
+        </div>
+
+        <div data-theme-system="bootstrap4" class="selector" style="" hidden>
+            Theme Name:
+            <select>
+                <option value="">Default</option>
+                <option value="cerulean">Cerulean</option>
+                <option value="cosmo">Cosmo</option>
+                <option value="cyborg">Cyborg</option>
+                <option value="darkly">Darkly</option>
+                <option value="flatly">Flatly</option>
+                <option value="journal">Journal</option>
+                <option value="litera">Litera</option>
+                <option value="lumen">Lumen</option>
+                <option value="lux">Lux</option>
+                <option value="materia">Materia</option>
+                <option value="minty">Minty</option>
+                <option value="pulse">Pulse</option>
+                <option value="sandstone">Sandstone</option>
+                <option value="simplex" selected="selected">Simplex</option>
+                <option value="sketchy">Sketchy</option>
+                <option value="slate">Slate</option>
+                <option value="solar">Solar</option>
+                <option value="spacelab">Spacelab</option>
+                <option value="superhero">Superhero</option>
+                <option value="united">United</option>
+                <option value="yeti">Yeti</option>
+            </select>
+        </div>
+
+
+        <div style="margin:0 auto;display:block;text-align:center;padding-bottom:3em">
+            <div style="border:solid;border-radius:8px;border-color:lightgray;margin:0 auto;display:inline-block;text-align:center">
+                <div style="margin:0 auto;display: inline-block;text-align:center">
+                    <label style="display:inline-block;margin:7px;color:black;text-align:center">@_localizer.GetString("Pass")</label><span style="width:22px;height:22px;border-radius:80px;border:1px solid #006600;background-color:#006600;margin:7px;float:right"></span>
+                </div>
+                <div style="margin:0 auto;display: inline-block;text-align:center">
+                    <label style="display:inline-block;margin:7px;color:black;text-align:center">@_localizer.GetString("Fail")</label><span style="width:22px;height:22px;border-radius:80px;border:1px solid #db4c3b;background-color:#db4c3b;margin:7px;float:right"></span>
+                </div>
+                <div style="margin:0 auto;display: inline-block;text-align:center">
+                    <label style="display:inline-block;margin:7px;color:black;text-align:center">@_localizer.GetString("Meeting")</label><span style="width:22px;height:22px;border-radius:80px;border:1px solid #156B8C;background-color:#156B8C;margin:7px;float:right"></span>
+                </div>
+                <div style="margin:0 auto;display: inline-block;text-align:center">
+                    <label style="display:inline-block;margin:7px;color:black;text-align:center">@_localizer.GetString("Exam")</label><span style="width:22px;height:22px;border-radius:70px;border:1px solid #e5e53e;background-color:#e5e53e;margin:7px;float:right"></span>
+                </div>
+            </div>
+        </div>
+
+        <div id='calendar'></div>
+    </div>
+
+
+    <div class="modal" id="fullCalModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document" style="background-color:#156B8C">
+            <div class="modal-content">
+
+                <div class="modal-header" style="background-color:#f7e8bb; border-bottom: 0 none;">
+                    <h3 class="modal-title w-100 text-center text-bold" id="modalTitle2"></h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body" style="background-color:#f7e8bb">
+                    <div style="font-size:medium;color:#3C4858" id="modalBody2">
+                        <div>  @_localizer.GetString("Admin.Name") : <label style="font-size:medium;color:#3C4858" id="username"> </label></div>
+                        <div> @_localizer.GetString("Admin.SerialNumber") : <label style="font-size:medium;color:#3C4858" id="serial"> </label></div>
+                        <div id="divmeetingdate"> @_localizer.GetString("Admin.MeetingDate") : <label style="font-size:medium;color:#3C4858" id="meetingdate"> </label></div>
+                        <div id="divexamdate"> @_localizer.GetString("Admin.ExamDate") : <label style="font-size:medium;color:#3C4858" id="examdate"> </label></div>
+                        <div id="divexamdegree"> @_localizer.GetString("Admin.ExamDegree") : <label style="font-size:medium;color:#3C4858" id="examdegree"> </label></div>
+                        <div id="divmark"> @_localizer.GetString("Admin.Mark") : <label style="font-size:medium;color:#3C4858" id="mark"> </label></div>
+
+
+
+
+                    </div>
+                </div>
+
+                <div class="modal-footer" style="background-color:#f7e8bb; border-top: 0 none;">
+                    <button style="background-color:#156B8C" type="button" class="btn btn-secondary" data-dismiss="modal">@_localizer.GetString("Pages.Applied.Close")</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            initThemeChooser({
+
+                init: function (themeSystem) {
+                    $('#calendar').fullCalendar({
+                        themeSystem: themeSystem,
+                        header: {
+                            left: 'prev,next today',
+                            center: 'title',
+                            right: 'month,agendaWeek,agendaDay,listMonth'
+                        },
+                        defaultDate: '@DateTime.Now.ToString("yyyy-MM-dd")',
+                        locale: '@initialLocaleCode',
+                        weekNumbers: true,
+                        navLinks: false, // can click day/week names to navigate views
+                        editable: true,
+                        selectable: true,
+                        eventLimit: true, // allow "more" link when too many events
+                        eventClick: function (event, jsEvent, view) {
+                            //event.id
+                            $('#modalTitle2').html(event.job);
+                            $('#username').text(event.UserName);
+                            $('#serial').text(event.Serial);
+
+                            if (event.MeetingDate != null) {
+                                $('#meetingdate').text(event.MeetingDate);
+                                $('#divmeetingdate').show();
+                            }
+                            else
+                                $('#divmeetingdate').hide();
+
+                            if (event.ExamDate != null) {
+                                $('#divmeetingdate').hide();
+                                $('#divexamdate').show();
+                                $('#examdate').text(event.ExamDate);
+                            }
+                            else
+                                $('#divexamdate').hide();
+
+                            if (event.ExamDegree == 1) {
+                                $('#divexamdegree').show();
+                                $('#divmark').show();
+                                $('#examdegree').text("ناجح");
+                                $('#mark').text(event.Mark);
+                            }
+                            else if (event.ExamDegree == 0) {
+                                $('#divexamdegree').show();
+                                $('#divmark').show();
+                                $('#examdegree').text("راسب");
+                                $('#mark').text(event.Mark);
+                            }
+                            else if (event.ExamDegree == null) {
+                                $('#divexamdegree').hide();
+                                $('#divmark').hide();
+                            }
+                            $('#fullCalModal').modal('toggle');
+
+                        },
+                        eventDrop: function (event, delta, revertFunc) {
+
+
+                            $.ajax({
+
+                                url: " @Url.Action("dragDateFullcalender", "Dashboard")",
+                                type: "POST",
+                                data: { id: event.id, start: event.start.format() }
+                            });
+                        },
+                        events: function (start, end, timezone, callback) {
+                            var model = { StartDate: start, EndDate: end }
+                            $.ajax({
+
+                                url: "@Url.Action("MeetingDate", "Dashboard")",
+                                contentType: "application/json; charset=utf-8",
+                                type: "Post",
+                                dataType: "json",
+                                data: JSON.stringify(model),
+                                success: function (result) {
+                                    var events = [];
+                                    $.map(result, function (data) {
+                                        events.push(
+                                            {
+                                                id: data.Id,
+                                                title: data.strUserName,
+                                                start: moment((data.MeetingDate != null && data.ExamDate != null) ? data.ExamDate :  data.MeetingDate  , "DD/MM/YYYY").format("YYYY-MM-DD"),
+                                                job: data.strVacancy,
+                                                UserName: data.strUserName,
+                                                Serial: data.Serial,
+                                                DateApply: data.DateApply,
+                                                MeetingDate: data.MeetingDate,
+                                                ExamDate: data.ExamDate,
+                                                ExamDegree: data.ExamDegree,
+                                                Mark:data.Mark,
+                                                color: data.color,
+
+                                            });
+                                    });
+
+                                    callback(events);
+                                }
+                            });
+                        },
+
+                    });
+                },
+                change: function (themeSystem) {
+                    $('#calendar').fullCalendar('option', 'themeSystem', themeSystem);
+                }
+
+            });
+        });
+    </script>
+}
+
+

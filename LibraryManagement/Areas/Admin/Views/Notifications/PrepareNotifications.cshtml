@@ -1,0 +1,15 @@
+﻿@model int
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer _localizer
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.Notifications.AddEdit");
+}
+<sg-page >
+    <form sg-form name="myform" data-ctrl="Notifications" data-id="@Model" token="0" form-controller="null">
+        <sg-form-toolbar savec="true"></sg-form-toolbar>
+        <sg-input type="text" name="Message" label="@_localizer.GetString("Admin.Notifications.Message")" ng-model="model.Message" ></sg-input>
+        <sg-input type="text" name="URL" label="@_localizer.GetString("Admin.Notifications.URL")" ng-model="model.URL" ></sg-input>
+       
+
+    </form>
+</sg-page>

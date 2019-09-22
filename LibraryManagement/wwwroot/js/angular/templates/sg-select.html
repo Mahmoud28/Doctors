@@ -1,0 +1,29 @@
+﻿<div class="form-group row">
+    <div class="control-label col-md-3" ng-class="{'text-bold' : attrs.ngRequired == 'true'}">{{::attrs.label}} {{attrs.ngRequired == "true" ? '*' : ''}}</div>
+    <div class="col-md-9 form-control-wrapper">
+        <div>
+            <div class="sg-select" style="position: relative;">
+                <div ng-click="vm.showModal();" class='form-control select-box' name tabindex="0">
+                    {{vm.currentRow[attrs.returnAs]|| 'Select'}}
+                    <i class='fa fa-angle-right open' style="font-size:20px" ng-show="!disabled" ng-class="{'fa-angle-down' : $root.showbox[attrs.name]}"></i>
+                    <i class="fa fa-remove text-primary remove" ng-show="vm.currentRow[attrs.returnCol] && !disabled" ng-click="vm.selectRow({});$event.stopPropagation();"></i>
+                </div>
+                <div id="droplist">
+                    <input class="form-control search-box" ng-change="vm.undo()" ng-model="vm.search[attrs.returnAs]" placeholder="{{attrs.searchmessage}}" ng-model-options="{debounce : 600}" />
+                    <div class="sg-table droplist-data" style="overflow: auto;max-height: 180px;margin-bottom: 0;margin-top:2px;border: 0;">
+                        <table class="table table-sm">
+                            <tr ng-repeat="row in vm.binding | filter:vm.search track by $index" ng-click="vm.selectRow(row)" ng-class="{'selected' : row[attrs.returnCol] == vm.selectedRow[attrs.returnCol]}">
+                                <td ng-bind="row[attrs.returnAs]"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-if="getMessage()">
+                <p class="ng-invalid"><i class="fa fa-warning"></i> {{getMessage()}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>

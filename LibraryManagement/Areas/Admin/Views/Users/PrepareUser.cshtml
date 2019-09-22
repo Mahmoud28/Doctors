@@ -1,0 +1,70 @@
+﻿@model int
+@using Microsoft.Extensions.Localization
+@using Seagull.Core.Helper
+@using Seagull.Core.Data.Interfaces
+
+@inject IStringLocalizer _localizer
+@inject IGlobalSettings _userService
+@inject IUserRepository _userRepository;
+@{
+    ViewData["Title"] = _localizer.GetString("Admin.User.AddEdit");
+    bool IsProducersUser = false;
+    bool isProducersUser = (_userService.CurrentUser.UserRoleName[0] == "Producers" ? true : false);
+    var isSame = (Model == _userService.CurrentUser.Id) ?true:false;
+}
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-header card-header-tabs card-header-warning">
+                <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                        @*<span class="nav-tabs-title">Tasks:</span>*@
+                        <ul class="nav nav-tabs" data-tabs="tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#users" data-toggle="tab">
+                                    <i class="material-icons">library_books</i> @_localizer.GetString("Admin.AddEditUser")
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="users">
+                        <form sg-form name="myform" data-ctrl="Users" data-id="@Model" token="0" form-controller="userCtrl">
+                            <sg-form-toolbar savec="true"></sg-form-toolbar>
+                            <sg-input type="text" name="Name" label="@_localizer.GetString("Admin.User.Name")" ng-model="model.Name" ng-required="true"></sg-input>
+                            <sg-input type="text" name="Email" label="@_localizer.GetString("Admin.User.Email")" ng-model="model.Email" ng-required="true"></sg-input>
+                            <sg-input type="password" name="Password" label="@_localizer.GetString("Admin.User.Password")" ng-model="model.Password" ng-required="true"></sg-input>
+                            <sg-input type="text" name="Mobile" label="@_localizer.GetString("Admin.User.Mobile")" ng-model="model.Mobile" ng-required="true"></sg-input>
+                            <sg-input type="checkbox" name="Activation" label="@_localizer.GetString("Admin.User.Activation")" ng-model="model.Activation"></sg-input>
+
+                            <sg-select token="0" label="@_localizer.GetString("UserRole")" datasrc="GenericGets/GetAllUserRoles" @*filter="true" *@ ng-change="getUser()" return-col="Name" return-as="Name" ng-model="model.SelectedUserRoles" ng-required="true" ng-hide="@isSame.ToString().ToLower()"></sg-select>
+
+                            <div ng-show="!@isProducersUser.ToString().ToLower()">
+                                <sg-select token="0" ng-show="model.IsProducersUser" label="UserProducers" datasrc="GenericGets/GetProducersUser" return-col="Id" return-as="Name" ng-model="model.SelectedProducersUser" ng-required="IsVisible"></sg-select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var app = LineApp.controller('userCtrl', function ($scope, $filter, $http, $timeout, $rootScope) {
+
+        $scope.getUser = function () {
+            var userRoleName = $scope.model.SelectedUserRoles;
+            debugger
+            if (userRoleName == "Ticketing User" || userRoleName == "Organizers User") {
+                $scope.model.IsProducersUser = true;
+            } else {
+                $scope.model.IsProducersUser = false;
+            }
+        }
+    });
+</script>

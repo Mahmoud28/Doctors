@@ -1,0 +1,121 @@
+body{
+	direction:rtl;
+	text-align: right;
+	font-family: 'Changa', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Changa', sans-serif;
+    text-align: right;
+}
+.playname a {
+    text-decoration: none;
+    text-align: right;
+    float: right;
+}
+p {
+    text-align: right;
+    letter-spacing: -1px !important;
+}
+li{  
+    letter-spacing: -1px !important;
+}
+label {
+    letter-spacing: -1px !important;
+}
+/*#ticketingInsImage {
+    direction: ltr;
+}*/
+.buytickets {
+    font-size: 20px;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    float: left !important;
+    letter-spacing: -1px !important;
+}
+.dropdown select{
+	margin-right: 17px;
+	margin-left: 0;
+}
+header button[type=submit]{
+	    border-radius: 5px 0px 0px 5px;
+}
+header input[type=search]{
+	border-radius: 0px 5px 5px 0px;
+}
+ul.rightmenu{
+	padding:0;
+}
+ul.list-inline.mb-0.social, ul.list-inline.mb-2{
+	padding-right: 0;
+}
+.widget_title{
+	text-align: right;
+}
+.list-inline.mb-2{
+	    text-align: right;
+}
+.colorcode{
+	margin-left: 15px;
+	margin-right: 0px;
+}
+section.seatbooking .bg-grey2{
+	border-radius: 24px 0px 0px 24px;
+}
+section.seatbooking .bg-grey1{
+	border-radius: 0px 24px 24px 0px;
+}
+.w-33{
+	width:46%;
+}
+.event_filter{
+	float: left;
+}
+
+@media screen and (max-width:768px){
+	
+	.navbar-light .navbar-toggler{
+		float: left;
+	}
+    .rightmenu li {
+        /*width: 30%;*/
+        float: right;
+        text-align: center;
+        margin-left:0px !important
+    }
+	.list-inline.mb-2 , .widget_title{
+		text-align: center;
+	}
+	ul.navbar-nav{
+		padding:0;
+	}
+	header input[type=search]{
+		    margin-right: auto;
+	}
+	
+
+}
+input{
+    letter-spacing: -1px !important;
+}
+textarea  {
+    letter-spacing: -1px !important;
+}
+select {
+    letter-spacing: -1px !important;
+}
+.plus-minus-input .input-group-field {
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    padding: 0rem;
+    font-size: 23px;
+    letter-spacing: -1px !important;
+}
+.ff{
+    float:right;
+}
