@@ -23,7 +23,7 @@ namespace API.Authorization
         
         public async Task OnAuthorizationAsync(AuthorizationFilterContext context)
         {
-            string[] allowController = new string[] { "Auth" , "Listening", "PublicApi", "ShowsApi", "OrderApi", "LookUps" };
+            string[] allowController = new string[] { "Auth" , "Listening", "PublicApi", "ShowsApi", "OrderApi", "LookUps", "PatientMedicationAPI" };
 
             string controllerName = context.RouteData.Values["controller"].ToString();
 

@@ -21,6 +21,7 @@ namespace Seagull.Core.Data.Model
         public int MorningCount { get; set; }
 
         public int AfternoonCount { get; set; }
+        public string PharmacyName { get; set; }
 
         public string Days { get; set; }
 
