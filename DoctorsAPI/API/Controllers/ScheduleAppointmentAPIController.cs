@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Seagull.API.APIHelper;
 using Seagull.Core.Data;
+using Seagull.Doctors.Data.Model;
 
 namespace Doctors.API.Controllers
 {
@@ -40,7 +41,11 @@ namespace Doctors.API.Controllers
 
             if(model.Id == 0)
             {
-                //ScheduleAppointment
+                ScheduleAppointment scheduleAppointment = new ScheduleAppointment()
+                {
+                    //Status = model.s
+                    Notes = model.Notes,
+                };
             }
             else
             {

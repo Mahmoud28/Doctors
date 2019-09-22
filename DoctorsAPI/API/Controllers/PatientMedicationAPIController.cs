@@ -49,7 +49,7 @@ namespace Doctors.API.Controllers
                     Doctors = model.DoctorName,
                     MorningCount = model.Morning,
                     PharmacyName = model.PharmacyName,
-                    Name = model.Medication.ToString(),
+                    MedicationId = model.Medication,
                     Sideeffect = model.Sideeffect,
                     UserId = Convert.ToInt32(User.Claims.SingleOrDefault(x => x.Type == "UserId") != null ? User.Claims.SingleOrDefault(x => x.Type == "UserId").Value : null)
                 };
@@ -68,7 +68,7 @@ namespace Doctors.API.Controllers
                     return Ok(result);
                 }
                 patientMedication.MorningCount = model.Morning;
-                patientMedication.Name = model.Medication.ToString();
+                patientMedication.MedicationId = model.Medication;
                 patientMedication.PharmacyName = model.PharmacyName;
                 patientMedication.Sideeffect = model.Sideeffect;
                 patientMedication.UserId = Convert.ToInt32(User.Claims.SingleOrDefault(x => x.Type == "UserId") != null ? User.Claims.SingleOrDefault(x => x.Type == "UserId").Value : null);
@@ -110,7 +110,7 @@ namespace Doctors.API.Controllers
                 SelectedIds = medication.Days.Split(',').Select(Int32.Parse).ToList(),
                 PharmacyName = medication.PharmacyName,
                 Sideeffect = medication.Sideeffect,
-                Medication = int.Parse(medication.Name)
+                Medication = (medication.MedicationId)
             };
             result.data = model;
             return Ok(result);
