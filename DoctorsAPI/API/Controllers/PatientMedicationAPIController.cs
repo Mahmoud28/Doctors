@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Seagull.API.APIHelper;
 using Seagull.Core.Data;
 using Seagull.Core.Data.Model;
+using Seagull.Core.Models;
+using Seagull.Doctors.Data.Model;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace Doctors.API.Controllers
@@ -15,11 +17,18 @@ namespace Doctors.API.Controllers
     public class PatientMedicationAPIController : ControllerBase
     {
         private LibraryDbContext _context;
+        private readonly DbSet<MedicinesLookUp> _medicinesLookUp;
+        private readonly DbSet<User> _user;
+        private readonly DbSet<Days> _days;
+
         private readonly DbSet<Medication> _medication;
         public PatientMedicationAPIController(LibraryDbContext context)
         {
             _context = context;
+            _user= _context.Set<User>();
             _medication = _context.Set<Medication>();
+            _days = _context.Set<Days>();
+            _medicinesLookUp = _context.Set<MedicinesLookUp>();
         }
         [HttpPost("PatientMedication")]
         public ActionResult PatientMedicationData([FromBody] PatientMedicationModel model)
@@ -109,6 +118,33 @@ namespace Doctors.API.Controllers
             };
             result.data = model;
             return Ok(result);
+        }
+
+        [HttpGet("PatientMedicationList")]
+
+        public IActionResult PatientMedicationList()
+        {
+            APIJsonResult result = new APIJsonResult();
+            result.Access = true;
+            result.success = true;
+            var currentUserToken = User.Claims.SingleOrDefault(x => x.Type == "UserRole") != null ? User.Claims.SingleOrDefault(x => x.Type == "UserRole").Value : null;
+            if (currentUserToken == null)
+            {
+                result.Msg.Add("Session Time Out");
+                result.success = false;
+                return Ok(result);
+            }
+            int userId = Convert.ToInt32(User.Claims.SingleOrDefault(x => x.Type == "UserId") != null ? User.Claims.SingleOrDefault(x => x.Type == "UserId").Value : null);
+            var list = (from a in _medication.Where(x => x.UserId == userId)
+                        select new
+                        {
+                            Id = a.Id,
+                            Medicines = _medicinesLookUp.Where(x=>x.Id == a.MedicationId).FirstOrDefault().MedicinesName,
+                            Doctor = a.Doctors,
+                            //Days =
+                        }
+                        );
+            return null;
         }
     }
     
