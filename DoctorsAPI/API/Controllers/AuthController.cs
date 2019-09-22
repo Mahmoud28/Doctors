@@ -264,7 +264,7 @@ namespace Seagull.API.Controllers
                         }
                         using (var fileStream = new FileStream(CoverImagetPath + userRegister.InsuranceImage.FileName, FileMode.Create))
                         {
-                            userRegister.InsuranceImage.CopyToAsync(fileStream);
+                            userRegister.InsuranceImage.CopyTo(fileStream);
                         }
                         //file.CopyToAsync(new FileStream(CoverImagetPath + user.InsuranceImage, FileMode.Create));
 
@@ -287,7 +287,7 @@ namespace Seagull.API.Controllers
                         }
                         using (var fileStream = new FileStream(CoverImagetPath + userRegister.PersonalImage.FileName, FileMode.Create))
                         {
-                            userRegister.PersonalImage.CopyToAsync(fileStream);
+                            userRegister.PersonalImage.CopyTo(fileStream);
                         }
                         //file.CopyToAsync(new FileStream(CoverImagetPath + user.InsuranceImage, FileMode.Create));
 

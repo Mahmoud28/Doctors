@@ -91,7 +91,7 @@ namespace Doctors.API.Controllers
                                a.Name,
                                SurgicalDate = PublicFunctions.ConvertToTimestamp(a.SurgicalDate),
                                a.UserId,
-                               Images = (from image in _PastSurgicalHistoryImage.Where(f => f.SurgicalId == a.Id).ToList()
+                               Images = (from image in _context.Set<PastSurgicalHistoryImage>().Where(f => f.SurgicalId == a.Id)
                                          select new
                                          {
                                              image = Configuration["Doctors:Url"] + "/" + "Upload/SurgicalHistory/" + UserId + "/" + image.Image,
@@ -111,7 +111,7 @@ namespace Doctors.API.Controllers
             Int32.TryParse(userId, out UserId);
             //new ExceptionLog().WriteException(JsonConvert.SerializeObject(model).ToString());
             APIJsonResult result = new APIJsonResult();
-            
+            result.Access = true;
             if (UserId == 0 || model == null)
             {
                 result.success = false;
@@ -135,14 +135,14 @@ namespace Doctors.API.Controllers
                     {
                         model.Images.ToList().ForEach(a =>
                         {
-                            var CoverImagetPath = _paths.SurgicalHistoryImages + UserId + "/";
+                            var CoverImagetPath = _paths.SurgicalHistoryImages + UserId + @"\";
                             if (!Directory.Exists(CoverImagetPath))
                             {
                                 Directory.CreateDirectory(CoverImagetPath);
                             }
                             using (var fileStream = new FileStream(CoverImagetPath + a.FileName, FileMode.Create))
                             {
-                                a.CopyToAsync(fileStream);
+                                a.CopyTo(fileStream);
                             }
                             PastSurgicalHistoryImage images = new PastSurgicalHistoryImage();
                             images.Image = a.FileName;

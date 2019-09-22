@@ -21,7 +21,10 @@ namespace Seagull.Core.Data
         }
 
         public DbSet<User> Users { get; set; }
+        
         public DbSet<MedicinesLookUp> MedicinesLookUp { get; set; }
+        public DbSet<ScheduleAppointment> ScheduleAppointment { get; set; }
+
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<UserRoleMap> UserRoleMaps { get; set; }
         public DbSet<Permission> Permission { get; set; }
@@ -74,14 +77,11 @@ namespace Seagull.Core.Data
 
             modelBuilder.Entity<GustUserDevice>().ToTable("GustUserDevice");
             modelBuilder.Entity<UserRole>().ToTable("UserRole");
-
             modelBuilder.Entity<KNetData>().ToTable("KNetData");
             modelBuilder.Entity<SeatsOrder>().ToTable("SeatsOrder");
-
             modelBuilder.Entity<EmailTemplate>().ToTable("EmailTemplate");
             modelBuilder.Entity<PushNotification>().ToTable("PushNotification");
-
-
+            modelBuilder.Entity<ScheduleAppointment>().ToTable("ScheduleAppointment");
             modelBuilder.Entity<UsersNotification>().ToTable("UsersNotification");
             modelBuilder.Entity<PromoCodeType>().ToTable("PromoCodeType");
             modelBuilder.Entity<EmailTransfer>().ToTable("EmailTransfer");

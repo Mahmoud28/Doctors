@@ -10,6 +10,7 @@ using Seagull.API.APIHelper;
 using Seagull.API.Controllers;
 using Seagull.Core.Data;
 using Seagull.Core.Data.Model;
+using Seagull.Core.Models;
 using Seagull.Doctors.Data.Model;
 using Seagull.Doctors.Helper.ImageHelper;
 using Swashbuckle.AspNetCore.Annotations;
@@ -21,6 +22,8 @@ namespace Doctors.API.Controllers
     {
         private LibraryDbContext _context;
         private readonly DbSet<MedicinesLookUp> _medicinesLookUp;
+        private readonly DbSet<User> _user;
+
         private readonly DbSet<Days> _days;
 
         public Paths _paths = new Paths();
@@ -31,6 +34,7 @@ namespace Doctors.API.Controllers
             _context = context;
             _medicinesLookUp = _context.Set<MedicinesLookUp>();
             _days = _context.Set<Days>();
+            _user=  _context.Set<User>();
             Configuration = builder.Build();
         }
 
@@ -54,6 +58,19 @@ namespace Doctors.API.Controllers
             paging.PageNumber = paging.PageNumber == 0 ? 0 : paging.PageNumber;
             paging.Count = paging.Count == 0 ? 100 : paging.Count;
             var data = _medicinesLookUp.ToList().Skip((paging.PageNumber * paging.Count)).Take(paging.Count).ToList();
+            result.data = data;
+            return Ok(result);
+        }
+
+        [HttpGet("DoctorList")]
+        public ActionResult DoctorList(PagingModel paging)
+        {
+            APIJsonResult result = new APIJsonResult();
+            result.Access = true;
+            result.success = true;
+            paging.PageNumber = paging.PageNumber == 0 ? 0 : paging.PageNumber;
+            paging.Count = paging.Count == 0 ? 100 : paging.Count;
+            var data = _user.Where(x=>x.fk_UserRoleMap.FirstOrDefault().UserRoleId == 9).ToList().Skip((paging.PageNumber * paging.Count)).Take(paging.Count).ToList();
             result.data = data;
             return Ok(result);
         }

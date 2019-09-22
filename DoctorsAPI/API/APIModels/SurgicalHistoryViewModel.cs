@@ -16,7 +16,7 @@ namespace Balanta.API.APIModels
         public string Name { get; set; }
         public long SurgicalDate { get; set; }
         public int UserId { get; set; }
-        public IFormFile[] Images { get; set; }
+        public List<IFormFile> Images { get; set; }
         //public IFormFile Images { get; set; }
     }
 }
