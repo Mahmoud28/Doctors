@@ -128,9 +128,9 @@ namespace Seagull.Core.Data.Repository
                             string strFk = (string)_search.Value;
                             switch ((string)_search.Name)
                             {
-                                case "Name":
-                                    query = query.Where(a => ((string.IsNullOrEmpty(a.Name) ? "" : a.Name)).Contains(strFk));
-                                    break;
+                                //case "Name":
+                                //    query = query.Where(a => ((string.IsNullOrEmpty(a.Name) ? "" : a.Name)).Contains(strFk));
+                                //    break;
                                 default:
                                     query = query.Where<Medication>(
                                     (object)_search.Name, (object)_search.Value,

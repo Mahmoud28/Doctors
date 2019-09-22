@@ -11,6 +11,7 @@ using Seagull.API.Controllers;
 using Seagull.Core.Data;
 using Seagull.Core.Data.Model;
 using Seagull.Core.Models;
+using Seagull.Doctors.Data;
 using Seagull.Doctors.Data.Model;
 using Seagull.Doctors.Helper.ImageHelper;
 using Swashbuckle.AspNetCore.Annotations;
@@ -70,7 +71,19 @@ namespace Doctors.API.Controllers
             result.success = true;
             paging.PageNumber = paging.PageNumber == 0 ? 0 : paging.PageNumber;
             paging.Count = paging.Count == 0 ? 100 : paging.Count;
-            var data = _user.Where(x=>x.fk_UserRoleMap.FirstOrDefault().UserRoleId == 9).ToList().Skip((paging.PageNumber * paging.Count)).Take(paging.Count).ToList();
+            var data = (from a in _user.Where(x => x.fk_UserRoleMap.FirstOrDefault().UserRoleId == 7)
+                        select new
+                        {
+                            Id = a.Id,
+                            Name = a.Name,
+                            PersonalImage = Configuration["Doctors:Url"] + "/" + "Upload/PersonalImage/" + a.Id + "/" + a.PersonalImage,
+                            Email = a.Email,
+                            Mobile = a.Mobile,
+                            Address = a.Address,
+                            Notes = a.Notes,
+                            BirthDate = PublicFunctions.ConvertToTimestamp(Convert.ToDateTime(a.BirthDate)),
+                        }
+                        ).Skip((paging.PageNumber * paging.Count)).Take(paging.Count).ToList();
             result.data = data;
             return Ok(result);
         }

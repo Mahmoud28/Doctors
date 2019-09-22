@@ -22,7 +22,6 @@ namespace Doctors.API.Controllers
             _medication = _context.Set<Medication>();
         }
         [HttpPost("PatientMedication")]
-        [SwaggerOperation(Summary = "Policy Api ", Description = "To Get Privacy & Policy Data Like Title and Description")]
         public ActionResult PatientMedicationData([FromBody] PatientMedicationModel model)
         {
             APIJsonResult result = new APIJsonResult();
@@ -38,7 +37,6 @@ namespace Doctors.API.Controllers
             {
                 result.Msg.Add("Session Time Out");
                 result.success = false;
-                result.Access = false;
                 return Ok(result);
             }
             if(model.Id == 0)
@@ -64,7 +62,6 @@ namespace Doctors.API.Controllers
                 {
                     result.Msg.Add("Not found");
                     result.success = false;
-                    result.Access = false;
                     return Ok(result);
                 }
                 patientMedication.MorningCount = model.Morning;
@@ -90,14 +87,12 @@ namespace Doctors.API.Controllers
             {
                 result.Msg.Add("Session Time Out");
                 result.success = false;
-                result.Access = false;
                 return Ok(result);
             }
             if(Id == 0)
             {
                 result.Msg.Add("Not found");
                 result.success = false;
-                result.Access = false;
                 return Ok(result);
             }
            var medication =_medication.Where(x => x.Id == Id).FirstOrDefault();
