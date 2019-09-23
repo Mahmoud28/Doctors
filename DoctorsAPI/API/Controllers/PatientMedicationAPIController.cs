@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using Balanta.API.APIModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Seagull.API.APIHelper;
@@ -13,7 +15,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace Doctors.API.Controllers
 {
-    [Route("PatientMedication")]
+    [Route("Seagull")]
     public class PatientMedicationAPIController : ControllerBase
     {
         private LibraryDbContext _context;
@@ -25,21 +27,22 @@ namespace Doctors.API.Controllers
         public PatientMedicationAPIController(LibraryDbContext context)
         {
             _context = context;
-            _user= _context.Set<User>();
+            _user = _context.Set<User>();
             _medication = _context.Set<Medication>();
             _days = _context.Set<Days>();
             _medicinesLookUp = _context.Set<MedicinesLookUp>();
         }
-        [HttpPost("PatientMedication")]
-        public ActionResult PatientMedicationData([FromBody] PatientMedicationModel model)
+        [HttpPost("PatientMedicationAddOrEdit")]
+        public ActionResult PatientMedicationAddOrEdit([FromBody] PatientMedicationModel model)
         {
             APIJsonResult result = new APIJsonResult();
             result.Access = true;
             result.success = true;
-            if(model == null)
+            if (model == null)
             {
                 result.success = false;
                 result.Msg.Add("Model is NULL");
+                return Ok(result);
             }
             var currentUserToken = User.Claims.SingleOrDefault(x => x.Type == "UserRole") != null ? User.Claims.SingleOrDefault(x => x.Type == "UserRole").Value : null;
             if (currentUserToken == null)
@@ -48,7 +51,7 @@ namespace Doctors.API.Controllers
                 result.success = false;
                 return Ok(result);
             }
-            if(model.Id == 0)
+            if (model.Id == 0)
             {
                 Medication m = new Medication()
                 {
@@ -67,7 +70,7 @@ namespace Doctors.API.Controllers
             else
             {
                 var patientMedication = _medication.Where(x => x.Id == model.Id).FirstOrDefault();
-                if(patientMedication == null)
+                if (patientMedication == null)
                 {
                     result.Msg.Add("Not found");
                     result.success = false;
@@ -82,7 +85,7 @@ namespace Doctors.API.Controllers
                 _medication.Update(patientMedication);
                 _context.SaveChanges();
             }
-           
+
             return Ok(result);
         }
         [HttpGet("PatientMedicationGet")]
@@ -98,13 +101,13 @@ namespace Doctors.API.Controllers
                 result.success = false;
                 return Ok(result);
             }
-            if(Id == 0)
+            if (Id == 0)
             {
                 result.Msg.Add("Not found");
                 result.success = false;
                 return Ok(result);
             }
-           var medication =_medication.Where(x => x.Id == Id).FirstOrDefault();
+            var medication = _medication.Where(x => x.Id == Id).FirstOrDefault();
             PatientMedicationModel model = new PatientMedicationModel()
             {
                 Id = medication.Id,
@@ -119,9 +122,7 @@ namespace Doctors.API.Controllers
             result.data = model;
             return Ok(result);
         }
-
         [HttpGet("PatientMedicationList")]
-
         public IActionResult PatientMedicationList()
         {
             APIJsonResult result = new APIJsonResult();
@@ -135,30 +136,30 @@ namespace Doctors.API.Controllers
                 return Ok(result);
             }
             int userId = Convert.ToInt32(User.Claims.SingleOrDefault(x => x.Type == "UserId") != null ? User.Claims.SingleOrDefault(x => x.Type == "UserId").Value : null);
-            var list = (from a in _medication.Where(x => x.UserId == userId)
-                        select new
-                        {
-                            Id = a.Id,
-                            Medicines = _medicinesLookUp.Where(x=>x.Id == a.MedicationId).FirstOrDefault().MedicinesName,
-                            Doctor = a.Doctors,
-                            //Days =
-                        }
-                        );
-            return null;
+            List<PatientMedicationListModel> list = new List<PatientMedicationListModel>();
+            _medication.Where(x => x.UserId == userId).ToList().ForEach(x => {
+                var ids = x.Days.Split(',').Select(Int32.Parse).ToList();
+                StringBuilder str = new StringBuilder();
+                ids.ForEach(v => {
+                    var day = _days.Where(id => id.Id == v).FirstOrDefault();
+                    if (day != null)
+                    {
+                        str.Append(day.Name + "-");
+                    }
+                });
+                string daysList = str.ToString();
+                
+                PatientMedicationListModel model = new PatientMedicationListModel()
+                {
+                    Days = daysList,
+                    Doctor = x.Doctors,
+                    Medicines = x.Doctors,
+                    Id = x.Id
+                };
+                list.Add(model);
+            });
+            result.data = list;
+            return Ok(result);
         }
-    }
-    
-
-    public class PatientMedicationModel
-    {
-        public int Id { get; set; }
-        public int Medication { get; set; }
-        public string DoctorName { get; set; }
-        public int Morning { get; set; }
-        public int Afternoon { get; set; }
-        public string PharmacyName { get; set; }
-        public string Sideeffect { get; set; }
-        public List<int> SelectedIds { get; set; }
-    }
-
+     }
 }
